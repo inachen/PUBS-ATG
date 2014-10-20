@@ -1,0 +1,18 @@
+Ohai
+
+Pseudocode for each script we need to write
+
+###################################
+I. Filter out reads by timepoint
+###################################
+
+Look into: Biophython (SeqIO)
+
+Input: Fastq file
+
+1. Use Biopython to c
+
+
+
+
+Output: dictionaries of 
