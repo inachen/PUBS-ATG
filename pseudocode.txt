@@ -16,11 +16,13 @@ Input: Fastq file
 	- yay test file
 
 1. Use Biopython to read in the fastq data
+	### Ina ####
 	- input: fastaq data
 	- object: seq, quality, index
 	- output: pickle
 
 1b. Distance between barcodes
+	### Steven ###
 	input: barcode library, identifier library
 	- function to calculate distance between two sequences of the same length
 		a. calculate distribution of distances in barcode library
@@ -29,6 +31,7 @@ Input: Fastq file
 	output: function, thresholds
 
 2. Filtering our data + lambda phage 
+	### Bruk ###
 	[- decide if it's easier to filter first or to filter after Biopython]
 	- input: pickle file
 	- look through index part of the description line
@@ -38,6 +41,7 @@ Input: Fastq file
 	- output: pickle files
 
 3. Filtering by quality and reads
+	### Ina ###
 	input: multiple pickle files, dictionary of barcodes{barcode: 0}
 	a. filter by low quality number in sequence
 		- none reads
@@ -52,14 +56,15 @@ Input: Fastq file
 		- combine those that match
 	output: dictionary {barcode: count}
 
-3b. Bruk's giggle about inappropriate thoughts [Bruk]
+4. Map into amino acid space
+	### Lillian ###
+	- input: dictionary {barcode: count}, library dictionary {barcode: [pos, aa]}
+	- function that go from barcode to [pos, aa]
+	- count barcodes into a [pos, aa] dictionary (duplicates for barcodes)
+	- output: dictionary {[pos, aa]: count}
 
-
-
-
-
-
-3b Calculate Error 
+5. Calculate error from lambda phage
+	- calculate infidelities with the lambda phage (use distance function)
 
 
 Output: dictionaries of 
