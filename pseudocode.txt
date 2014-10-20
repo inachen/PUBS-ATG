@@ -12,16 +12,54 @@ Input: Fastq file
 
 0. Generate test files
 	- stackoverflow
-	- read in a few lines and write into new file
+	- read in a few lines and write into new file (250 sequences)
+	- yay test file
 
 1. Use Biopython to read in the fastq data
-	- what is the output?
-	- is using Biopython a good idea?
+	- input: fastaq data
+	- object: seq, quality, index
+	- output: pickle
 
-2. Filtering our data out
-	- decide if it's easier to filter first or to filter after Biopython
+1b. Distance between barcodes
+	input: barcode library, identifier library
+	- function to calculate distance between two sequences of the same length
+		a. calculate distribution of distances in barcode library
+		b. calculate distribution of distances in identifier library
+	- determine thresholds
+	output: function, thresholds
+
+2. Filtering our data + lambda phage 
+	[- decide if it's easier to filter first or to filter after Biopython]
+	- input: pickle file
+	- look through index part of the description line
+	- save into new pickles
+		- 1-6 of time points
+		- lambda phage
+	- output: pickle files
 
 3. Filtering by quality and reads
+	input: multiple pickle files, dictionary of barcodes{barcode: 0}
+	a. filter by low quality number in sequence
+		- none reads
+		- quality cutoff (20 or 30)
+			- use Galaxy (Bruk)
+		- throw away all sequences that have one bad read]
+	b. by non-barcode length
+		- thrown away
+	c. calculate distance to barcodes in library
+		- determine length (different task)
+		- throw away those that really don't match
+		- combine those that match
+	output: dictionary {barcode: count}
+
+3b. Bruk's giggle about inappropriate thoughts [Bruk]
+
+
+
+
+
+
+3b Calculate Error 
 
 
 Output: dictionaries of 

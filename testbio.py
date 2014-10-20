@@ -14,5 +14,5 @@ import cPickle as pic
 
 from Bio import SeqIO
 
-for record in SeqIO.parse(open("test.fastq", "rU"), "fastq"):
-	print record.description
+for record in SeqIO.parse(open("testfile.fastq", "rU"), "fastq"):
+	print record.quality
