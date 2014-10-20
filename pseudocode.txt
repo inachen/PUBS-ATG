@@ -10,9 +10,18 @@ Look into: Biophython (SeqIO)
 
 Input: Fastq file
 
-1. Use Biopython to c
+0. Generate test files
+	- stackoverflow
+	- read in a few lines and write into new file
 
+1. Use Biopython to read in the fastq data
+	- what is the output?
+	- is using Biopython a good idea?
 
+2. Filtering our data out
+	- decide if it's easier to filter first or to filter after Biopython
+
+3. Filtering by quality and reads
 
 
 Output: dictionaries of 
