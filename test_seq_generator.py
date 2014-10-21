@@ -4,7 +4,7 @@ i=0
 f = open("/data/ClassData-2014/data-oct16/lane1_Undetermined_L001_R1_001.fastq", "r")
 copy = open("/data/atg/testfile.fastq", "wt")
 
-for i in range(1,1001):
+for i in range(1,10001):
 	line = f.readline()
 	copy.write(str(line))
 f.close()
