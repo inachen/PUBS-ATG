@@ -1,4 +1,7 @@
 import bio
 from bio import seqIO
 
-print seqIO.parse("testfile.fastq", "fastq")
+record_iterator = seqIO.parse("testsmall.fastq", "fastq")
+first_record = next(record_iterator)
+
+print first_record
