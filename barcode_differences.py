@@ -1,14 +1,14 @@
 barcodes = ['CGTGAT', 'ACATCG', 'GCCTAA','TGGTCA','CACTGT','ATTGGC','GATCTG','TCAAGT','CTGATC','AAGCTA','GTAGCC','TACAAG','TTGACT','GGAACT','TGACAT','GGACGG','CTCTAC','GCGGAC','TTTCAC','GGCCAC','CGAAAC','CGTACG','CCACTC','GCTACC','ATCAGT','GCTCAT','AGGAAT','CTTTTG','TAGTTG','CCGGTG']
-ATG_barcodes = ['TTGACT','GGAACT','TGACAT','GGACGG','CTCTAC','GCGGAC']
 import numpy as np
+import cPickle as pic
+data = pic.load(open("allele_dic_with_WT.pkl", "rb"))
+alleles = []
+alleles = data.keys()
 
 #comparing one string to another and returning the number of differences
 def single_comp(cats, dogs):
 	n = 0
-	if len(cats) != len(dogs):
-		n = len(cats)
-		return n
-	elif cats == dogs:
+	if cats == dogs:
 		return n
 	else:
 		for i in range(0, len(cats)):
@@ -40,5 +40,5 @@ def check(seq1, seq2):
 	
 #print single_comp("cats", "dogs")
 
-print mult_comp(barcodes, ATG_barcodes)
+#print mult_comp(alleles, alleles)
 #print check(barcodes, barcodes)
