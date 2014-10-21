@@ -19,7 +19,8 @@ Input: Fastq file
 	=== Ina ===
 	- input: fastaq data
 	- object: seq, quality, index
-	- output: pickle
+	- output: pickle (list of Biopython objects)
+	- doing batches!
 
 1b. Distance between barcodes
 	=== Steven ===
@@ -33,12 +34,12 @@ Input: Fastq file
 2. Filtering our data + lambda phage 
 	=== Bruk ===
 	[- decide if it's easier to filter first or to filter after Biopython]
-	- input: pickle file
+	- input: pickle file (giant list of Biopython object)
 	- look through index part of the description line
 	- save into new pickles
 		- 1-6 of time points
 		- lambda phage
-	- output: pickle files
+	- output: pickle files (lists of Biopython objects)
 
 3. Filtering by quality and reads
 	=== Ina ===
@@ -54,14 +55,14 @@ Input: Fastq file
 		- determine length (different task)
 		- throw away those that really don't match
 		- combine those that match
-	output: dictionary {barcode: count}
+	output: dictionary {barcode: count} (pickle)
 
 4. Map into amino acid space
 	=== Lillian ===
 	- input: dictionary {barcode: count}, library dictionary {barcode: [pos, aa]}
 	- function that go from barcode to [pos, aa]
 	- count barcodes into a [pos, aa] dictionary (duplicates for barcodes)
-	- output: dictionary {[pos, aa]: count}
+	- output: dictionary {[pos, aa]: count} (pickle)
 
 5. Calculate error from lambda phage
 	- calculate infidelities with the lambda phage (use distance function)
