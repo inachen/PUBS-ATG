@@ -1,5 +1,6 @@
 barcodes = ['CGTGAT', 'ACATCG', 'GCCTAA','TGGTCA','CACTGT','ATTGGC','GATCTG','TCAAGT','CTGATC','AAGCTA','GTAGCC','TACAAG','TTGACT','GGAACT','TGACAT','GGACGG','CTCTAC','GCGGAC','TTTCAC','GGCCAC','CGAAAC','CGTACG','CCACTC','GCTACC','ATCAGT','GCTCAT','AGGAAT','CTTTTG','TAGTTG','CCGGTG']
 import numpy as np
+import matplotlib.pyplot as plt
 import cPickle as pic
 data = pic.load(open("allele_dic_with_WT.pkl", "rb"))
 alleles = []
@@ -26,6 +27,27 @@ def mult_comp(seq1, seq2):
 			n = single_comp(seq1[i], seq2[j])
 			mat[i,j] = n
 	return mat
+	
+#comparing two lists of strings and putting the number of differences into a list
+def mult_comp_list(seq1, seq2):
+	num_list = []
+	for i in range(0, len(seq1)):
+		for j in range(0, len(seq2)):
+			n = 0
+			n = single_comp(seq1[i], seq2[j])
+			num_list.append(n)
+	return num_list
+	
+#comparing two lists of strings and outputting the smallest non-zero hamming distance
+def mult_comp_small(seq1, seq2):
+	p = 1000
+	for i in range(0, len(seq1)):
+		for j in range(0, len(seq2)):
+			n = 0
+			n = single_comp(seq1[i], seq2[j])
+			if n != 0 and n < p:
+				p = n
+	return p
 
 #looking through two lists of strings, and two that have > 2 differences will be the output
 def check(seq1, seq2):
@@ -40,5 +62,10 @@ def check(seq1, seq2):
 	
 #print single_comp("cats", "dogs")
 
-#print mult_comp(alleles, alleles)
+#num_list = mult_comp_list(alleles, alleles)
+#plt.hist(num_list)
+#plt.show()
+
+print mult_comp_small(alleles, alleles)
+
 #print check(barcodes, barcodes)
