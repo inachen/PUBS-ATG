@@ -32,10 +32,10 @@ def mult_comp(seq1, seq2):
 	
 ATG_indices = ['TTGACT','GGAACT','TGACAT','GGACGG','CTCTAC','GCGGAC']
 
-#thefilename = ["100k_testdata.fastq", "10k_testdata.fastq"]
+thefilename = ["100k_testdata.fastq"]
 #this line is for testing on small datasets, ignore!
 
-thefilename = ["/data/ClassData-2014/data-oct16/lane1_Undetermined_L001_R1_001.fastq", "/data/ClassData-2014/data-oct16/lane2_Undetermined_L002_R1_001.fastq", "/data/ClassData-2014/data-oct17/lane1_Undetermined_L001_R1_001.fastq"]
+#thefilename = ["/data/ClassData-2014/data-oct16/lane1_Undetermined_L001_R1_001.fastq", "/data/ClassData-2014/data-oct16/lane2_Undetermined_L002_R1_001.fastq", "/data/ClassData-2014/data-oct17/lane1_Undetermined_L001_R1_001.fastq"]
 #files to demultiplex
 
 #filename = raw_input("sequencing fastq file name: ")
@@ -53,7 +53,7 @@ total_reads= dict((element,0) for element in ATG_indices)
 #for counting the total reads for each time-point index
 
 for filename in thefilename:
-	print "processing " + filename
+	print "processing" + filename
 	for value in ATG_indices:
 	#iterates over the ATG_indices
 
@@ -66,7 +66,7 @@ for filename in thefilename:
 			indexcounter[value][indexread]=indexcounter[value].get(indexread,1)+1
 			# creates an entry in indexcounter if index is new, gives it a 1 count, otherwise finds the index and increments the count
 		
-			if single_comp(value, indexread) <1:
+			if single_comp(value, indexread) <2:
 			# checks if the index from seq is 1 distance or less from the desired index
 		
 				theoutput[value].append((record.seq,record.letter_annotations["phred_quality"]))
