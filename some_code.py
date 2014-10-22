@@ -8,8 +8,8 @@ import csv
 import numpy as np
 import math
 import matplotlib.cm as cm
-from mpltools import style
-from mpltools import color
+# from mpltools import style
+# from mpltools import color
 from Bio import SeqIO
 import cPickle as pickle
 
@@ -39,6 +39,11 @@ INDEX_ERR = 1
 # ambiguity threshold (other sequences farther than this away)
 BARCODE_SEP = 4
 
+# directory names
+OUTPUT_DIR = "output/"
+PICKLE_DIR = "pickles/"
+TESTSET_DIR = "test_sets/"
+
 # namedtuple to represent timepoint objects
 # day = [1,2], time = [1,2,3], index = sequence
 Timepoint = namedtuple("Timepoint", ["day", "time", "seq"])
@@ -50,6 +55,12 @@ ATG_INDICES = [Timepoint(day=1, time=1, seq='TTGACT'),
             Timepoint(day=2, time=1, seq='GGACGG'),
             Timepoint(day=2, time=2, seq='CTCTAC'),
             Timepoint(day=2, time=3, seq='GCGGAC')]
+
+FASTA_INPUT = ["/data/ClassData-2014/data-oct16/lane1_Undetermined_L001_R1_001.fastq", 
+    "/data/ClassData-2014/data-oct16/lane1_Undetermined_L002_R1_001.fastq", 
+    "/data/ClassData-2014/data-oct17/lane1_Undetermined_L001_R1_001.fastq"]
+
+TEST_INPUT = [TESTSET_DIR + "testseq.fastq"]
 
 # source: wikipedia
 def hamming_distance(s1, s2):
@@ -64,41 +75,46 @@ def bar_to_aa(bar):
     return 
 
 def make_aa_dic():
+
+
     return
 
 def demultiplex ():
-    infile = "testseq.fastq"
+    fileset = FASTA_INPUT
 
     # create a dictionary to store the barcodes
     seqdata = dict((i,[]) for i in ATG_INDICES)
     index_lst = [i.seq for i in ATG_INDICES]
 
-    for record in SeqIO.parse(open(infile, "rU"), "fastq"):
-        
-        # pull out index from description
-        index_seq = record.description.split(":")[-1]
+    for infile in fileset:
+        print ("======= Demultiplexing ", infile, " =======")
+        for record in SeqIO.parse(open(infile, "rU"), "fastq"):
+            
+            # pull out index from description
+            index_seq = record.description.split(":")[-1]
 
-        # get reverse complement of the barcode!
-        sequence = str(record.seq.reverse_complement())[7:]
-        qual = record.letter_annotations["phred_quality"]
+            # get reverse complement of the barcode!
+            sequence = str(record.seq.reverse_complement())[7:]
+            qual = record.letter_annotations["phred_quality"]
 
-        # update counts
-        if index_seq in index_lst:
-            # seqdata[index][sequence] = seqdata[index].get(sequence, 0) + 1
-            seqdata[ATG_INDICES[index_lst.index(index_seq)]].append((sequence, qual))
+            # update counts
+            if index_seq in index_lst:
+                # seqdata[index][sequence] = seqdata[index].get(sequence, 0) + 1
+                seqdata[ATG_INDICES[index_lst.index(index_seq)]].append((sequence, qual))
 
     # dump dictionary into a pickle
-    outfile = open('rawseq.pkl', 'wb')
-    pickle.dump(seqdata, outfile)
+    pickle.dump(seqdata, open(OUTPUT_DIR + 'rawseq.pkl', 'wb'))
+
+    print("======= Finished Demultiplexing =======")
 
 def barcode_filter():
 
     # open seq data
-    infile = open('rawseq.pkl', 'rb')
+    infile = open(OUTPUT_DIR + 'rawseq.pkl', 'rb')
     seqdata = pickle.load(infile)
 
     # get barcode library
-    bar_dic = pickle.load(open("allele_dic_with_WT.pkl", "rb"))
+    bar_dic = pickle.load(open(PICKLE_DIR + "allele_dic_with_WT.pkl", "rb"))
     bar_lst = bar_dic.keys()
 
     # trajectory dictionary
@@ -176,13 +192,21 @@ def barcode_filter():
 
     # print bar_timecourse
 
-    print "Identical matches: ", count_match
-    print "Near matches: ", count_near
-    print "Ambiguous cases: ", count_ambig
+    outf = open(OUTPUT_DIR + 'output.txt', 'w')
+
+    outf.write("===== Filter Results ===== \n \n")
+
+    outf.write("Identical matches: %d \n" % count_match)
+    outf.write("Near matches: %d \n" % count_near)
+    outf.write("Ambiguous cases: %d \n" % count_ambig)
+
+    outf.close()
+
             
 def run():
     # demultiplex()
-    barcode_filter()
+    # barcode_filter()
+    make_aa_dic()
 
 run()
 
