@@ -66,6 +66,6 @@ def check(seq1, seq2):
 #plt.hist(num_list)
 #plt.show()
 
-print mult_comp_small(alleles, alleles)
+#print mult_comp_small(alleles, alleles)
 
 #print check(barcodes, barcodes)
