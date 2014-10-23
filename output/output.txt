@@ -1,5 +1,0 @@
-===== Filter Results ===== 
- 
-Identical matches: 335 
-Near matches: 24 
-Ambiguous cases: 2 

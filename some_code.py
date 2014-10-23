@@ -17,8 +17,6 @@ import cPickle as pickle
 
 ############ TO DO ################
 # 1. add near match to indices
-# 2. bar_to_aa()
-# 3. make_aa_dic()
 ###################################
 
 ############ Functions ############
@@ -36,6 +34,7 @@ BAD_QUAL_THRESHOLD = 20
 BAD_QUAL_NUM = 3
 
 # length of barcode sequence
+INDEX_LEN = 6
 BARCODE_LEN = 18
 
 # hammings distance error tolerances 
@@ -44,6 +43,7 @@ INDEX_ERR = 1
 
 # ambiguity threshold (other sequences farther than this away)
 BARCODE_SEP = 3
+INDEX_SEP = 3
 
 # directory names
 OUTPUT_DIR = "output/"
@@ -105,13 +105,25 @@ def make_aa_dic():
 
 def demultiplex (fileset):
 
+    print "====== Started Demultiplexing ======"
+
     # create a dictionary to store the barcodes
     seqdata = dict((i,[]) for i in ATG_INDICES)
     index_lst = [i.seq for i in ATG_INDICES]
 
+    count_match = 0
+    count_near = 0
+    count_ambig = 0
+
+    count_total = 0
+    count_bad_qual = 0
+    count_bad_len = 0
+
     for infile in fileset:
-        print "======= Demultiplexing ", infile, " ======="
+        print "Demultiplexing ", infile, "..."
         for record in SeqIO.parse(open(infile, "rU"), "fastq"):
+
+            count_total += 1
             
             # pull out index from description
             index_seq = record.description.split(":")[-1]
@@ -120,15 +132,83 @@ def demultiplex (fileset):
             sequence = str(record.seq.reverse_complement())[7:]
             qual = record.letter_annotations["phred_quality"]
 
-            # update counts
-            if index_seq in index_lst:
-                # seqdata[index][sequence] = seqdata[index].get(sequence, 0) + 1
-                seqdata[ATG_INDICES[index_lst.index(index_seq)]].append((sequence, qual))
+            # check for bad quality
+            if sum(i < BAD_QUAL_THRESHOLD for i in qual) > BAD_QUAL_NUM :
+                count_bad_qual += 1
+                continue
+
+            # check for length
+            if len(index_seq) != INDEX_LEN :
+                count_bad_len += 1
+                continue
+
+            # store match sequence
+            match = ""
+            near_matches = []
+
+            # check for match
+            for ind in index_lst:
+
+                d = hamming_distance(ind, index_seq)
+
+                if d == 0:
+                    match = ind
+                    break
+
+                elif d <= INDEX_ERR + INDEX_SEP:
+                    near_matches.append((ind, d))
+
+            # update match
+
+            # exact match
+            if match != "":
+
+                seqdata[ATG_INDICES[index_lst.index(match)]].append((sequence, qual))
+
+                count_match +=1
+
+            # one close match within error range
+            elif (len(near_matches) == 1) and (near_matches[0][1] <= INDEX_ERR):
+                match_ind = near_matches[0][0]
+                seqdata[ATG_INDICES[index_lst.index(match_ind)]].append((sequence, qual))
+
+                count_near += 1
+
+            # more than one matches
+            elif len(near_matches) > 1:
+
+                # sort by distance
+                sorted_matches = sorted(near_matches, key=lambda x: x[1])
+                first_dist = sorted_matches[0][1]
+                second_dist = sorted_matches[1][1]
+
+                # first within range, second farther away than ambiguity threshold
+                if (first_dist <= INDEX_ERR) and (second_dist - first_dist > INDEX_SEP) :
+                    match_ind = sorted_matches[0][0]
+                    seqdata[ATG_INDICES[index_lst.index(match_ind)]].append((sequence, qual))
+
+                    count_near += 1
+
+                else :
+                    count_ambig += 1
+
+            # # update counts
+            # if index_seq in index_lst:
+            #     # seqdata[index][sequence] = seqdata[index].get(sequence, 0) + 1
+            #     seqdata[ATG_INDICES[index_lst.index(index_seq)]].append((sequence, qual))
 
     # dump dictionary into a pickle
     pickle.dump(seqdata, open(OUTPUT_DIR + DEMULT_PIC, 'wb'))
 
     print"======= Finished Demultiplexing ======="
+
+    print "====== Index Filter Counts ======"
+    print "Total Count :", count_total
+    print "Bad Quality Count: ", count_bad_qual
+    print "Bad Length Count: ", count_bad_len
+    print "Identical Matches :", count_match
+    print "Near Matches :", count_near
+    print "Ambiguous Cases: ", count_ambig
 
 def check_demult():
 
@@ -138,12 +218,13 @@ def check_demult():
     seqdata = pickle.load(infile)
     infile.close()
 
+    # checks how many counts there are for each index
     for index, seqlst in seqdata.iteritems():
         print index.seq, ': ', len(seqlst)
 
 def barcode_filter():
 
-    print "======= Start Barcode Filtering ======="
+    print "======= Started Barcode Filtering ======="
 
     # open seq data
     infile = open(OUTPUT_DIR + DEMULT_PIC, 'rb')
@@ -174,6 +255,8 @@ def barcode_filter():
             
     # update timecourse dictionary
     for timept, seqlst in seqdata.iteritems():
+
+        print "Filtering", timept, "..."
 
         for s in seqlst:
             sequence = s[0]
@@ -233,7 +316,6 @@ def barcode_filter():
 
                 # first within range, second farther away than ambiguity threshold
                 if (first_dist <= BARCODE_ERR) and (second_dist - first_dist > BARCODE_SEP) :
-                    print second_dist - first_dist
                     match_seq = sorted_matches[0][0]
                     mut_timecourse[match_seq][timept.day - 1][timept.time - 1] += 1
 
@@ -242,22 +324,12 @@ def barcode_filter():
                 else :
                     count_ambig += 1
 
-    # print mut_timecourse
+    print mut_timecourse
 
     pickle.dump(mut_timecourse, open(OUTPUT_DIR + FILT_PIC, 'wb'))
 
-    # outf = open(OUTPUT_DIR + 'output.txt', 'w')
-
-    # outf.write("===== Filter Results ===== \n \n")
-
-    # outf.write("Identical matches: %d \n" % count_match)
-    # outf.write("Near matches: %d \n" % count_near)
-    # outf.write("Ambiguous cases: %d \n" % count_ambig)
-
-    outf.close()
-
-    print "====== Completed Filtering ======"
-    print "====== Filter Counts ======"
+    print "====== Completed Barcode Filtering ======"
+    print "====== Barcode Filter Counts ======"
     print "Total Count :", count_total
     print "Bad Quality Count: ", count_bad_qual
     print "Bad Length Count: ", count_bad_len
