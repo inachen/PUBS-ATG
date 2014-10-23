@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib
 import cPickle as pic
-seq_data = pic.load(open("2500_filtered_seq.pkl", "rb"))
+#seq_data = pic.load(open("2500_filtered_seq.pkl", "rb"))
 
 '''#making a dictionary called wildtypedict to identify wt
 ubiquitin = "MQIFVKTLTGKTITLEVESSDTIDNVKSKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG"
@@ -18,8 +18,8 @@ for key in wildtypedict.keys():
 def total_value(seq_data):
 	sum_counts = {('total') : ([0,0,0],[0,0,0])}
 	for keys in seq_data.iterkeys():
-		for i in range(0,1):
-			for j in range(0,2):
+		for i in range(0,2):
+			for j in range(0,3):
 				sum_counts['total'][i][j] += seq_data[keys][i][j]
 	return sum_counts
 				
@@ -32,8 +32,8 @@ def enrich_val(seq_data):
 	for keys in seq_data.iterkeys():
 		#declaring dictionary to use for values
 		enrich_val[keys] = ([0,0,0],[0,0,0])
-		for i in range(0,1):
-			for j in range(0,2):
+		for i in range(0,2):
+			for j in range(0,3):
 				F = 0.0
 				F_zero = 0.0
 				E = 0.0

@@ -1,17 +1,23 @@
 import cPickle as pic
+from enrichment_value import enrich_val
+
 wt_aa_dict = pic.load(open("wt_aa_dict.pkl", "rb"))
 wt_number_dict = pic.load(open("wt_number_dict.pkl", "rb"))
-testset = pic.load(open("test_set.pkl", "rb"))
+test_set = pic.load(open("test_set.pkl", "rb"))
 
-print ">> printing test set keys"
-print sorted(testset.keys())
-print ">> printing wt set keys"
-print sorted(wt_aa_dict.keys())
-print ">>(57, 'D) in testset before norm"
+print "printing test set preprocessing"
+print test_set
+
+testset = enrich_val(test_set)
+
+print "printing tests set"
+print testset
+
+print "printing testset (57, 'D')"
 print testset[57, 'D']
-print ">>(57, 'S') in testset before norm"
+print "printing testset (57, 'S')"
 print testset[57, 'S']
-print ">>(57) in wt data (the divisor)"
+print "printing teset (57)"
 print wt_number_dict[57]
 
 for key in testset:
@@ -21,9 +27,9 @@ for key in testset:
 		testset[key][1][i] /= wt_number_dict[aa_pos][1][i]
 # adds wt counts for aa position to mutant counts for aa position in testset
 
-print ">>(57, 'D') after norm"
+print "printing testset (57, 'D') after norm"
 print testset[57, 'D']
-print ">>(57, 'S') after norm"
+print "printing testset (57, 'S') after norm"
 print testset[57, 'S']
 
 """
