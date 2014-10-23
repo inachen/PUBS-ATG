@@ -8,6 +8,8 @@ import csv
 import numpy as np
 import math
 import matplotlib.cm as cm
+import copy
+import os.path
 # from mpltools import style
 # from mpltools import color
 from Bio import SeqIO
@@ -23,6 +25,10 @@ import cPickle as pickle
 # 
 ###################################
 
+# bio constants
+NUM_AA = 21
+NUM_POS = 77
+
 # bad illumina quality threshold
 BAD_QUAL_THRESHOLD = 20
 
@@ -37,12 +43,21 @@ BARCODE_ERR = 1
 INDEX_ERR = 1
 
 # ambiguity threshold (other sequences farther than this away)
-BARCODE_SEP = 4
+BARCODE_SEP = 3
 
 # directory names
 OUTPUT_DIR = "output/"
 PICKLE_DIR = "pickles/"
 TESTSET_DIR = "test_sets/"
+
+# reference pickle files
+ALLELE_PIC = "allele_dic_with_WT.pkl"
+TRANSLATE_PIC = "translate.pkl"
+
+# output pickle files
+BAR_AA_PIC = "bar_to_aa.pkl"
+DEMULT_PIC = "rawseq.pkl"
+FILT_PIC = "filtered_seq.pkl"
 
 # namedtuple to represent timepoint objects
 # day = [1,2], time = [1,2,3], index = sequence
@@ -57,10 +72,10 @@ ATG_INDICES = [Timepoint(day=1, time=1, seq='TTGACT'),
             Timepoint(day=2, time=3, seq='GCGGAC')]
 
 FASTA_INPUT = ["/data/ClassData-2014/data-oct16/lane1_Undetermined_L001_R1_001.fastq", 
-    "/data/ClassData-2014/data-oct16/lane1_Undetermined_L002_R1_001.fastq", 
+    "/data/ClassData-2014/data-oct16/lane2_Undetermined_L002_R1_001.fastq", 
     "/data/ClassData-2014/data-oct17/lane1_Undetermined_L001_R1_001.fastq"]
 
-TEST_INPUT = [TESTSET_DIR + "testseq.fastq"]
+TEST_INPUT = [TESTSET_DIR + "2500_testdata.fastq"]
 
 # source: wikipedia
 def hamming_distance(s1, s2):
@@ -71,23 +86,31 @@ def hamming_distance(s1, s2):
 
     return sum(ch1 != ch2 for ch1, ch2 in zip(s1, s2))
 
-def bar_to_aa(bar):
-    return 
-
 def make_aa_dic():
 
+    # reference dictionaries
+    bar_codon_dic = pickle.load(open(PICKLE_DIR + ALLELE_PIC, "rb"))
+    codon_aa_dic = pickle.load(open(PICKLE_DIR + TRANSLATE_PIC, "rb"))
 
-    return
+    # make dictionary to store barcode to amino acid table
+    bar_aa_dic = copy.deepcopy(bar_codon_dic)
 
-def demultiplex ():
-    fileset = FASTA_INPUT
+    for bar, pair in bar_aa_dic.iteritems():
+        if pair[1] != 'WT':
+            bar_aa_dic[bar] = (pair[0], codon_aa_dic[pair[1].replace('T', 'U')])
+
+    pickle.dump(bar_aa_dic, open(OUTPUT_DIR + BAR_AA_PIC, 'wb'))
+
+    print "======= Made Barcode to AA Dictionary ======="
+
+def demultiplex (fileset):
 
     # create a dictionary to store the barcodes
     seqdata = dict((i,[]) for i in ATG_INDICES)
     index_lst = [i.seq for i in ATG_INDICES]
 
     for infile in fileset:
-        print ("======= Demultiplexing ", infile, " =======")
+        print "======= Demultiplexing ", infile, " ======="
         for record in SeqIO.parse(open(infile, "rU"), "fastq"):
             
             # pull out index from description
@@ -103,27 +126,51 @@ def demultiplex ():
                 seqdata[ATG_INDICES[index_lst.index(index_seq)]].append((sequence, qual))
 
     # dump dictionary into a pickle
-    pickle.dump(seqdata, open(OUTPUT_DIR + 'rawseq.pkl', 'wb'))
+    pickle.dump(seqdata, open(OUTPUT_DIR + DEMULT_PIC, 'wb'))
 
-    print("======= Finished Demultiplexing =======")
+    print"======= Finished Demultiplexing ======="
+
+def check_demult():
+
+    print "====== Demultiplexing Counts ======"
+
+    infile = open(OUTPUT_DIR + DEMULT_PIC, 'rb')
+    seqdata = pickle.load(infile)
+    infile.close()
+
+    for index, seqlst in seqdata.iteritems():
+        print index.seq, ': ', len(seqlst)
 
 def barcode_filter():
 
-    # open seq data
-    infile = open(OUTPUT_DIR + 'rawseq.pkl', 'rb')
-    seqdata = pickle.load(infile)
+    print "======= Start Barcode Filtering ======="
 
-    # get barcode library
-    bar_dic = pickle.load(open(PICKLE_DIR + "allele_dic_with_WT.pkl", "rb"))
+    # open seq data
+    infile = open(OUTPUT_DIR + DEMULT_PIC, 'rb')
+    seqdata = pickle.load(infile)
+    infile.close()
+
+    # get barcode lst
+    bar_dic = pickle.load(open(PICKLE_DIR + ALLELE_PIC, "rb"))
     bar_lst = bar_dic.keys()
 
-    # trajectory dictionary
-    bar_timecourse = dict((i, ([0,0,0], [0,0,0])) for i in bar_lst)
+    # get list of unique mutations
+    bar_aa_dic = pickle.load(open(OUTPUT_DIR + BAR_AA_PIC, 'rb'))
+    mut_lst = list(set(bar_aa_dic.values()))
+
+    # trajectory dictionary 
+    # ([timept 1, timept 2, timept 3], [timept 1, timept 2, timept 3])
+    # first list is day 1, second list is day two
+    mut_timecourse = dict((i, ([0,0,0], [0,0,0])) for i in mut_lst)
 
     # counts different types of matches
     count_match = 0
     count_near = 0
     count_ambig = 0
+
+    count_total = 0
+    count_bad_qual = 0
+    count_bad_len = 0
             
     # update timecourse dictionary
     for timept, seqlst in seqdata.iteritems():
@@ -132,12 +179,16 @@ def barcode_filter():
             sequence = s[0]
             qual = s[1]
 
+            count_total += 1
+
             # check for bad quality
             if sum(i < BAD_QUAL_THRESHOLD for i in qual) > BAD_QUAL_NUM :
+                count_bad_qual += 1
                 continue
 
             # check for length
             if len(sequence) != BARCODE_LEN :
+                count_bad_len += 1
                 continue
 
             # store match sequence
@@ -150,25 +201,25 @@ def barcode_filter():
                 d = hamming_distance(bar, sequence)
 
                 if d == 0:
-                    match = bar
+                    match = bar_aa_dic[bar]
                     break
 
                 elif d <= BARCODE_ERR + BARCODE_SEP:
-                    near_matches.append((bar, d))
+                    near_matches.append((bar_aa_dic[bar], d))
 
             # update match
 
             # exact match
             if match != "":
 
-                bar_timecourse[match][timept.day - 1][timept.time - 1] += 1
+                mut_timecourse[match][timept.day - 1][timept.time - 1] += 1
 
                 count_match +=1
 
             # one close match within error range
             elif (len(near_matches) == 1) and (near_matches[0][1] <= BARCODE_ERR):
                 match_seq = near_matches[0][0]
-                bar_timecourse[match_seq][timept.day - 1][timept.time - 1] += 1
+                mut_timecourse[match_seq][timept.day - 1][timept.time - 1] += 1
 
                 count_near += 1
 
@@ -182,31 +233,56 @@ def barcode_filter():
 
                 # first within range, second farther away than ambiguity threshold
                 if (first_dist <= BARCODE_ERR) and (second_dist - first_dist > BARCODE_SEP) :
+                    print second_dist - first_dist
                     match_seq = sorted_matches[0][0]
-                    bar_timecourse[match_seq][timept.day - 1][timept.time - 1] += 1
+                    mut_timecourse[match_seq][timept.day - 1][timept.time - 1] += 1
 
                     count_near += 1
 
                 else :
                     count_ambig += 1
 
-    # print bar_timecourse
+    # print mut_timecourse
 
-    outf = open(OUTPUT_DIR + 'output.txt', 'w')
+    pickle.dump(mut_timecourse, open(OUTPUT_DIR + FILT_PIC, 'wb'))
 
-    outf.write("===== Filter Results ===== \n \n")
+    # outf = open(OUTPUT_DIR + 'output.txt', 'w')
 
-    outf.write("Identical matches: %d \n" % count_match)
-    outf.write("Near matches: %d \n" % count_near)
-    outf.write("Ambiguous cases: %d \n" % count_ambig)
+    # outf.write("===== Filter Results ===== \n \n")
+
+    # outf.write("Identical matches: %d \n" % count_match)
+    # outf.write("Near matches: %d \n" % count_near)
+    # outf.write("Ambiguous cases: %d \n" % count_ambig)
 
     outf.close()
 
+    print "====== Completed Filtering ======"
+    print "====== Filter Counts ======"
+    print "Total Count :", count_total
+    print "Bad Quality Count: ", count_bad_qual
+    print "Bad Length Count: ", count_bad_len
+    print "Identical Matches :", count_match
+    print "Near Matches :", count_near
+    print "Ambiguous Cases: ", count_ambig
+
             
 def run():
-    # demultiplex()
-    # barcode_filter()
-    make_aa_dic()
+
+    ### RUN ONCE - makes rawseq.pkl ###
+    if not (os.path.exists(OUTPUT_DIR + DEMULT_PIC)):
+
+        # FASTA_INPUT for actual data, TEST_INPUT for small test set
+        demultiplex(fileset = TEST_INPUT)
+        check_demult()
+
+    ### RUN ONCE - makes bar_to_aa.pkl ###
+    if not (os.path.exists(OUTPUT_DIR + BAR_AA_PIC)):
+        make_aa_dic()
+
+    ### RUN ONCE - make the amino acid table of filtered counts ###
+    if not (os.path.exists(OUTPUT_DIR + FILT_PIC)):
+        barcode_filter()
+
 
 run()
 
