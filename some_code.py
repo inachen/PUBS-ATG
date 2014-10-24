@@ -370,7 +370,7 @@ def run():
         # set err_check = False to get only perfect matches
         barcode_filter(err_check=True)
 
-    print_pickle("filtered_seq_perfect.pkl")
+    # print_pickle("filtered_seq_perfect.pkl")
 
 
 
