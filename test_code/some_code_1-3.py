@@ -86,16 +86,6 @@ def hamming_distance(s1, s2):
 
     return sum(ch1 != ch2 for ch1, ch2 in zip(s1, s2))
 
-def print_pickle(fpath):
-
-    # load pickle
-    infile = open(fpath, 'rb')
-    obj = pickle.load(infile)
-    infile.close()
-
-    # print dictionary
-    print obj
-
 def make_aa_dic():
 
     # reference dictionaries
@@ -225,7 +215,7 @@ def check_demult():
     for index, seqlst in seqdata.iteritems():
         print index.seq, ': ', len(seqlst)
 
-def barcode_filter(err_check=True):
+def barcode_filter(err_check=True, num=0):
 
     print "======= Started Barcode Filtering ======="
 
@@ -255,91 +245,95 @@ def barcode_filter(err_check=True):
     count_total = 0
     count_bad_qual = 0
     count_bad_len = 0
+
+    # use this to break up looping over time points
+    timept = seqdata.keys()[num]
+    seqlst = seqdata[timept]
             
-    # update timecourse dictionary
-    for timept, seqlst in seqdata.iteritems():
+    # update timecourse dictionary (all at once)
+    # for timept, seqlst in seqdata.iteritems():
 
-        print "Filtering", timept, "..."
+    print "Filtering", timept, "..."
 
-        for s in seqlst:
-            sequence = s[0]
-            qual = s[1]
+    for s in seqlst:
+        sequence = s[0]
+        qual = s[1]
 
-            count_total += 1
+        count_total += 1
 
-            # check for bad quality
-            if sum(i < BAD_QUAL_THRESHOLD for i in qual) > BAD_QUAL_NUM :
-                count_bad_qual += 1
+        # check for bad quality
+        if sum(i < BAD_QUAL_THRESHOLD for i in qual) > BAD_QUAL_NUM :
+            count_bad_qual += 1
+            continue
+
+        if err_check:
+
+            # check for length
+            if len(sequence) != BARCODE_LEN :
+                count_bad_len += 1
                 continue
 
-            if err_check:
+            # store match sequence
+            match = ""
+            near_matches = []
 
-                # check for length
-                if len(sequence) != BARCODE_LEN :
-                    count_bad_len += 1
-                    continue
+            # check for match
+            for bar in bar_lst:
 
-                # store match sequence
-                match = ""
-                near_matches = []
+                d = hamming_distance(bar, sequence)
 
-                # check for match
-                for bar in bar_lst:
+                if d == 0:
+                    match = bar_aa_dic[bar]
+                    break
 
-                    d = hamming_distance(bar, sequence)
+                elif d <= BARCODE_ERR + BARCODE_SEP:
+                    near_matches.append((bar_aa_dic[bar], d))
 
-                    if d == 0:
-                        match = bar_aa_dic[bar]
-                        break
+            # update match
 
-                    elif d <= BARCODE_ERR + BARCODE_SEP:
-                        near_matches.append((bar_aa_dic[bar], d))
+            # exact match
+            if match != "":
 
-                # update match
+                mut_timecourse[match][timept.day - 1][timept.time - 1] += 1
 
-                # exact match
-                if match != "":
+                count_match +=1
 
-                    mut_timecourse[match][timept.day - 1][timept.time - 1] += 1
+            # one close match within error range
+            elif (len(near_matches) == 1) and (near_matches[0][1] <= BARCODE_ERR):
+                match_seq = near_matches[0][0]
+                mut_timecourse[match_seq][timept.day - 1][timept.time - 1] += 1
 
-                    count_match +=1
+                count_near += 1
 
-                # one close match within error range
-                elif (len(near_matches) == 1) and (near_matches[0][1] <= BARCODE_ERR):
-                    match_seq = near_matches[0][0]
+            # more than one matches
+            elif len(near_matches) > 1:
+
+                # sort by distance
+                sorted_matches = sorted(near_matches, key=lambda x: x[1])
+                first_dist = sorted_matches[0][1]
+                second_dist = sorted_matches[1][1]
+
+                # first within range, second farther away than ambiguity threshold
+                if (first_dist <= BARCODE_ERR) and (second_dist - first_dist > BARCODE_SEP) :
+                    match_seq = sorted_matches[0][0]
                     mut_timecourse[match_seq][timept.day - 1][timept.time - 1] += 1
 
                     count_near += 1
 
-                # more than one matches
-                elif len(near_matches) > 1:
+                else :
+                    count_ambig += 1
 
-                    # sort by distance
-                    sorted_matches = sorted(near_matches, key=lambda x: x[1])
-                    first_dist = sorted_matches[0][1]
-                    second_dist = sorted_matches[1][1]
+        # only look for perfect matches
+        else :
 
-                    # first within range, second farther away than ambiguity threshold
-                    if (first_dist <= BARCODE_ERR) and (second_dist - first_dist > BARCODE_SEP) :
-                        match_seq = sorted_matches[0][0]
-                        mut_timecourse[match_seq][timept.day - 1][timept.time - 1] += 1
+            if sequence in bar_lst :
 
-                        count_near += 1
+                match = bar_aa_dic[sequence]
+                mut_timecourse[match][timept.day - 1][timept.time - 1] += 1
 
-                    else :
-                        count_ambig += 1
+                count_match += 1
 
-            # only look for perfect matches
-            else :
-
-                if sequence in bar_lst :
-
-                    match = bar_aa_dic[sequence]
-                    mut_timecourse[match][timept.day - 1][timept.time - 1] += 1
-
-                    count_match += 1
-
-    pickle.dump(mut_timecourse, open(OUTPUT_DIR + FILT_PIC, 'wb'))
+    pickle.dump(mut_timecourse, open(OUTPUT_DIR + str(num) + FILT_PIC, 'wb'))
 
     print "====== Completed Barcode Filtering ======"
     print "====== Barcode Filter Counts ======"
@@ -365,13 +359,10 @@ def run():
         make_aa_dic()
 
     ### RUN ONCE - make the amino acid table of filtered counts ###
-    if not (os.path.exists(OUTPUT_DIR + FILT_PIC)):
+    # if not (os.path.exists(OUTPUT_DIR + FILT_PIC)):
 
         # set err_check = False to get only perfect matches
-        barcode_filter(err_check=True)
-
-    print_pickle("filtered_seq_perfect.pkl")
-
+    barcode_filter(err_check=True, num=2)
 
 
 run()

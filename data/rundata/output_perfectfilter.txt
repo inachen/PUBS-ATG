@@ -1,0 +1,19 @@
+Output for job "perfectfilter"
+- used rawseq_imperfect.pkl
+- pulled perfect matches into {(pos, aa): ([t1,t2,t3], [t1,t2,t3])}
+
+======= Started Barcode Filtering =======
+Filtering Timepoint(day=1, time=2, seq='GGAACT') ...
+Filtering Timepoint(day=2, time=2, seq='CTCTAC') ...
+Filtering Timepoint(day=1, time=3, seq='TGACAT') ...
+Filtering Timepoint(day=2, time=3, seq='GCGGAC') ...
+Filtering Timepoint(day=2, time=1, seq='GGACGG') ...
+Filtering Timepoint(day=1, time=1, seq='TTGACT') ...
+====== Completed Barcode Filtering ======
+====== Barcode Filter Counts ======
+Total Count : 19181724
+Bad Quality Count:  941373
+Bad Length Count:  0
+Identical Matches : 16633987
+Near Matches : 0
+Ambiguous Cases:  0

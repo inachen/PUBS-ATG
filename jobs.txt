@@ -1,0 +1,27 @@
+====== Dead job list ======
+
+filter (ina): running filter function on perfect match indices rawseq_perfect_first_run.pkl
+	- KILLED
+	- saved rawseq_perfect_first_run.pkl
+run2 (rerun): running whole run with error match in both filter and indices (slight, non-effect problem)
+	- KILLED
+
+====== Current job list ======
+
+
+finalrun (rerun3): running whole run with error match in both (fixed non-effect problem)
+	- saved rawseq_imperfect.pkl
+
+imperfect1-1 (rerun3)
+imperfect1-2 (rerun3)
+imperfect1-3 (rerun3)
+imperfect2-1 (rerun3)
+imperfect2-2 (rerun3)
+imperfect2-3 (rerun3)
+- running imperfect filter on rawseq_imperfect.pkl one time point per screen.
+
+====== Finished Useful Jobs ======
+
+perfectfilter (rerun4): running perfect filter on rawseq_imperfect.pkl from finalrun
+	- output_perfectfilter.txt
+	- filtered_seq_perfect.pkl

@@ -1,0 +1,23 @@
+Output associated with 2500_filtered_seq.pkl
+
+-----------------------------------------------------------------
+
+======= Demultiplexing  test_sets/2500_testdata.fastq  =======
+======= Finished Demultiplexing =======
+====== Demultiplexing Counts ======
+GGAACT :  67
+CTCTAC :  59
+TGACAT :  40
+GCGGAC :  91
+GGACGG :  76
+TTGACT :  51
+======= Made Barcode to AA Dictionary =======
+======= Start Barcode Filtering =======
+====== Completed Filtering ======
+====== Filter Counts ======
+Total Count : 384
+Bad Quality Count:  0
+Bad Length Count:  0
+Identical Matches : 335
+Near Matches : 24
+Ambiguous Cases:  2

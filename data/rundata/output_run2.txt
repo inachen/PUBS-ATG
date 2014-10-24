@@ -1,0 +1,27 @@
+Output associated with "run2"
+
+- had a bad qual check on index that was unnecessary
+	- fixed in "finalrerun"
+
+====== Started Demultiplexing ======
+Demultiplexing  /data/ClassData-2014/data-oct16/lane1_Undetermined_L001_R1_001.fastq ...
+Demultiplexing  /data/ClassData-2014/data-oct16/lane2_Undetermined_L002_R1_001.fastq ...
+Demultiplexing  /data/ClassData-2014/data-oct17/lane1_Undetermined_L001_R1_001.fastq ...
+======= Finished Demultiplexing =======
+====== Index Filter Counts ======
+Total Count : 125776016
+Bad Quality Count:  6663893
+Bad Length Count:  0
+Identical Matches : 18167104
+Near Matches : 73247
+Ambiguous Cases:  75171466
+====== Demultiplexing Counts ======
+GGAACT :  2647254
+CTCTAC :  3251445
+TGACAT :  2232127
+GCGGAC :  4378003
+GGACGG :  3144151
+TTGACT :  2587371
+======= Made Barcode to AA Dictionary =======
+======= Started Barcode Filtering =======
+Filtering Timepoint(day=1, time=2, seq='GGAACT') ...

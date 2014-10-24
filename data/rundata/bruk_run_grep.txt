@@ -1,0 +1,12 @@
+bruk run check
+
+grep results on ':GCGGAC': 
+1328022
+1525724
+1734071
+
+sums to
+4587817
+
+equals count got by bruk
+4587817

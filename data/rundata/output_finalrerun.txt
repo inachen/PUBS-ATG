@@ -1,0 +1,25 @@
+output for finalrerun
+- error tolerant matches on both indices and barcodes
+- fixed qual check on index problem
+
+====== Started Demultiplexing ======
+Demultiplexing  /data/ClassData-2014/data-oct16/lane1_Undetermined_L001_R1_001.fastq ...
+Demultiplexing  /data/ClassData-2014/data-oct16/lane2_Undetermined_L002_R1_001.fastq ...
+Demultiplexing  /data/ClassData-2014/data-oct17/lane1_Undetermined_L001_R1_001.fastq ...
+======= Finished Demultiplexing =======
+====== Index Filter Counts ======
+Total Count : 125776016
+Bad Length Count:  0
+Identical Matches : 19105962
+Near Matches : 75762
+Ambiguous Cases:  79522430
+====== Demultiplexing Counts ======
+GGAACT :  2785106
+CTCTAC :  3413462
+TGACAT :  2348801
+GCGGAC :  4608969
+GGACGG :  3294492
+TTGACT :  2730894
+======= Made Barcode to AA Dictionary =======
+======= Started Barcode Filtering =======
+Filtering Timepoint(day=1, time=2, seq='GGAACT') ...
