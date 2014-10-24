@@ -19,7 +19,7 @@ for key in bar_nuc.iterkeys():
 	# replaces the 2nd value of each key with amino
 	bar_nuc[key][1] = aminonum
 	#incrementing each incidence
-	freqarray[int(bar_nuc[key][1]-1),int(bar_nuc[key][0])-1]=array[int(bar_nuc[key][1]-1),int(bar_nuc[key][0])-1]+1
+	freqarray[int(bar_nuc[key][1]-1),int(bar_nuc[key][0])-1]+=1
 	
 	
 	
