@@ -5,6 +5,8 @@ num_dic = pic.load(open("aminotonumber.pkl", "rb"))
 
 testset= pic.load(open("filtered_seq_perfect.pkl", "rb"))
 wt_counts= pic.load(open("all_wt_barcode_counts.pkl", "rb"))
+
+
 testset= enrich_val(testset)
 ########################## normalizing read enrichment by wt enrichment #################
 ubiquitin = "MQIFVKTLTGKTITLEVESSDTIDNVKSKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG"
@@ -33,9 +35,6 @@ j= int(raw_input("sample#: "))-1
 fitnessarray = np.zeros((22,78))
 
 print fitnessarray
-
-for key in num_dic:
-	print str(key) + ":" + str(num_dic[key])
 
 for key in testset.iterkeys():
 	if key[1] !='WT':

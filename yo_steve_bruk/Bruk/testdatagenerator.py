@@ -1,12 +1,16 @@
 import cPickle as pic
-from enrichment_value import enrich_val
+import numpy as np
 
 ubiquitin = "MQIFVKTLTGKTITLEVESSDTIDNVKSKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG"
 wt_aa_dict = dict(((i, ubiquitin[i-1]),([],[])) for i in range (1,77))
 wt_aa_dict[(77, 'STOP')]=([],[])
 wt_aa_dict[(0, 'WT')]=([],[])
 testset= pic.load(open("filtered_seq_perfect.pkl", "rb"))
+num_dic = pic.load(open("aminotonumber.pkl", "rb"))
 
+
+######################## for normalization with ALL wt counts #######################
+#gets all the counts for WT sequences
 for key in wt_aa_dict:
 	if key in testset.keys():
 		wt_aa_dict[key] = testset[key]
@@ -16,19 +20,21 @@ for key in wt_aa_dict:
 		print "no reads for: " + str(key)
 #dictionary now populated with wild-type sequences
 
-print wt_aa_dict
+#print wt_aa_dict
 
-wt_counts = {'WT':([0.0,0.0,0.0],[0.0,0.0,0.0])}
+#####################################################################################
 
-print wt_counts
+all_wt_counts = {'WT':([0.0,0.0,0.0],[0.0,0.0,0.0])}
 
 #add up all wt counts
 for key in wt_aa_dict:
 	for i in range (0,2):
 		for j in range (0,3):
-			wt_counts['WT'][i][j] += wt_aa_dict[key][i][j]
+			all_wt_counts['WT'][i][j] += wt_aa_dict[key][i][j]
 
-print wt_counts
+#print all_wt_counts
+
+#####################################################################################
 
 total_counts = {'total':([0.0,0.0,0.0],[0.0,0.0,0.0])}
 
@@ -38,30 +44,50 @@ for key in testset:
 		for j in range (0,3):
 			total_counts['total'][i][j] += testset[key][i][j]
 
-print total_counts
+#print total_counts
 
-norm_wt_counts = {'norm_wt':([0.0,0.0,0.0],[0.0,0.0,0.0])}
+#####################################################################################
 
-#normalize wt_count by total_count
+norm_all_wt_counts = {'norm_wt':([0.0,0.0,0.0],[0.0,0.0,0.0])}
+
+#normalize all_wt_count by total_count
 for i in range (0,2):
 	for j in range (0,3):
-		norm_wt_counts['norm_wt'][i][j] = wt_counts['WT'][i][j]/total_counts['total'][i][j]
+		norm_all_wt_counts['norm_wt'][i][j] = all_wt_counts['WT'][i][j]/total_counts['total'][i][j]
 
-print norm_wt_counts
+#print norm_all_wt_counts
 
-enrich_wt_counts = {'enrich_wt':([0.0,0.0,0.0],[0.0,0.0,0.0])}
+enrich_all_wt_counts = {'enrich_wt':([0.0,0.0,0.0],[0.0,0.0,0.0])}
 
 for i in range (0,2):
 	for j in range (0,3):
-		enrich_wt_counts['enrich_wt'][i][j] = norm_wt_counts['norm_wt'][i][j]/norm_wt_counts['norm_wt'][i][0]
+		enrich_all_wt_counts['enrich_wt'][i][j] = norm_all_wt_counts['norm_wt'][i][j]/norm_all_wt_counts['norm_wt'][i][0]
 			
-print enrich_wt_counts
+#print enrich_all_wt_counts
 
-testset= enrich_val(testset)
+pic.dump(enrich_all_wt_counts, open("all_wt_counts.pkl", "wb"))
+
+####################### for normalization with 'WT' barcoded counts #######################
+
+norm_wt_barcode_counts = {'norm_wt_barcode':([0.0,0.0,0.0],[0.0,0.0,0.0])}
+#print norm_wt_barcode_counts
+
+for i in range (0,2):
+	for j in range (0,3):
+		norm_wt_barcode_counts['norm_wt_barcode'][i][j]= testset[0, 'WT'][i][j]/total_counts['total'][i][j]
+
+#print norm_wt_barcode_counts
+
+enrich_wt_barcode_counts = {'enrich_wt':([0.0,0.0,0.0],[0.0,0.0,0.0])}
+
+for i in range (0,2):
+	for j in range (0,3):
+		enrich_wt_barcode_counts['enrich_wt'][i][j]= norm_wt_barcode_counts['norm_wt_barcode'][i][j]/ norm_wt_barcode_counts['norm_wt_barcode'][i][0]
+		
+
+#print enrich_wt_barcode_counts
+
+pic.dump(enrich_wt_barcode_counts, open("all_wt_barcode_counts.pkl", "wb"))
 
 
-
-
-
-pic.dump(enrich_wt_counts, open("wt_counts.pkl", "wb"))
-pic.dump(testset, open("test_set.pkl", "wb"))
+			
