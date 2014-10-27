@@ -16,11 +16,7 @@ from Bio import SeqIO
 import cPickle as pickle
 
 ############ TO DO ################
-# 1. add near match to indices
-###################################
-
-############ Functions ############
-# 
+#
 ###################################
 
 # bio constants
@@ -79,6 +75,7 @@ TEST_INPUT = [TESTSET_DIR + "2500_testdata.fastq"]
 
 # source: wikipedia
 def hamming_distance(s1, s2):
+    """Calculate the Hammings Distance for equal length strings"""
     #Return the Hamming distance between equal-length sequences
     if len(s1) != len(s2):
         # raise ValueError("Undefined for sequences of unequal length")
@@ -87,7 +84,7 @@ def hamming_distance(s1, s2):
     return sum(ch1 != ch2 for ch1, ch2 in zip(s1, s2))
 
 def print_pickle(fpath):
-
+    """Prints pickle content"""
     # load pickle
     infile = open(fpath, 'rb')
     obj = pickle.load(infile)
@@ -97,6 +94,7 @@ def print_pickle(fpath):
     print obj
 
 def make_aa_dic():
+    """Make (pos, aa) to barcode reference dictionary"""
 
     # reference dictionaries
     bar_codon_dic = pickle.load(open(PICKLE_DIR + ALLELE_PIC, "rb"))
@@ -114,6 +112,7 @@ def make_aa_dic():
     print "======= Made Barcode to AA Dictionary ======="
 
 def demultiplex (fileset):
+    """Demultiplexes fastq data"""
 
     print "====== Started Demultiplexing ======"
 
@@ -214,6 +213,7 @@ def demultiplex (fileset):
     print "Ambiguous Cases: ", count_ambig
 
 def check_demult():
+    """Counts for each timepoint after demultiplexing"""
 
     print "====== Demultiplexing Counts ======"
 
@@ -226,6 +226,7 @@ def check_demult():
         print index.seq, ': ', len(seqlst)
 
 def barcode_filter(err_check=True):
+    """Filters and matches barcode to library list"""
 
     print "======= Started Barcode Filtering ======="
 
