@@ -1,0 +1,31 @@
+
+====== Started Demultiplexing ======
+Demultiplexing  /data/ClassData-2014/data-oct16/lane1_Undetermined_L001_R1_001.fastq ...
+Demultiplexing  /data/ClassData-2014/data-oct16/lane2_Undetermined_L002_R1_001.fastq ...
+Demultiplexing  /data/ClassData-2014/data-oct17/lane1_Undetermined_L001_R1_001.fastq ...
+======= Finished Demultiplexing =======
+====== Index Filter Counts ======
+Total Count : 125776016
+Bad Length Count:  0
+Identical Matches : 19105962
+Near Matches : 75762
+Ambiguous Cases:  79522430
+====== Demultiplexing Counts ======
+d
+======= Made Barcode to AA Dictionary =======
+======= Started Barcode Filtering =======
+Filtering Timepoint(day=1, time=2, seq='GGAACT') ...
+Filtering Timepoint(day=2, time=2, seq='CTCTAC') ...
+Filtering Timepoint(day=1, time=3, seq='TGACAT') ...
+Filtering Timepoint(day=2, time=3, seq='GCGGAC') ...
+Filtering Timepoint(day=2, time=1, seq='GGACGG') ...
+Filtering Timepoint(day=1, time=1, seq='TTGACT') ...
+====== Completed Barcode Filtering ======
+====== Barcode Filter Counts ======
+Total Count : 19181724
+Bad Quality Count:  941373
+Bad Length Count:  0
+Identical Matches : 16633987
+Near Matches : 0
+Ambiguous Cases:  0
+

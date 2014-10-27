@@ -99,20 +99,24 @@ def calc_sel_coeff():
 def get_consensus():
     # get all the amino acid sequences
 
+    # open file
     infile = open("input_data/filtered_seq_perfect.pkl", 'rb')
     time_dic = pickle.load(infile)
     infile.close()
 
     ubiq_lst = list(UBIQ_SEQ)
 
+    # track all seqs
     seq_d1_lst = []
     seq_d2_lst = []
 
+    # wt counts
     count_1_1 = 0
     count_1_3 = 0
     count_2_1 = 0
     count_2_3 = 0
 
+    # get wt counts at each time
     for mut, times in time_dic.iteritems():
 
         d1_1 = times[0][0]
@@ -127,11 +131,15 @@ def get_consensus():
 
     for mut, times in time_dic.iteritems():
 
-        d1_count = times[0][2]
-        d2_count = times[1][2]
+        mut_d1_1 = times[0][0]
+        mut_d1_3 = times[0][2]
+        mut_d2_1 = times[1][0]
+        mut_d2_3 = times[1][2]
 
-        d1_ratio = int(d1_count/float(count_d1) * 1000)
-        d2_ratio = int(d2_count/float(count_d2) * 1000)
+        ratio_d1_1 = int(mut_d1_1/float(count_1_1) * 10000)
+        ratio_d1_3 = int(mut_d1_3/float(count_1_3) * 10000)
+        ratio_d2_1 = int(mut_d2_1/float(count_2_1) * 10000)
+        ratio_d2_3 = int(mut_d2_3/float(count_2_3) * 10000)
 
         pos = mut[0]
         aa = mut[1]
@@ -144,18 +152,22 @@ def get_consensus():
                 seq[pos-1] = aa
             else :
                 seq[pos-1] = "!"
- 
+        
+        if ratio_d1_3 > ratio_d1_1:
+            seq_d1_lst.extend(["".join(seq) for i in range(ratio_d1_3)])
 
-        seq_d1_lst.extend(["".join(seq) for i in range(d1_ratio)])
-        seq_d2_lst.extend(["".join(seq) for i in range(d2_ratio)])
+        if ratio_d2_3 > ratio_d2_1:
+            seq_d2_lst.extend(["".join(seq) for i in range(ratio_d2_3)])
 
-    print count_d1
-    print count_d2
-
-    cw = csv.writer(open("consensus_seq.csv", "wb"))
+    cw = csv.writer(open("consensus_seq_d1.csv", "wb"))
 
     for s in seq_d1_lst:
         cw.writerow([s])
+
+    cw2 = csv.writer(open("consensus_seq_d2.csv", "wb"))
+
+    for s in seq_d2_lst:
+        cw2.writerow([s])
 
 get_consensus()
 
