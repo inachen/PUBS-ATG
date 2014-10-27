@@ -101,7 +101,7 @@ def get_consensus():
 
     # open file
     infile = open("input_data/filtered_seq_perfect.pkl", 'rb')
-    time_dic = pickle.load(infile)
+    t_dic = pickle.load(infile)
     infile.close()
 
     ubiq_lst = list(UBIQ_SEQ)
@@ -115,6 +115,21 @@ def get_consensus():
     count_1_3 = 0
     count_2_1 = 0
     count_2_3 = 0
+
+    time_dic = copy.deepcopy(t_dic)
+
+    # wt keys
+    wt_seq = [(i, UBIQ_SEQ[i-1]) for i in range (1,77)]
+
+    # calculate total WT counts
+    for mut, times in t_dic.iteritems():
+
+        # check if mutation is wt
+        if mut in wt_seq:
+            time_dic.pop(mut, None)
+
+        elif mut == (0, 'WT'):
+            time_dic.pop(mut, None)
 
     # get wt counts at each time
     for mut, times in time_dic.iteritems():
