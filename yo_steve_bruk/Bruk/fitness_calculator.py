@@ -1,4 +1,5 @@
 import cPickle as pic
+import numpy as np
 
 wt_aa_dict = pic.load(open("wt_aa_dict.pkl", "rb"))
 wt_number_dict = pic.load(open("wt_number_dict.pkl", "rb"))
