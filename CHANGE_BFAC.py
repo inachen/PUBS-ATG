@@ -11,6 +11,7 @@ parser.__init__(QUIET=True)
 # ./CHANGE_BFAC.py [fitvals.txt] [pdb file] [ouput name]
 
 fit_vals = open(sys.argv[1], 'r').readline().split()
+print len(fit_vals)
 fit_vals = np.array(fit_vals, dtype='float')/10.
 
 
