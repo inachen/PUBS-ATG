@@ -54,4 +54,5 @@ arrayfile= open(filename, "w")
 #fitnessarray.tofile(arrayfile, sep = "\t", format = "%F")
 
 np.savetxt(arrayfile, fitnessarray, delimiter = "	")
+pic.dump(fitnessarray, open("D2S3fitness_scores.py", "wb"))
 
