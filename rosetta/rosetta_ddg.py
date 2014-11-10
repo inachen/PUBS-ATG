@@ -21,6 +21,7 @@ import json
 
 # file paths
 IN_DIR = "input_jsons"
+OUT_DIR = "out_pickles"
 FSEP = "/"
 FP_MONO = "uby_1ubq.json"
 
@@ -57,6 +58,7 @@ def json_to_dic(jfile, param):
     return ddg_dic
 
 def bin_by_hydrophobe(ddg_dic):
+    '''bin by hydrophobicity'''
 
     hydro_bin_dic = {'hydrophobic': {}, 'polar':{}, 'charged':{}}
 
@@ -72,17 +74,22 @@ def bin_by_hydrophobe(ddg_dic):
 
     return hydro_bin_dic
 
+def dic_to_lsts(dic):
+    # TODO
+
 def run():
     # parameter value to extract
     param = "global_DDG"
 
+    # get ddg dic
     ddg_dic = json_to_dic(IN_DIR + FSEP + FP_MONO, param)
 
-    pickle.dump(ddg_dic, open('ddg_dic.pkl', 'wb'))
+    pickle.dump(ddg_dic, open(OUT_DIR + FSEP + 'ddg_dic.pkl', 'wb'))
 
     # bin by hydrophobicity
     hydro_bin_dic = bin_by_hydrophobe(ddg_dic)
 
-    print hydro_bin_dic
+    pickle.dump(ddg_dic, open(OUT_DIR + FSEP + 'hydro_bin_dic.pkl', 'wb'))
+
 
 run()
