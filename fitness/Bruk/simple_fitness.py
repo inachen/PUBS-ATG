@@ -14,15 +14,15 @@ wt_aa_dict[(77, 'STOP')]= []
 wt_aa_dict[(0, 'WT')]= []
 
 for key in testset:
-		for i in range (0,2):
-			for j in range (0,3):
-				testset[key][i][j] /= wt_counts[('enrich_wt')][i][j]
+	for i in range (0,2):
+		for j in range (0,3):
+			testset[key][i][j] /= wt_counts[('enrich_wt')][i][j]
 				
 print testset[(4, 'F')]
 				
-for key in testset:
+"""for key in testset:
 	if key in wt_aa_dict.keys():
-		testset[key] = ([-1,-1,-1],[-1,-1,-1])
+		testset[key] = ([-1,-1,-1],[-1,-1,-1])"""
 		
 print testset[(4, 'F')]
 
@@ -30,7 +30,17 @@ print testset[(4, 'F')]
 i=int(raw_input("day: "))-1
 j= int(raw_input("sample#: "))-1
 
+fitness_scores_d2s3 = {}
 
+for key in testset:
+	fitness_scores_d2s3[key] = testset[key][1][2]
+
+
+
+print fitness_scores_d2s3
+pic.dump(fitness_scores_d2s3, open("D2S3fitness_scores.pic", "wb"))
+
+"""
 fitnessarray = np.zeros((22,78))
 
 print fitnessarray
@@ -55,4 +65,5 @@ arrayfile= open(filename, "w")
 
 np.savetxt(arrayfile, fitnessarray, delimiter = "	")
 pic.dump(fitnessarray, open("D2S3fitness_scores.py", "wb"))
+"""
 
