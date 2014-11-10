@@ -28,6 +28,11 @@ FP_MONO = "uby_1ubq.json"
 POS_POS = 3
 MUT_POS = 4
 
+# polarity binning
+HYDROPHOBIC = ['M', 'C', 'I', 'L', 'Y', 'F', 'W']
+POLAR = ['Q', 'P', 'N', 'A', 'T', 'S', 'V', 'G']
+CHARGED = ['E', 'D', 'K', 'R', 'H']
+
 def json_to_dic(jfile, param):
 
     '''convert json file of Rosetta DDG values to dictionary'''
@@ -39,11 +44,33 @@ def json_to_dic(jfile, param):
 
     for dat in raw_ddg['data']:
 
-        allel = (int(dat['Mutation'][POS_POS]), str(dat['Mutation'][MUT_POS]))
+        mut = dat['Mutation']
+
+        # get the position and amino acid
+        if len(mut) == 5:
+            allel = (int(mut[POS_POS]), str(mut[MUT_POS]))
+        else:
+            allel = (int(mut[POS_POS:POS_POS+2]), str(mut[MUT_POS+1]))
+
         ddg_dic[allel] = dat[param]
 
     return ddg_dic
 
+def bin_by_hydrophobe(ddg_dic):
+
+    hydro_bin_dic = {'hydrophobic': {}, 'polar':{}, 'charged':{}}
+
+    for k, val in ddg_dic.iteritems():
+        aa = k[1]
+
+        if aa in HYDROPHOBIC:
+            hydro_bin_dic['hydrophobic'][k] = val
+        elif aa in POLAR:
+            hydro_bin_dic['polar'][k] = val
+        else:
+            hydro_bin_dic['charged'][k] = val
+
+    return hydro_bin_dic
 
 def run():
     # parameter value to extract
@@ -52,5 +79,10 @@ def run():
     ddg_dic = json_to_dic(IN_DIR + FSEP + FP_MONO, param)
 
     pickle.dump(ddg_dic, open('ddg_dic.pkl', 'wb'))
+
+    # bin by hydrophobicity
+    hydro_bin_dic = bin_by_hydrophobe(ddg_dic)
+
+    print hydro_bin_dic
 
 run()
