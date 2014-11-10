@@ -51,6 +51,6 @@ def run():
 
     ddg_dic = json_to_dic(IN_DIR + FSEP + FP_MONO, param)
 
-    print ddg_dic
+    pickle.dump(ddg_dic, open('ddg_dic.pkl', 'wb'))
 
 run()
