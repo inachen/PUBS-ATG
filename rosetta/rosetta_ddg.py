@@ -30,21 +30,27 @@ MUT_POS = 4
 
 def json_to_dic(jfile, param):
 
+    '''convert json file of Rosetta DDG values to dictionary'''
+
     json_data = open(jfile, 'r')
     raw_ddg = json.load(json_data)
 
     ddg_dic = {}
 
-    for dat in json_data['data']:
+    for dat in raw_ddg['data']:
 
-        allel = (dat['Mutation'][POS_POS], dat['Mutation'][MUT_POS])
-        ddg_dic[dat['Mutation']] = dat[param]
+        allel = (int(dat['Mutation'][POS_POS]), str(dat['Mutation'][MUT_POS]))
+        ddg_dic[allel] = dat[param]
+
+    return ddg_dic
 
 
 def run():
     # parameter value to extract
-    param = "global_DGG"
+    param = "global_DDG"
 
-    json_to_dic(IN_DIR + FSEP + FP_MONO, param)
+    ddg_dic = json_to_dic(IN_DIR + FSEP + FP_MONO, param)
+
+    print ddg_dic
 
 run()
