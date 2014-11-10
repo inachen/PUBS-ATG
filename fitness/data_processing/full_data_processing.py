@@ -15,9 +15,12 @@ import os.path
 from Bio import SeqIO
 import cPickle as pickle
 
-############ TO DO ################
-#
-###################################
+############ README ###################################################
+# Have these directories created:
+# output/ : output files go here (incl. output pickles)
+# pickles/ : containing reference pickles
+# change constants FASTA_INPUT and TEST_INPUT to where files are stored
+########################################################################
 
 # bio constants
 NUM_AA = 21
@@ -360,20 +363,22 @@ def run():
         # FASTA_INPUT for actual data, TEST_INPUT for small test set
         demultiplex(fileset = FASTA_INPUT)
         check_demult()
+    else :
+        print "Found Demultiplexed Pickle"
 
     ### RUN ONCE - makes bar_to_aa.pkl ###
     if not (os.path.exists(OUTPUT_DIR + BAR_AA_PIC)):
         make_aa_dic()
+    else :
+        print "Found Barcode -> Allele Dictionary"
 
     ### RUN ONCE - make the amino acid table of filtered counts ###
     if not (os.path.exists(OUTPUT_DIR + FILT_PIC)):
 
         # set err_check = False to get only perfect matches
         barcode_filter(err_check=True)
-
-    # print_pickle("filtered_seq_perfect.pkl")
-
-
+    else:
+        print "Found Filtered Pickle"
 
 run()
 

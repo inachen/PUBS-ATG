@@ -1,0 +1,100 @@
+install.packages('knitr')
+library(knitr)
+?kint
+?knit
+install.package("glmulti")
+install.packages("glmulti")
+install.packages("relaimpo")
+dat1 = read.csv("MarineData.Subset.csv")
+dat1 = read.csv("data/MarineData.Subset.csv")
+dat1 = read.csv("MarineData.Subset.csv")
+dat1_2 = read.csv("data_files/fitness1-2.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat1_3 = read.csv("data_files/fitness1-3.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat2_2 = read.csv("data_files/fitness2-2.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat2_3 = read.csv("data_files/fitness2-3.csv", row.names=1, header=TRUE, check.names=FALSE)
+dat1_2 = read.csv("data_files/fitness1-2.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat1_3 = read.csv("data_files/fitness1-3.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat2_2 = read.csv("data_files/fitness2-2.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat2_3 = read.csv("data_files/fitness2-3.csv", row.names=1, header=TRUE, check.names=FALSE)
+log(2.66, 2)
+dat_gcurve = read.csv("data_files/growthcurve.csv", header=TRUE)
+dat_gcurve
+dat_gcurve = read.csv("data_files/growthcurve.csv", header=TRUE)
+dat_gcurve
+summary(dat_gcurve)
+library("ggplot2")
+library(reshape2)
+################
+#
+dat1_2 = read.csv("data_files/fitness1-2.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat1_3 = read.csv("data_files/fitness1-3.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat2_2 = read.csv("data_files/fitness2-2.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat2_3 = read.csv("data_files/fitness2-3.csv", row.names=1, header=TRUE, check.names=FALSE)
+# take log2#
+log1_2 = log(dat1_2,2)#
+log1_3 = log(dat1_3,2)#
+log2_2 = log(dat2_2,2)#
+log2_3 = log(dat2_3,2)
+pheatmap(log1_3, cluster_rows=FALSE, cluster_cols=TRUE, main="Day 1 Sample 3", show_colnames=TRUE )
+library("pheatmap")
+pheatmap(log1_3, cluster_rows=FALSE, cluster_cols=TRUE, main="Day 1 Sample 3", show_colnames=TRUE )
+log1_3
+# replace 0's with 0.001#
+dat1_2[(dat1_2 == 0)] <- 0.05#
+dat1_3[(dat1_3 == 0)] <- 0.005#
+dat2_2[(dat2_2 == 0)] <- 0.05#
+dat2_3[(dat2_3 == 0)] <- 0.005
+################
+#
+# take log2#
+log1_2 = log(dat1_2,2)#
+log1_3 = log(dat1_3,2)#
+log2_2 = log(dat2_2,2)#
+log2_3 = log(dat2_3,2)
+pheatmap(log1_3, cluster_rows=FALSE, cluster_cols=TRUE, main="Day 1 Sample 3", show_colnames=TRUE )
+ta#
+################
+#
+dat1_2 = read.csv("data_files/fitness1-2.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat1_3 = read.csv("data_files/fitness1-3.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat2_2 = read.csv("data_files/fitness2-2.csv", row.names=1, header=TRUE, check.names=FALSE)#
+dat2_3 = read.csv("data_files/fitness2-3.csv", row.names=1, header=TRUE, check.names=FALSE)
+# replace 0's with 0.001#
+dat1_2[(dat1_2 == 0)] <- 0.05#
+dat1_3[(dat1_3 == 0)] <- 0.005#
+dat2_2[(dat2_2 == 0)] <- 0.05#
+dat2_3[(dat2_3 == 0)] <- 0.005
+# take log2#
+log1_2 = log(dat1_2,2)#
+log1_3 = log(dat1_3,2)#
+log2_2 = log(dat2_2,2)#
+log2_3 = log(dat2_3,2)
+log2_avg_1_3 = colMeans(log1_3, na.rm=TRUE)#
+log2_avg_1_3_df = data.frame(dat=log2_avg_1_3, pos=1:77)
+ggplot(log2_avg1_3_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
+    ggtitle("Day 1 Sample 3") + xlab("Position") + ylab("Log2 (Average Fitness)") + #
+    scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
+    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))
+log2_avg1_3 = colMeans(log1_3, na.rm=TRUE)#
+log2_avg1_3_df = data.frame(dat=log2_avg1_3, pos=1:77)
+ggplot(log2_avg1_3_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
+    ggtitle("Day 1 Sample 3") + xlab("Position") + ylab("Log2 (Average Fitness)") + #
+    scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
+    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))
+log2_avg1_3
+x = -log2_avg1_3
+x
+log2_avg1_3 = -colMeans(log1_3, na.rm=TRUE)#
+log2_avg1_3_df = data.frame(dat=log2_avg1_3, pos=1:77)
+ggplot(log2_avg1_3_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
+    ggtitle("Day 1 Sample 3") + xlab("Position") + ylab("Log2 (Average Fitness)") + #
+    scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
+    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))
+ggplot(log2_avg1_3_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
+    ggtitle("Day 1 Sample 3") + xlab("Position") + ylab("- Log2 (Average Fitness)") + #
+    scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
+    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))
+ggplot(log2_avg1_3_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
+    ggtitle("Day 1 Sample 3") + xlab("Position") + ylab("- Average Log2 Fitness") + #
+    scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
+    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))
