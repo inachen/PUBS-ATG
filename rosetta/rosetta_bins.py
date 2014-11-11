@@ -1,6 +1,6 @@
 import numpy as np
 import cPickle as pic
-fitness_dict = pic.load(open("D1S2fitness_scores.py", "rb"))
+fitness_dict = pic.load(open("D2S3fitness_scores.pkl", "rb"))
 ddG_dict = pic.load(open("ddg_dic.pkl", "rb"))
 
 
@@ -12,12 +12,13 @@ compiled = {}
 #print fitness_dict
 
 for key in fitness_dict:
-	print key
-	#fitness_score = fitness_dict[key]
-	#ddG_score = ddG_dict[key]
-	#compiled[key] = (fitness_score, ddG_score)
+	if key[1] != 'STOP':
+		fitness_score = fitness_dict[key]
+		ddG_score = ddG_dict[key]
+		compiled[key] = (fitness_score, ddG_score)
+		print compiled[key]
 	
 	
-#print fitness_dict
+print compiled
 	
 	
