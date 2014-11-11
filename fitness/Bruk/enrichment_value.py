@@ -46,7 +46,7 @@ def enrich_val(seq_data):
 	return enrich_val
 		
 
-#wildtype_E = enrich_val(wildtypedict)
+"""#wildtype_E = enrich_val(wildtypedict)
 e_vals = enrich_val(seq_data)
 
 for key in e_vals:
@@ -55,5 +55,5 @@ for key in e_vals:
 print e_vals
 
 #print wildtype_E
-#def enrich_val(seq_data):
+#def enrich_val(seq_data):"""
 	

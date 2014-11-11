@@ -1,6 +1,7 @@
 import cPickle as pic
 from enrichment_value import enrich_val
 import numpy as np
+from math import log
 num_dic = pic.load(open("aminotonumber.pkl", "rb"))
 
 testset= pic.load(open("filtered_seq_perfect.pkl", "rb"))
@@ -33,7 +34,11 @@ j= int(raw_input("sample#: "))-1
 fitness_scores_d2s3 = {}
 
 for key in testset:
-	fitness_scores_d2s3[key] = testset[key][1][2]
+	try:
+		log_transformed = log(testset[key][1][2])/log(2)
+		fitness_scores_d2s3[key] = log_transformed
+	except:
+		pass
 
 
 
