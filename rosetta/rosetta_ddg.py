@@ -77,8 +77,29 @@ def bin_by_hydrophobe(ddg_dic):
 
 def dic_to_lsts(dic, fit_dic):
 
-    return
-    # TODO
+    ddg_lst = []
+    fit_lst = []
+
+    for mut, ddg in dic.iteritems():
+
+        if mut in fit_dic.keys():
+            ddg_lst.append(ddg)
+            fit_lst.append(fit_dic[mut])
+
+    return (ddg_lst, fit_lst)
+
+def lsts_to_csv(lst1, lst2, h1, h2):
+
+    lst = [list(i) for i in zip(lst1, lst2)]
+
+    outfile = open(OUT_DIR + FSEP + h1+"_"+h2+".csv",'wb')
+
+    print lst
+
+    wr = csv.writer(outfile)
+    wr.writerow([h1, h2])
+    for i in lst:
+        wr.writerow(i)
 
 def run():
     # parameter value to extract
@@ -97,9 +118,11 @@ def run():
     # get fitness dictionary
     fitness_dic = pickle.load(open(IN_DIR+FSEP+FITNESS_PKL, "rb"))
 
-    print fitness_dic
+    # generate lists for corrleation
+    ddg_lst, fit_lst = dic_to_lsts(ddg_dic, fitness_dic)
 
-    
+    lsts_to_csv(ddg_lst, fit_lst, 'DDG', 'Fitness')
+
 
 
 run()
