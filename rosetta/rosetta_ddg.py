@@ -75,6 +75,13 @@ def bin_by_hydrophobe(ddg_dic):
 
     return hydro_bin_dic
 
+def bin_dic_to_csv(dic, fit_dic):
+    
+    for label, d in dic.iteritems():
+        ddg_lst, fit_lst = dic_to_lsts(d, fit_dic)
+
+        lsts_to_csv(ddg_lst, fit_lst, 'DDG', 'Fitness', label)
+
 def dic_to_lsts(dic, fit_dic):
 
     ddg_lst = []
@@ -88,13 +95,11 @@ def dic_to_lsts(dic, fit_dic):
 
     return (ddg_lst, fit_lst)
 
-def lsts_to_csv(lst1, lst2, h1, h2):
+def lsts_to_csv(lst1, lst2, h1, h2, bintype):
 
     lst = [list(i) for i in zip(lst1, lst2)]
 
-    outfile = open(OUT_DIR + FSEP + h1+"_"+h2+".csv",'wb')
-
-    print lst
+    outfile = open(OUT_DIR + FSEP + bintype+"_"+h1+"_"+h2+".csv",'wb')
 
     wr = csv.writer(outfile)
     wr.writerow([h1, h2])
@@ -121,7 +126,10 @@ def run():
     # generate lists for corrleation
     ddg_lst, fit_lst = dic_to_lsts(ddg_dic, fitness_dic)
 
-    lsts_to_csv(ddg_lst, fit_lst, 'DDG', 'Fitness')
+    lsts_to_csv(ddg_lst, fit_lst, 'DDG', 'Fitness', 'all')
+
+    bin_dic_to_csv(hydro_bin_dic, fitness_dic)
+
 
 
 
