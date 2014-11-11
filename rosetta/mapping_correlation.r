@@ -7,4 +7,7 @@ polar = read.csv('out_pickles/polar_DDG_Fitness.csv', header=TRUE, check.names=F
 l_trans_charged = log2(charged)
 l_trans_hydrophobic = log2(hydrophbic)
 l_trans_polar = log2(polar)
-plot(l_trans_hydrophobic)
+#l_combined = l_trans_charged + l_trans_hydrophobic
+plot(l_trans_polar, col = "blue") 
+points(l_trans_charged, col = "red")
+points(l_trans_hydrophobic, col = "green")
