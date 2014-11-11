@@ -38,7 +38,7 @@ for key in testset:
 
 
 print fitness_scores_d2s3
-pic.dump(fitness_scores_d2s3, open("D2S3fitness_scores.pic", "wb"))
+pic.dump(fitness_scores_d2s3, open("D1S3fitness_scores.pkl", "wb"))
 
 """
 fitnessarray = np.zeros((22,78))
