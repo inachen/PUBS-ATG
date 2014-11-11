@@ -76,15 +76,16 @@ def check(seq1, seq2):
 				f.append(str(i + 1) + ": " + seq1[i] + ", " +  str(j + 1) +": " + seq2[j])
 	return f			
 	
+print mult_comp(barcodes, barcodes)
 #print single_comp("cats", "dogs")
 
-num_list = mult_comp_list(alleles, alleles)
-plt.hist(num_list)
-plt.title('Hamming Distances of Barcodes')
-plt.xlabel('Hamming Distance Values')
-plt.ylabel('Number of Occurances')
-#plt.show()
-plt.savefig('barcodes_histogram')
+# num_list = mult_comp_list(alleles, alleles)
+# plt.hist(num_list)
+# plt.title('Hamming Distances of Barcodes')
+# plt.xlabel('Hamming Distance Values')
+# plt.ylabel('Number of Occurances')
+# #plt.show()
+# plt.savefig('barcodes_histogram')
 #small_dist = list_small_dist(allele_set, allele_set)
 #print small_dist
 #pic.dump(small_dist, open('test_dump.pkl', 'wb'))

@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib
 import cPickle as pic
-#seq_data = pic.load(open("2500_filtered_seq.pkl", "rb"))
+seq_data = pic.load(open("filtered_seq_perfect.pkl", "rb"))
 
 '''#making a dictionary called wildtypedict to identify wt
 ubiquitin = "MQIFVKTLTGKTITLEVESSDTIDNVKSKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG"
@@ -47,7 +47,13 @@ def enrich_val(seq_data):
 		
 
 #wildtype_E = enrich_val(wildtypedict)
-#print enrich_val(seq_data)
+e_vals = enrich_val(seq_data)
+
+for key in e_vals:
+	if 
+
+print e_vals
+
 #print wildtype_E
 #def enrich_val(seq_data):
 	

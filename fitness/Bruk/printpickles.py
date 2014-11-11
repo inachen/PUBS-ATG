@@ -7,5 +7,5 @@ import cPickle as pic
 #print data1
 
 import cPickle as pic
-data2 = pic.load(open("test_dump.pkl", "rb"))
+data2 = pic.load(open("fitness_scores.pkl", "rb"))
 print data2
