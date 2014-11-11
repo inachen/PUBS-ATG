@@ -20,10 +20,11 @@ import json
 # Constants
 
 # file paths
-IN_DIR = "input_jsons"
+IN_DIR = "input"
 OUT_DIR = "out_pickles"
 FSEP = "/"
 FP_MONO = "uby_1ubq.json"
+FITNESS_PKL = "D2S3fitness_scores.pkl"
 
 # parsing mutations A X1Y, 1 is position, Y is mutation
 POS_POS = 3
@@ -74,7 +75,9 @@ def bin_by_hydrophobe(ddg_dic):
 
     return hydro_bin_dic
 
-def dic_to_lsts(dic):
+def dic_to_lsts(dic, fit_dic):
+
+    return
     # TODO
 
 def run():
@@ -82,14 +85,21 @@ def run():
     param = "global_DDG"
 
     # get ddg dic
-    ddg_dic = json_to_dic(IN_DIR + FSEP + FP_MONO, param)
+    ddg_dic = json_to_dic(IN_DIR+FSEP+FP_MONO, param)
 
-    pickle.dump(ddg_dic, open(OUT_DIR + FSEP + 'ddg_dic.pkl', 'wb'))
+    pickle.dump(ddg_dic, open(OUT_DIR+FSEP+'ddg_dic.pkl', 'wb'))
 
     # bin by hydrophobicity
     hydro_bin_dic = bin_by_hydrophobe(ddg_dic)
 
-    pickle.dump(ddg_dic, open(OUT_DIR + FSEP + 'hydro_bin_dic.pkl', 'wb'))
+    pickle.dump(ddg_dic, open(OUT_DIR+FSEP+'hydro_bin_dic.pkl', 'wb'))
+
+    # get fitness dictionary
+    fitness_dic = pickle.load(open(IN_DIR+FSEP+FITNESS_PKL, "rb"))
+
+    print fitness_dic
+
+    
 
 
 run()
