@@ -83,6 +83,8 @@ for key in correlation:
 
 print "printing correlations"
 print final_data
+final_data[0] = 0
+print final_data
 
 filename = raw_input("save file as: ")
 
@@ -92,6 +94,7 @@ with open(filename, 'w') as filename:
 			filename.write("%s\t" % item)
 		except:
 			pass
+
 
 
 
