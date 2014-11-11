@@ -4,7 +4,7 @@ import cPickle as pic
 fitness_dict = pic.load(open("input/D1S3fitness_scores.pkl", "rb"))
 ddg = pic.load(open("out_pickles/ddg_dic.pkl", "rb"))
 
-
+all_aa = ['M', 'C', 'I', 'L', 'Y', 'F', 'W','Q', 'P', 'N', 'A', 'T', 'S', 'V', 'G','E', 'D', 'K', 'R', 'H']
 hydro = ['M', 'C', 'I', 'L', 'Y', 'F', 'W']
 polar = ['Q', 'P', 'N', 'A', 'T', 'S', 'V', 'G']
 charged = ['E', 'D', 'K', 'R', 'H']
@@ -26,9 +26,11 @@ for key in ddg:
 print "unmatched key count: " + str(count)	
 
 ### parses by type of amino acid###
-aa_type = int(raw_input("input # of choice >> 1: hydrophobic, 2: polar, 3: charged, 4: fitness scores, 5: ddG ???"))
+aa_type = int(raw_input("input # of choice >> 0: all amino acids, 1: hydrophobic, 2: polar, 3: charged, 4: fitness scores, 5: ddG ???"))
 
-if aa_type == 1:
+if aa_type == 0:
+	bin_type = all_aa
+elif aa_type == 1:
 	bin_type= hydro
 elif aa_type ==2:
 	bin_type = polar
