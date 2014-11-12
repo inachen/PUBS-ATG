@@ -1,0 +1,9 @@
+load 1UBQ.pdb, async=0
+ribbackbone
+~disp
+disp @ca
+represent bs
+setattr m autochain 0
+setattr m ballScale .6
+rangecolor bfactor,a min blue max red
+orient

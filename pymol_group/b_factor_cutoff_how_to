@@ -1,0 +1,1 @@
+awk '{if ($1=="ATOM" && $11>.75) print $0}' ub_day2_sample2.pdb > ub_day2_b75.pdb
