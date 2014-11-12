@@ -11,3 +11,5 @@ l_trans_polar = log2(polar)
 plot(l_trans_polar, col = "blue") 
 points(l_trans_charged, col = "red")
 points(l_trans_hydrophobic, col = "green")
+abline(lm(l_trans_polar[,2]~l_trans_polar[,1]))
+l_trans_polar[,1]
