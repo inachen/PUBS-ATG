@@ -1,0 +1,139 @@
+install.packages('knitr')
+library(knitr)
+?kint
+?knit
+install.package("glmulti")
+install.packages("glmulti")
+install.packages("relaimpo")
+dat1 = read.csv("MarineData.Subset.csv")
+dat1 = read.csv("data/MarineData.Subset.csv")
+dat1 = read.csv("MarineData.Subset.csv")
+n1<-10#
+n2<-10#
+m1<-1#
+m2<-0#
+x1<-rnorm(n1,mean=m1,sd=1)#
+x2<-rnorm(n2,mean=m2,sd=1)#
+x<-c(x1,x2)#
+group<-c(rep(0,n1),rep(1,n2))
+students<-t.test(x~group)#
+stat<-students$statistic#
+pvalue<-students$p.value
+table(sample(group))#
+P<-100#
+tperm<-NULL#
+for(p in 1:P){#
+    tperm[p]<-t.test(x~sample(group))$statistic#
+}#
+permp<-mean(tperm>stat)
+permp
+stat
+n1<-10#
+n2<-10#
+m1<-1#
+m2<-0#
+x1<-rnorm(n1,mean=m1,sd=1)#
+x2<-rnorm(n2,mean=m2,sd=1)#
+x<-c(x1,x2)
+group<-c(rep(0,n1),rep(1,n2))#
+#
+# Student's T test#
+students<-t.test(x~group)#
+stat<-students$statistic#
+pvalue<-students$p.value
+stat
+pvalue
+table(sample(group))#
+P<-100#
+tperm<-NULL#
+for(p in 1:P){#
+    tperm[p]<-t.test(x~sample(group))$statistic#
+}#
+permp<-mean(tperm>stat)
+table(group[sample(1:length(group),replace=TRUE)])#
+B<-100#
+tboot<-NULL#
+for(b in 1:B){#
+    bstrap<-sample(1:length(group),replace=TRUE)#
+    tboot[b]<-t.test(x[bstrap]~group[bstrap])$statistic#
+}#
+bootp<-mean(tperm>stat)
+table(group)
+group
+sample(group)
+bootp
+permp
+table(sample(group))#
+P<-1000#
+tperm<-NULL#
+for(p in 1:P){#
+    tperm[p]<-t.test(x~sample(group))$statistic#
+}#
+permp<-mean(tperm>stat)
+permp
+table(sample(group))#
+P<-100000#
+tperm<-NULL#
+for(p in 1:P){#
+    tperm[p]<-t.test(x~sample(group))$statistic#
+}#
+permp<-mean(tperm>stat)
+permp
+table(group[sample(1:length(group),replace=TRUE)])#
+B<-100#
+tboot<-NULL#
+for(b in 1:B){#
+    bstrap<-sample(1:length(group),replace=TRUE)#
+    tboot[b]<-t.test(x[bstrap]~group[bstrap])$statistic#
+}#
+bootp<-mean(tperm>stat)
+bootp
+table(group[sample(1:length(group),replace=TRUE)]) # sampling with replacement#
+B<-100#
+tboot<-NULL#
+for(b in 1:B){#
+    bstrap<-sample(1:length(group),replace=TRUE)#
+    tboot[b]<-t.test(x[bstrap]~group[bstrap])$statistic#
+}#
+bootp<-mean(tboot>stat)
+bootp
+source("http://bioconductor.org/biocLite.R")
+biocLite("DESeq")
+dat1 = read.csv('out_pickles/DDG_Fitness.csv', header=TRUE, check.names=FALSE)
+all_dat = read.csv('out_pickles/all_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+charged_dat = read.csv('out_pickles/charged_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+hydrophbic_dat = read.csv('out_pickles/hydrophobic_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+polar_dat = read.csv('out_pickles/polar_DDG_Fitness.csv', header=TRUE, check.names=FALSE)
+all_dat = read.csv('out_pickles/all_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+charged_dat = read.csv('out_pickles/charged_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+hydrophbic_dat = read.csv('out_pickles/hydrophobic_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+polar_dat = read.csv('out_pickles/polar_DDG_Fitness.csv', header=TRUE, check.names=FALSE)
+all_dat['Fitness'] - charged_dat['Fitness']
+len(all_dat)
+length(all_dat)
+all_dat
+summary(all_dat)
+all_dat('Fitness')
+all_dat['Fitness'] - charged_dat['Fitness']
+all_dat['Fitness']
+charged_dat['Fitness']
+charged_dat['Fitness'] - all_dat['Fitness']
+summary(charged_dat)
+summary(charged_dat)
+charged_dat['Fitness'] - polar_dat['Fitness']
+plot(charged_dat)#
+points(hydrophbic_dat, 'r')
+plot(charged_dat)#
+points(hydrophbic_dat, col='red')
+plot(charged_dat)#
+points(hydrophbic_dat, col='red')#
+points(polar_dat, col='blue')
+plot(charged_dat)#
+points(hydrophbic_dat, col='red')#
+points(polar_dat, col='blue')
+plot(charged_dat, col='green')#
+points(hydrophbic_dat, col='red')#
+points(polar_dat, col='blue')
+plot(charged_dat)#
+points(hydrophbic_dat, col='red')#
+points(polar_dat, col='blue')
