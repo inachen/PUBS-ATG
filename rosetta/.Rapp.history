@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 install.packages('knitr')
 library(knitr)
 ?kint
@@ -137,3 +138,137 @@ points(polar_dat, col='blue')
 plot(charged_dat)#
 points(hydrophbic_dat, col='red')#
 points(polar_dat, col='blue')
+=======
+dat1 = read.csv('out_pickles/DDG_Fitness.csv', header=TRUE, check.names=FALSE)
+dat1 = read.csv('out_pickles/DDG_Fitness.csv', header=TRUE, check.names=FALSE)
+dat1
+dat1['DDG']
+dat1[1]
+dat1[1][1]
+dat1['DDG'][1]
+hist(dat1['DDG'])
+summary(dat1)
+hist(dat1)
+plot(dat1)
+dat1 = read.csv('out_pickles/DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+plot(dat1)
+dat1 = read.csv('out_pickles/DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+l_transform = log2(dat1)#
+plot(l_transform)
+charged = read.csv('out_pickles/charged_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+hydrophbic = read.csv('out_pickles/hydrophobic_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+polar = read.csv('out_pickles/polar_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+l_trans_charged = log2(charged)#
+l_trans_hydrophobic = log2(hydrophbic)#
+l_trans_polar = log2(polar)#
+plot(l_trans_polar)
+charged = read.csv('out_pickles/charged_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+hydrophbic = read.csv('out_pickles/hydrophobic_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+polar = read.csv('out_pickles/polar_DDG_Fitness.csv', header=TRUE, check.names=FALSE)#
+l_trans_charged = log2(charged)#
+l_trans_hydrophobic = log2(hydrophbic)#
+l_trans_polar = log2(polar)#
+plot(l_trans_charged)
+plot(l_trans_hydrophobic)
+plot(l_trans_hydrophobic, col = 26)
+plot((l_trans_hydrophobic, col = 26), (l_trans_charged, col = 32))
+plot((l_trans_hydrophobic, col = 26), (l_trans_charged, col = 32))
+plot((l_trans_hydrophobic, col = 26), (l_trans_charged, col = 32))
+plot((l_trans_hydrophobic, col = 26) (l_trans_charged, col = 32))
+plot(l_trans_hydrophobic, col = 26)
+plot(l_trans_hydrophobic, (col = 26))
+plot(l_trans_hydrophobic, (col = 26))
+plot(l_trans_charged(col = 32))
+plot(l_trans_charged(col = 32))
+plot(l_trans_hydrophobic(col = 26))
+plot(l_trans_hydrophobic, (col = 26))
+plot(l_trans_hydrophobic, col = 26)
+plot(l_trans_charged, col = 32)
+plot(l_trans_hydrophobic, col = 26) #
+plot(l_trans_charged, col = 32)
+plot(l_trans_hydrophobic, col = 26) #
+plot(l_trans_charged, col = 32)
+plot(l_trans_hydrophobic, col = 26), (l_trans_charged, col = 32)
+plot(l_trans_hydrophobic, col = 26) plot(l_trans_charged, col = 32)
+plot(l_trans_hydrophobic, col = 26) #
+plot(l_trans_charged, col = 32)
+plot(l_trans_hydrophobic, col = 26)
+plot(l_trans_charged, col = 32)
+plot(l_trans_hydrophobic, col = 26, l_trans_charged, col = 32)
+plot(l_trans_hydrophobic, col = 26, l_trans_charged, col = 32)
+plot(l_combined, col = 26)
+plot(l_trans_polar, col = 26)
+plot(l_trans_polar, col = "blue") #
+point(l_trans_charged, col = "red")
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")
+setwd("/Users/smoss/Documents/PUBS/PUBS-ATG/rosetta")
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")#
+points(l_trans_hydrophobic, col = "yellow")
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")#
+points(l_trans_hydrophobic, col = "black")
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")#
+points(l_trans_hydrophobic, col = "green")
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")#
+points(l_trans_hydrophobic, col = "green")#
+abline(lm(l_trans_polar), col = "blue")
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")#
+points(l_trans_hydrophobic, col = "green")#
+abline(lm(l_trans_polar(DDG)~l_trans_polar(Fitness)), col = "blue")
+setwd("/Users/smoss/Documents/PUBS/PUBS-ATG/rosetta")
+l_trans_charged
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")#
+points(l_trans_hydrophobic, col = "green")#
+abline(lm(l_trans_polar[DDG]~l_trans_polar[Fitness]), col = "blue")
+l_trans_charged(DDG)
+l_trans_charged[DDG]
+l_trans_charged[DDG]
+l_trans_charged(DDG)
+l_trans_charged#
+DDG
+l_trans_charged[,1]
+l_trans_charged[,1]
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")#
+points(l_trans_hydrophobic, col = "green")#
+abline(lm(l_trans_polar[,1]~l_trans_polar[,2]), col = "blue")
+abline(lm(l_trans_polar[,1], l_trans_polar[,2]), col = "blue")
+abline(lm(l_trans_polar[,1]~l_trans_polar[,2]), col = "blue")
+abline(lm(l_trans_polar), col = "blue")
+l_trans_charged[,1]
+abline(lm(l_trans_polar), col = "blue")
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")#
+points(l_trans_hydrophobic, col = "green")#
+abline(lm(l_trans_polar), col = "blue")
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")#
+points(l_trans_hydrophobic, col = "green")#
+abline(lm(l_trans_polar[,2]~l_trans_polar[,1]))
+l_trans_polar[,1]
+l_trans_polar[,1]
+l_trans_polar_edit = l_trans_polar[apply(l_trans_polar, 1, Compose(is.finite, all)),]#
+#l_combined = l_trans_charged + l_trans_hydrophobic#
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")#
+points(l_trans_hydrophobic, col = "green")#
+abline(lm(l_trans_polar[,2]~l_trans_polar[,1]))#
+l_trans_polar[,1]
+l_trans_polar_edit = l_trans_polar[apply(l_trans_polar, 1, Compose(is.finite, all)),]#
+#l_combined = l_trans_charged + l_trans_hydrophobic#
+plot(l_trans_polar, col = "blue") #
+points(l_trans_charged, col = "red")#
+points(l_trans_hydrophobic, col = "green")#
+abline(lm(l_trans_polar[,2]~l_trans_polar[,1]))#
+l_trans_polar_edit[,1]
+l_trans_polar_edit[,1]
+l_trans_polar_edit = l_trans_polar[apply(l_trans_polar, 1, Compose(is.finite, all)),]
+l_trans_polar_edit = l_trans_polar[apply(l_trans_polar, 1, Compose(is.finite, all)),]
+l_trans_polar_edit = l_trans_polar[apply(l_trans_polar, 1, compose(is.finite, all)),]
+>>>>>>> Stashed changes
