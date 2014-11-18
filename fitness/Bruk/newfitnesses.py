@@ -21,7 +21,7 @@ for key in testset.iterkeys():
 		fitnessarray[int(aminonum),int(key[0])] = testset[key][0]
 print fitnessarray[1]
 
-filename = "D1_new_fitness_scores.txt"
+filename = "HU_D1_new_fitness_scores.txt"
 # create a file called array file, write format
 arrayfile= open(filename, "w")
 
@@ -29,4 +29,4 @@ arrayfile= open(filename, "w")
 #fitnessarray.tofile(arrayfile, sep = "\t", format = "%F")
 
 np.savetxt(arrayfile, fitnessarray, delimiter = "	")
-pic.dump(fitnessarray, open("D1_new_fitness_scores.py", "wb"))
+pic.dump(fitnessarray, open("HU_D1_new_fitness_scores.py", "wb"))
