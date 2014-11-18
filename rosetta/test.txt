@@ -1,0 +1,65 @@
+reinitialize
+set matrix_mode, 1
+set movie_panel, 1
+set scene_buttons, 1
+set cache_frames, 1
+config_mouse three_button_motions, 1
+ 
+# download the complex and setup it up
+load 1te1.pdb,
+extract AA, c. A
+extract BB, c. B
+color marine, AA
+color grey, BB
+as surface, BB
+as cartoon, AA
+ 
+# intialize the movie 
+mset 1 x410
+ 
+# orient the scene
+set_view (\
+     0.423117876,    0.061672822,    0.903973043,\
+     0.789699256,   -0.514252067,   -0.334546506,\
+     0.444237947,    0.855418444,   -0.266292989,\
+     0.000107866,   -0.000027858, -196.784057617,\
+    28.171787262,   70.919288635,   52.095287323,\
+   155.143981934,  238.418914795,  -20.000000000 )
+ 
+# move the inhibitor off the screeen
+translate [0,0,100], object=AA
+ 
+# first movie scene
+frame 1
+wizard message, "Let's watch the binder float it, while the camera doesn't move."
+mview store, object=AA
+mview store, object=BB
+ 
+# 2 second pause for the user to catch up
+frame 60
+mview store, object=AA
+mview store, object=BB
+ 
+frame 300
+# slide the inhibitor in from over the camera.  :-)
+translate [0,0,-100], object=AA
+mview store, object=AA
+mview interpolate, object=AA
+ 
+# store & wait 2 seconds...
+frame 360
+mview store, object=AA
+mview store, object=BB
+mview reinterpolate, object=AA
+mview reinterpolate, object=BB
+ 
+# 'explode' apart
+frame 380
+translate [-70, 70, 70], object=AA
+translate [70, -70, -70], object=BB
+mview store, object=AA
+mview store, object=BB
+mview reinterpolate, object=AA
+mview reinterpolate, object=BB
+ 
+mplay
