@@ -26,5 +26,5 @@ filename = "HU_D1_new_fitness_scores.txt"
 arrayfile= open(filename, "w")
 
 ################### Change the name of the output pickle ###################
-np.savetxt(arrayfile, fitnessarray, delimiter = "	")
+np.savetxt(arrayfile, fitnessarray, delimiter = ",")
 pic.dump(fitnessarray, open("HU_D1_new_fitness_scores.py", "wb"))
