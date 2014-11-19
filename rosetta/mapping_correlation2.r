@@ -6,7 +6,7 @@
 all_dat = read.csv('out_pickles/all_Monomer_DDG_Fitness.csv', header=TRUE, check.names=FALSE)
 
 pdf(file='plots/all_Monomer.pdf')
-plot(log2(all_dat), pch=16)
+plot(log2(all_dat), pch=16) 
 title("Monomer")
 dev.off()
 
