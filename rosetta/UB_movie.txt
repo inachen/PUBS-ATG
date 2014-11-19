@@ -1,0 +1,170 @@
+reinitialize
+set matrix_mode, 1
+set movie_panel, 1
+set scene_buttons, 1
+set cache_frames, 1
+config_mouse three_button_motions, 1
+ 
+load 2GMI.pse
+#select E2, chain A
+#select MMS2, chain B
+select UB, chain C
+select covalent, resi 561
+#extract UB, chain C
+extract MMS2, chain B
+extract E2, chain A
+color marine, E2
+color grey, MMS2
+as surface, E2
+as surface, MMS2
+as cartoon, UB
+ 
+mset 1 x1000
+ 
+orient
+
+translate [0,0,100], object=UB
+
+frame 1
+mview store, object=MMS2
+mview store, object=E2
+#mview store
+ 
+set_view (\
+    -0.599383652,    0.743741095,    0.295939058,\
+     0.799002111,    0.578190267,    0.165181056,\
+    -0.048256520,    0.335462123,   -0.940815389,\
+     0.000000000,    0.000000000, -329.573455811,\
+     5.602733612,   21.602519989,    0.000003815,\
+   277.899505615,  381.247283936,  -20.000000000 ) 
+
+frame 60
+mview store
+ 
+# define the inhib as the binding loop
+select binding_site, resi 571
+select (none)
+ 
+# slowly zoom in
+frame 100
+zoom binding_site
+mview store
+ 
+# look around the binding pocket
+frame 180
+turn x, 360
+mview store
+ 
+# wrap back more quickly...
+frame 320
+turn y, 180
+mview store
+
+translate [0,0,100], object=MMS2
+
+frame 490
+#translate [0,0,+100], object=MMS2
+mview store, object=MMS2
+mview interpolate, object=MMS2
+#mview store
+
+frame 390
+mview store, object=MMS2
+mview store, object=E2
+mview reinterpolate, object=MMS2
+mview reinterpolate, object=E2
+
+
+# one more gratuitous view
+frame 600
+### cut below here and paste into script ###
+### cut below here and paste into script ###
+set_view (\
+    -0.852495909,    0.281913519,    0.440195322,\
+     0.110207438,    0.920111358,   -0.375834495,\
+    -0.510981321,   -0.271884203,   -0.815460920,\
+     0.000053555,    0.000026345,  -98.705787659,\
+    22.596321106,   32.269584656,   -1.381577969,\
+    65.606353760,  131.803726196,  -20.000001907 )
+mview store
+ 
+frame 700
+set_view (\
+    -0.883944750,    0.430790305,    0.181814834,\
+     0.463548630,    0.858354092,    0.219891459,\
+    -0.061333276,    0.278652966,   -0.958430767,\
+     0.000010359,    0.000005096, -324.162658691,\
+     8.889893532,   23.665906906,   -0.267242879,\
+   270.033325195,  378.291687012,  -20.000000000 )
+mview store
+
+translate [0,0,+100], object=E2
+
+frame 750
+mview store, object=E2
+mview interpolate, object+E2
+
+frame 800
+mview store, object=E2
+mview store, object=MMS2
+mview reinterpolate, object=MMS2
+mview reinterpolate, object=E2
+#mview store
+
+orient
+
+#translate [0,0,100], object=UB
+
+frame 850
+set_view (\
+    -0.599383652,    0.743741095,    0.295939058,\
+     0.799002111,    0.578190267,    0.165181056,\
+    -0.048256520,    0.335462123,   -0.940815389,\
+     0.000000000,    0.000000000, -329.573455811,\
+     5.602733612,   21.602519989,    0.000003815,\
+   277.899505615,  381.247283936,  -20.000000000 )
+mview store
+
+#wait 3 seconds
+frame 900
+mview store
+
+# define the inhib as the binding loop
+select binding_site, resi 571
+select (none)
+
+# slowly zoom in
+frame 1000
+zoom binding_site
+mview store
+
+
+# stop a second
+frame 1100
+translate [0,0,100], object=E2
+mview store, object=E2
+mview interpolate, object=E2
+mview store
+
+frame 1500
+mview store, object=E2
+mview store, object=MMS2
+mview reinterpolate, object=E2
+mview reinterpolate, object=MMS2
+
+frame 1550
+mview store, object=E2
+mview store, object=MMS2
+mview store
+
+mview reinterpolate
+
+frame 1555
+translate [0,0,+100], object=E2
+mview store, object=E2
+mview interpolate, object=E2
+
+
+mview reinterpolate
+mplay
+

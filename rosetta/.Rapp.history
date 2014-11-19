@@ -1448,4 +1448,7 @@ l_trans_polar_edit = l_trans_polar[apply(l_trans_polar, 1, Compose(is.finite, al
 l_trans_polar_edit = l_trans_polar[apply(l_trans_polar, 1, Compose(is.finite, all)),]
 l_trans_polar_edit = l_trans_polar[apply(l_trans_polar, 1, compose(is.finite, all)),]
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+>>>>>>> FETCH_HEAD
+=======
 >>>>>>> FETCH_HEAD

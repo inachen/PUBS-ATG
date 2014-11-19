@@ -6,3 +6,5 @@ rosetta/.Rapp.history
 *.pyc
 
 rosetta/.Rapp.history
+
+.pymol.swo
