@@ -1,8 +1,8 @@
 # plotting matrices
 
-dat_mat = read.csv("fitness_csv/Hydroxyurea_sub_Caffeine_fitness.csv", header=FALSE, check.names=TRUE) # row.names = 1
+dat_mat = read.csv("fitness_csv/Hydroxyurea_sub_DMSO_fitness.csv", header=FALSE, check.names=TRUE) # row.names = 1
 
-title = "HU - Caffeine"
+title = "HU - DMSO"
 
 library("pheatmap")
 
