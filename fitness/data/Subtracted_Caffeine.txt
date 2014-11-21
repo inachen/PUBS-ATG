@@ -1,0 +1,186 @@
+
+R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.65 (6833) x86_64-apple-darwin10.8.0]
+
+> nba <- read.csv("subtracted_caffeine.csv", sep=",")
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'subtracted_caffeine.csv': No such file or directory
+> Caffeine <- read.csv("subtracted_caffeine.csv", sep=",")
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'subtracted_caffeine.csv': No such file or directory
+> 
+> source("/Users/lkenner/PUBS/subtracted_caffeine.csv")
+Error in source("/Users/lkenner/PUBS/subtracted_caffeine.csv") : 
+  /Users/lkenner/PUBS/subtracted_caffeine.csv:1:25: unexpected ','
+1: 0.000000000000000000e+00,
+                            ^
+> source("/Users/lkenner/PUBS-ATG/fitness/data/subtracted_caffeine.xlsx")
+Error in source("/Users/lkenner/PUBS-ATG/fitness/data/subtracted_caffeine.xlsx") : 
+  /Users/lkenner/PUBS-ATG/fitness/data/subtracted_caffeine.xlsx:1:3: unexpected input
+1: PK
+      ^
+In addition: Warning messages:
+1: In grepl("\n", lines, fixed = TRUE) :
+  input string 2 is invalid in this locale
+2: In grepl("\n", lines, fixed = TRUE) :
+  input string 3 is invalid in this locale
+3: In grepl("\n", lines, fixed = TRUE) :
+  input string 4 is invalid in this locale
+4: In grepl("\n", lines, fixed = TRUE) :
+  input string 5 is invalid in this locale
+5: In grepl("\n", lines, fixed = TRUE) :
+  input string 6 is invalid in this locale
+>  help(read.csv)
+starting httpd help server ... done
+> caffiene <- read.csv(file="subtracted_caffeine.csv",head=TRUE,sep=",")
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'subtracted_caffeine.csv': No such file or directory
+> caffiene <- read.csv(file="PUBS/subtracted_caffeine.csv",head=TRUE,sep=",")
+> pheatmap(caffiene, cluster_rows=FALSE, cluster_cols=FALSE, main="Day 1 Sample 2", show_colnames=TRUE )
+Error: could not find function "pheatmap"
+> library("pheatmap")
+Error in library("pheatmap") : there is no package called ‘pheatmap’
+> library("pheatmap")
+Error in library("pheatmap") : there is no package called ‘pheatmap’
+> library("Downloads/pheatmap")
+Error in library("Downloads/pheatmap") : 
+  there is no package called ‘Downloads/pheatmap’
+> load("/Users/lkenner/Downloads/pheatmap/help/paths.rds")
+Error: bad restore file magic number (file may be corrupted) -- no data loaded
+In addition: Warning message:
+file ‘paths.rds’ has magic number 'X'
+  Use of save versions prior to 2 is deprecated 
+> library("pheatmap")
+Error in library("pheatmap") : there is no package called ‘pheatmap’
+> .libPaths()
+[1] "/Library/Frameworks/R.framework/Versions/3.1/Resources/library"
+trying URL 'http://cran.cnr.Berkeley.edu/bin/macosx/contrib/3.1/pheatmap_0.7.7.tgz'
+Content type 'application/x-gzip' length 28814 bytes (28 Kb)
+opened URL
+==================================================
+downloaded 28 Kb
+
+
+The downloaded binary packages are in
+	/var/folders/yb/xl4l8pbn31nbz7l0tdjnnnvm0000gn/T//Rtmp19E0Ii/downloaded_packages
+> library("pheatmap")
+Error in library("pheatmap") : there is no package called ‘pheatmap’
+> library("pheatmap")
+Error in library("pheatmap") : there is no package called ‘pheatmap’
+> source("/Users/lkenner/PUBS/pheatmap/R/pheatmap")
+Error in dynGet("__LoadingNamespaceInfo__", stop("not loading a namespace")) : 
+  not loading a namespace
+> source("/Users/lkenner/PUBS/pheatmap/R/pheatmap.rdb")
+Error in source("/Users/lkenner/PUBS/pheatmap/R/pheatmap.rdb") : 
+  invalid multibyte character in parser at line 2
+In addition: Warning messages:
+1: In grepl("\n", lines, fixed = TRUE) :
+  input string 2 is invalid in this locale
+2: In grepl("\n", lines, fixed = TRUE) :
+  input string 3 is invalid in this locale
+3: In grepl("\n", lines, fixed = TRUE) :
+  input string 4 is invalid in this locale
+4: In grepl("\n", lines, fixed = TRUE) :
+  input string 5 is invalid in this locale
+5: In grepl("\n", lines, fixed = TRUE) :
+  input string 6 is invalid in this locale
+> load("/Users/lkenner/PUBS/pheatmap/R/pheatmap.rdx")
+Error: bad restore file magic number (file may be corrupted) -- no data loaded
+In addition: Warning message:
+file ‘pheatmap.rdx’ has magic number 'X'
+  Use of save versions prior to 2 is deprecated 
+> .libPaths()
+[1] "/Library/Frameworks/R.framework/Versions/3.1/Resources/library"
+> library("/Users/lkenner/PUBS/pheatmap/R/pheatmap.r")
+Error in library("/Users/lkenner/PUBS/pheatmap/R/pheatmap.r") : 
+  there is no package called ‘/Users/lkenner/PUBS/pheatmap/R/pheatmap.r’
+> .packages()
+> .lib.loc
+Error: object '.lib.loc' not found
+> library("pheatmap", help = NULL, lib.loc = .lib.loc,
++ 	character.only = FALSE, logical.return = FALSE)
+Error in library("pheatmap", help = NULL, lib.loc = .lib.loc, character.only = FALSE,  : 
+  object '.lib.loc' not found
+> library("pheatmap", help = NULL,
++ 	character.only = FALSE, logical.return = FALSE)
+Error in library("pheatmap", help = NULL, character.only = FALSE, logical.return = FALSE) : 
+  there is no package called ‘pheatmap’
+> library(pheatmap)
+Error in library(pheatmap) : there is no package called ‘pheatmap’
+> library(pheatmap_0.7.7)
+Error in library(pheatmap_0.7.7) : 
+  there is no package called ‘pheatmap_0.7.7’
+> search()
+ [1] ".GlobalEnv"        "tools:RGUI"        "package:stats"    
+ [4] "package:graphics"  "package:grDevices" "package:utils"    
+ [7] "package:datasets"  "package:methods"   "Autoloads"        
+[10] "package:base"     
+> [7]
+Error: unexpected '[' in "["
+> library(package:graphics)
+Error in library(package:graphics) : 'package' must be of length 1
+> library("package:graphics")
+Error in library("package:graphics") : 
+  there is no package called ‘package:graphics’
+> install.packages("pheatmap", lib="/lkenner/PUBS/")
+Warning in install.packages("pheatmap", lib = "/lkenner/PUBS/") :
+  'lib = "/lkenner/PUBS/"' is not writable
+Would you like to use a personal library instead?  (y/n) y
+Would you like to create a personal library
+~/Library/R/3.1/library
+to install packages into?  (y/n) y
+also installing the dependency ‘RColorBrewer’
+
+trying URL 'http://cran.cnr.Berkeley.edu/bin/macosx/contrib/3.1/RColorBrewer_1.0-5.tgz'
+Content type 'application/x-gzip' length 22751 bytes (22 Kb)
+opened URL
+==================================================
+downloaded 22 Kb
+
+trying URL 'http://cran.cnr.Berkeley.edu/bin/macosx/contrib/3.1/pheatmap_0.7.7.tgz'
+Content type 'application/x-gzip' length 28814 bytes (28 Kb)
+opened URL
+==================================================
+downloaded 28 Kb
+
+
+The downloaded binary packages are in
+	/var/folders/yb/xl4l8pbn31nbz7l0tdjnnnvm0000gn/T//Rtmp19E0Ii/downloaded_packages
+> library(pheatmap, lib.loc="/Library/R/3.1/library")
+Error in library(pheatmap, lib.loc = "/Library/R/3.1/library") : 
+  no library trees found in 'lib.loc'
+> library(pheatmap, lib.loc="~/Library/R/3.1/library")
+> pheatmap(caffiene, cluster_rows=FALSE, cluster_cols=FALSE, main="Day 1 Sample 2", show_colnames=TRUE )
+> pheatmap(caffiene, cluster_rows=FALSE, cluster_cols=FALSE, main="Subtracted_Caffiene", show_colnames=TRUE )
+> pheatmap(caffiene, cluster_rows=FALSE, cluster_cols=FALSE, main="Subtracted_Caffiene", show_colnames=FALSE )
+> pheatmap(caffiene, cluster_rows=FALSE, cluster_cols=TRUE, main="Subtracted_Caffiene", show_colnames=FALSE )
+> pheatmap(caffiene, cluster_rows=FALSE, cluster_cols=TRUE, main="Subtracted_Caffiene", show_colnames=FALSE )
+> TRUE
+[1] TRUE
+> pheatmap(caffiene, cluster_rows=FALSE, cluster_cols=TRUE, main="Subtracted_Caffiene", show_colnames=TRUE )
+> pheatmap(caffiene, cluster_rows=FALSE, cluster_cols=FALSE, main="Subtracted_Caffiene", show_colnames=FALSE )
+> pheatmap(caffiene, cluster_rows=FALSE, cluster_cols=FALSE, main="Subtracted_Caffeine", show_colnames=FALSE )
+> 
