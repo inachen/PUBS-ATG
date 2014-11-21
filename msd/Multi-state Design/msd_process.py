@@ -92,15 +92,11 @@ def get_prop_dic(fasta_fp, patch_num, run_num):
     for s in seq_str_lst:
         cw.writerow([s])
 
-    # convert to sequence with dashes
-
-
     # write sequences with only mutations
     cw = csv.writer(open('out_txt/consensus_run_allel_'+str(run_num)+'_patch_'+str(patch_num)+'.csv', "wb"))
 
     for s in seq_allel_lst:
         cw.writerow([s])
-
 
     # dictionary for consensus proportions
     prop_dic = {}
@@ -124,13 +120,17 @@ def run():
     # file name format: run_#_patch_#_output
     filelst = glob("msd_output/run*_output")
 
+    # goes through all output files
     for fp in filelst:
         info_lst = fp.split('_')
         run_num = int(info_lst[2])
         patch_num = int(info_lst[4])
 
+        # extract .fasta files from output
         get_fasta(fp)
 
+        # produce prop dictionary pickles (for bruk)
+        # also saves sequence txt files for consensus logo
         get_prop_dic(fp+'.fasta', patch_num, run_num)
 
     # fasta_fp = "UQ_CON_interface_Patch1.fasta"
