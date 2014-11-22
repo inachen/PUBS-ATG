@@ -111,7 +111,6 @@ def get_prop_dic(fasta_fp, patch_num, run_num):
             k = str(pos+1)
             prop_dic[k] = prop_dic.get(k, []) + ([(aa, num/float(total))])
 
-    print prop_dic
     # write prop dic to pickle
     pickle.dump(prop_dic, open('outpickles/run_'+str(run_num)+'_patch_'+str(patch_num)+'_propdic.pkl', 'wb'))
 

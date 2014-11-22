@@ -1,0 +1,1773 @@
+core.init: (0) Rosetta version exported  from http://www.rosettacommons.org
+core.init: (0) command: /netapp/home/thompson/Rosetta/rosetta_2014.22/source/bin/mpi_msd.mpi.linuxgccrelease -database /netapp/home/thompson/Rosetta/rosetta_2014.22/database -msd:fitness_file fitness_file_patch4.txt -entity_resfile entity_file_patch4.txt -ms:generations 200 -ms:pop_size 250 -ms:fraction_by_recombination 0.1 -msd::double_lazy_ig_mem_limit 1024 -ignore_unrecognized_res -ignore_zero_occupancy false -mute core.pack.annealer.MultiCoolAnnealer
+core.init: (0) 'RNG device' seed mode, using '/dev/urandom', seed=-1179406181 seed_offset=0 real_seed=-1179406181
+core.init.random: (0) RandomGenerator:init: Normal mode, seed=-1179406181 RG_type=mt19937
+core.scoring.ScoreFunctionFactory: (0) SCOREFUNCTION: talaris2013
+core.scoring.etable: (0) Starting energy table calculation
+core.scoring.etable: (0) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (0) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (0) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.init: (3) Rosetta version exported  from http://www.rosettacommons.org
+core.init: (3) command: /netapp/home/thompson/Rosetta/rosetta_2014.22/source/bin/mpi_msd.mpi.linuxgccrelease -database /netapp/home/thompson/Rosetta/rosetta_2014.22/database -msd:fitness_file fitness_file_patch4.txt -entity_resfile entity_file_patch4.txt -ms:generations 200 -ms:pop_size 250 -ms:fraction_by_recombination 0.1 -msd::double_lazy_ig_mem_limit 1024 -ignore_unrecognized_res -ignore_zero_occupancy false -mute core.pack.annealer.MultiCoolAnnealer
+core.init: (3) 'RNG device' seed mode, using '/dev/urandom', seed=1980656262 seed_offset=0 real_seed=-1179406178
+core.init.random: (3) RandomGenerator:init: Normal mode, seed=-1179406178 RG_type=mt19937
+core.scoring.ScoreFunctionFactory: (3) SCOREFUNCTION: talaris2013
+core.init: (1) Rosetta version exported  from http://www.rosettacommons.org
+core.init: (1) command: /netapp/home/thompson/Rosetta/rosetta_2014.22/source/bin/mpi_msd.mpi.linuxgccrelease -database /netapp/home/thompson/Rosetta/rosetta_2014.22/database -msd:fitness_file fitness_file_patch4.txt -entity_resfile entity_file_patch4.txt -ms:generations 200 -ms:pop_size 250 -ms:fraction_by_recombination 0.1 -msd::double_lazy_ig_mem_limit 1024 -ignore_unrecognized_res -ignore_zero_occupancy false -mute core.pack.annealer.MultiCoolAnnealer
+core.init: (1) 'RNG device' seed mode, using '/dev/urandom', seed=-1914441494 seed_offset=0 real_seed=-1179406180
+core.init.random: (1) RandomGenerator:init: Normal mode, seed=-1179406180 RG_type=mt19937
+core.scoring.ScoreFunctionFactory: (1) SCOREFUNCTION: talaris2013
+core.init: (2) Rosetta version exported  from http://www.rosettacommons.org
+core.init: (2) command: /netapp/home/thompson/Rosetta/rosetta_2014.22/source/bin/mpi_msd.mpi.linuxgccrelease -database /netapp/home/thompson/Rosetta/rosetta_2014.22/database -msd:fitness_file fitness_file_patch4.txt -entity_resfile entity_file_patch4.txt -ms:generations 200 -ms:pop_size 250 -ms:fraction_by_recombination 0.1 -msd::double_lazy_ig_mem_limit 1024 -ignore_unrecognized_res -ignore_zero_occupancy false -mute core.pack.annealer.MultiCoolAnnealer
+core.init: (2) 'RNG device' seed mode, using '/dev/urandom', seed=1280294183 seed_offset=0 real_seed=-1179406179
+core.init.random: (2) RandomGenerator:init: Normal mode, seed=-1179406179 RG_type=mt19937
+core.scoring.ScoreFunctionFactory: (2) SCOREFUNCTION: talaris2013
+core.scoring.etable: (2) Starting energy table calculation
+core.scoring.etable: (2) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (2) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (2) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (1) Starting energy table calculation
+core.scoring.etable: (1) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (1) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (1) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (3) Starting energy table calculation
+core.scoring.etable: (3) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (3) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (3) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (0) Finished calculating energy tables.
+basic.io.database: (0) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBPoly1D.csv
+basic.io.database: (0) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBFadeIntervals.csv
+basic.io.database: (0) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBEval.csv
+basic.io.database: (0) Database file opened: scoring/score_functions/rama/Rama_smooth_dyn.dat_ss_6.4
+core.scoring.etable: (2) Finished calculating energy tables.
+basic.io.database: (2) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBPoly1D.csv
+basic.io.database: (2) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBFadeIntervals.csv
+basic.io.database: (2) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBEval.csv
+basic.io.database: (2) Database file opened: scoring/score_functions/rama/Rama_smooth_dyn.dat_ss_6.4
+core.scoring.etable: (1) Finished calculating energy tables.
+basic.io.database: (1) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBPoly1D.csv
+basic.io.database: (1) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBFadeIntervals.csv
+basic.io.database: (1) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBEval.csv
+core.scoring.etable: (3) Finished calculating energy tables.
+basic.io.database: (3) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBPoly1D.csv
+basic.io.database: (3) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBFadeIntervals.csv
+basic.io.database: (3) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBEval.csv
+basic.io.database: (1) Database file opened: scoring/score_functions/rama/Rama_smooth_dyn.dat_ss_6.4
+basic.io.database: (3) Database file opened: scoring/score_functions/rama/Rama_smooth_dyn.dat_ss_6.4
+basic.io.database: (0) Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: (0) Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+basic.io.database: (0) Database file opened: scoring/score_functions/P_AA_pp/P_AA_pp
+basic.io.database: (2) Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: (2) Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+basic.io.database: (2) Database file opened: scoring/score_functions/P_AA_pp/P_AA_pp
+basic.io.database: (1) Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: (1) Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+basic.io.database: (3) Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: (1) Database file opened: scoring/score_functions/P_AA_pp/P_AA_pp
+basic.io.database: (3) Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+basic.io.database: (3) Database file opened: scoring/score_functions/P_AA_pp/P_AA_pp
+apps.public.design.mpi_msd: (0) Activating decompose_bb_hb_into_pair_energies in the score function
+core.scoring.etable: (0) Starting energy table calculation
+core.scoring.etable: (0) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (0) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (0) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (2) Starting energy table calculation
+core.scoring.etable: (2) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (2) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (2) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (3) Starting energy table calculation
+core.scoring.etable: (3) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (3) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (3) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (1) Starting energy table calculation
+core.scoring.etable: (1) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (1) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (1) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (0) Finished calculating energy tables.
+core.scoring.etable: (2) Finished calculating energy tables.
+core.scoring.etable: (3) Finished calculating energy tables.
+core.scoring.etable: (1) Finished calculating energy tables.
+core.chemical.ResidueTypeSet: (0) Finished initializing fa_standard residue type set.  Created 722 residue types
+Setting dlig nmeg limit1024
+protocols.pack_daemon.DynamicAggregateFunction: (0) Read STATE line.  Name= SH3_currentenergy PDB= /netapp/home/thompson/UBQ/PDBs/SH3_yeast_relax.pdb Corr= correspondence_file_patch4.txt 2RF= sec_resfile_SH3_patch4.txt
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 2, attempting to tokenize scalar expression:  -196.728
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 2, attempting to parse scalar expression:  -196.728
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 2 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 3, attempting to tokenize scalar expression:  SH3_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 3, attempting to parse scalar expression:  SH3_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 3 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 4, attempting to tokenize scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 4, attempting to parse scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 4 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 5, attempting to tokenize scalar expression:  exp(SH3_s*(SH3_currentenergy-SH3_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 5, attempting to parse scalar expression:  exp(SH3_s*(SH3_currentenergy-SH3_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 5 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 6, attempting to tokenize scalar expression:  0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 6, attempting to parse scalar expression:  0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 6 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 7, attempting to tokenize scalar expression:  (1-SH3_k)+(SH3_k/(1+SH3_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 7, attempting to parse scalar expression:  (1-SH3_k)+(SH3_k/(1+SH3_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 7 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) Read STATE line.  Name= UBQ_currentenergy PDB= /netapp/home/thompson/UBQ/PDBs/1UBQ_yeast_relax.pdb Corr= correspondence_file_patch4.txt 2RF= sec_resfile_UBQ_patch4.txt
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 10, attempting to tokenize scalar expression:  -125.813
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 10, attempting to parse scalar expression:  -125.813
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 10 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 11, attempting to tokenize scalar expression:  UBQ_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 11, attempting to parse scalar expression:  UBQ_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 11 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 12, attempting to tokenize scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 12, attempting to parse scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 12 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 13, attempting to tokenize scalar expression:  exp(UBQ_s*(UBQ_currentenergy-UBQ_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 13, attempting to parse scalar expression:  exp(UBQ_s*(UBQ_currentenergy-UBQ_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 13 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 14, attempting to tokenize scalar expression:  0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 14, attempting to parse scalar expression:  0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 14 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 15, attempting to tokenize scalar expression:  (1-UBQ_k)+(UBQ_k/(1+UBQ_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 15, attempting to parse scalar expression:  (1-UBQ_k)+(UBQ_k/(1+UBQ_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 15 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) Read STATE line.  Name= CUE_currentenergy PDB= /netapp/home/thompson/UBQ/PDBs/CUE_yeast_relax.pdb Corr= correspondence_file_patch4.txt 2RF= sec_resfile_CUE_patch4.txt
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 18, attempting to tokenize scalar expression:  -187.539
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 18, attempting to parse scalar expression:  -187.539
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 18 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 19, attempting to tokenize scalar expression:  CUE_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 19, attempting to parse scalar expression:  CUE_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 19 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 20, attempting to tokenize scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 20, attempting to parse scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 20 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 21, attempting to tokenize scalar expression:  exp(CUE_s*(CUE_currentenergy-CUE_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 21, attempting to parse scalar expression:  exp(CUE_s*(CUE_currentenergy-CUE_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 21 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 22, attempting to tokenize scalar expression:  0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 22, attempting to parse scalar expression:  0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 22 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 23, attempting to tokenize scalar expression:  (1-CUE_k)+(CUE_k/(1+CUE_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 23, attempting to parse scalar expression:  (1-CUE_k)+(CUE_k/(1+CUE_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 23 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) Read STATE line.  Name= UQ_CON_currentenergy PDB= /netapp/home/thompson/UBQ/PDBs/UQ_con_yeast_relax.pdb Corr= correspondence_file_patch4.txt 2RF= sec_resfile_UQ_CON_patch4.txt
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 26, attempting to tokenize scalar expression:  -577.719
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 26, attempting to parse scalar expression:  -577.719
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 26 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 27, attempting to tokenize scalar expression:  UQ_CON_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 27, attempting to parse scalar expression:  UQ_CON_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 27 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 28, attempting to tokenize scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 28, attempting to parse scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 28 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 29, attempting to tokenize scalar expression:  exp(UQ_CON_s*(UQ_CON_currentenergy-UQ_CON_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 29, attempting to parse scalar expression:  exp(UQ_CON_s*(UQ_CON_currentenergy-UQ_CON_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 29 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 30, attempting to tokenize scalar expression:  1.0
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 30, attempting to parse scalar expression:  1.0
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 30 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 31, attempting to tokenize scalar expression:  (1-UQ_CON_k)+(UQ_CON_k/(1+UQ_CON_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 31, attempting to parse scalar expression:  (1-UQ_CON_k)+(UQ_CON_k/(1+UQ_CON_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 31 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) Read STATE line.  Name= RPN13_currentenergy PDB= /netapp/home/thompson/UBQ/PDBs/RPN13_yeast_relax.pdb Corr= correspondence_file_patch4.txt 2RF= sec_resfile_RPN13_patch4.txt
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 34, attempting to tokenize scalar expression:  -286.033
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 34, attempting to parse scalar expression:  -286.033
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 34 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 35, attempting to tokenize scalar expression:  RPN13_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 35, attempting to parse scalar expression:  RPN13_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 35 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 36, attempting to tokenize scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 36, attempting to parse scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 36 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 37, attempting to tokenize scalar expression:  exp(RPN13_s*(RPN13_currentenergy-RPN13_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 37, attempting to parse scalar expression:  exp(RPN13_s*(RPN13_currentenergy-RPN13_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 37 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 38, attempting to tokenize scalar expression:  0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 38, attempting to parse scalar expression:  0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 38 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 39, attempting to tokenize scalar expression:  (1-RPN13_k)+(RPN13_k/(1+RPN13_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 39, attempting to parse scalar expression:  (1-RPN13_k)+(RPN13_k/(1+RPN13_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 39 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) Read STATE line.  Name= OTU_currentenergy PDB= /netapp/home/thompson/UBQ/PDBs/OTU_yeast_relax.pdb Corr= correspondence_file_patch4.txt 2RF= sec_resfile_OTU_patch4.txt
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 42, attempting to tokenize scalar expression:  -429.016
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 42, attempting to parse scalar expression:  -429.016
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 42 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 43, attempting to tokenize scalar expression:  OTU_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 43, attempting to parse scalar expression:  OTU_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 43 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 44, attempting to tokenize scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 44, attempting to parse scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 44 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 45, attempting to tokenize scalar expression:  exp(OTU_s*(OTU_currentenergy-OTU_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 45, attempting to parse scalar expression:  exp(OTU_s*(OTU_currentenergy-OTU_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 45 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 46, attempting to tokenize scalar expression:  0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 46, attempting to parse scalar expression:  0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 46 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 47, attempting to tokenize scalar expression:  (1-OTU_k)+(OTU_k/(1+OTU_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 47, attempting to parse scalar expression:  (1-OTU_k)+(OTU_k/(1+OTU_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 47 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 49, attempting to tokenize FITNESS expression:  -1*SH3_sig*UBQ_sig*CUE_sig*UQ_CON_sig*RPN13_sig*OTU_sig
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 49, attempting to parse expression:  -1*SH3_sig*UBQ_sig*CUE_sig*UQ_CON_sig*RPN13_sig*OTU_sig
+protocols.pack_daemon.DynamicAggregateFunction: (0) FITNESS on line 49 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for SH3_startenergy
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:-196.728
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for SH3_o
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:variable:SH3_startenergy
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTValue:literal:4.91
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for SH3_s
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.6
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for SH3_exp
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTFunction:exp:1(
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:SH3_s
+            ) 
+            ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:variable:SH3_currentenergy
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:SH3_o
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for SH3_k
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.25
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for SH3_sig
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTExpression(
+        ArithmeticASTTerm(
+          ArithmeticASTFactor( 
+            ArithmeticASTValue:literal:1
+          ) 
+          ArithmeticASTRestTerm()
+        )
+        ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:SH3_k
+            ) 
+            ArithmeticASTRestTerm()
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:SH3_k
+            ) 
+            ArithmeticASTRestTerm:DIVIDE_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:literal:1
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:PLUS_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:SH3_exp
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UBQ_startenergy
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:-125.813
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UBQ_o
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:variable:UBQ_startenergy
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTValue:literal:4.91
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UBQ_s
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.6
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UBQ_exp
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTFunction:exp:1(
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:UBQ_s
+            ) 
+            ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:variable:UBQ_currentenergy
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:UBQ_o
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UBQ_k
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.25
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UBQ_sig
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTExpression(
+        ArithmeticASTTerm(
+          ArithmeticASTFactor( 
+            ArithmeticASTValue:literal:1
+          ) 
+          ArithmeticASTRestTerm()
+        )
+        ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:UBQ_k
+            ) 
+            ArithmeticASTRestTerm()
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:UBQ_k
+            ) 
+            ArithmeticASTRestTerm:DIVIDE_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:literal:1
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:PLUS_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:UBQ_exp
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for CUE_startenergy
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:-187.539
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for CUE_o
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:variable:CUE_startenergy
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTValue:literal:4.91
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for CUE_s
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.6
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for CUE_exp
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTFunction:exp:1(
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:CUE_s
+            ) 
+            ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:variable:CUE_currentenergy
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:CUE_o
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for CUE_k
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.25
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for CUE_sig
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTExpression(
+        ArithmeticASTTerm(
+          ArithmeticASTFactor( 
+            ArithmeticASTValue:literal:1
+          ) 
+          ArithmeticASTRestTerm()
+        )
+        ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:CUE_k
+            ) 
+            ArithmeticASTRestTerm()
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:CUE_k
+            ) 
+            ArithmeticASTRestTerm:DIVIDE_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:literal:1
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:PLUS_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:CUE_exp
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UQ_CON_startenergy
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:-577.719
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UQ_CON_o
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:variable:UQ_CON_startenergy
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTValue:literal:4.91
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UQ_CON_s
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.6
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UQ_CON_exp
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTFunction:exp:1(
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:UQ_CON_s
+            ) 
+            ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:variable:UQ_CON_currentenergy
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:UQ_CON_o
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UQ_CON_k
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:1
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for UQ_CON_sig
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTExpression(
+        ArithmeticASTTerm(
+          ArithmeticASTFactor( 
+            ArithmeticASTValue:literal:1
+          ) 
+          ArithmeticASTRestTerm()
+        )
+        ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:UQ_CON_k
+            ) 
+            ArithmeticASTRestTerm()
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:UQ_CON_k
+            ) 
+            ArithmeticASTRestTerm:DIVIDE_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:literal:1
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:PLUS_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:UQ_CON_exp
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_startenergy
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:-286.033
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_o
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:variable:RPN13_startenergy
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTValue:literal:4.91
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_s
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.6
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_exp
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTFunction:exp:1(
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:RPN13_s
+            ) 
+            ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:variable:RPN13_currentenergy
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:RPN13_o
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_k
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.25
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_sig
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTExpression(
+        ArithmeticASTTerm(
+          ArithmeticASTFactor( 
+            ArithmeticASTValue:literal:1
+          ) 
+          ArithmeticASTRestTerm()
+        )
+        ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:RPN13_k
+            ) 
+            ArithmeticASTRestTerm()
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:RPN13_k
+            ) 
+            ArithmeticASTRestTerm:DIVIDE_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:literal:1
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:PLUS_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:RPN13_exp
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for OTU_startenergy
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:-429.016
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for OTU_o
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:variable:OTU_startenergy
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTValue:literal:4.91
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for OTU_s
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.6
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for OTU_exp
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTFunction:exp:1(
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:OTU_s
+            ) 
+            ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:variable:OTU_currentenergy
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:OTU_o
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for OTU_k
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.25
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for OTU_sig
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTExpression(
+        ArithmeticASTTerm(
+          ArithmeticASTFactor( 
+            ArithmeticASTValue:literal:1
+          ) 
+          ArithmeticASTRestTerm()
+        )
+        ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:OTU_k
+            ) 
+            ArithmeticASTRestTerm()
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:OTU_k
+            ) 
+            ArithmeticASTRestTerm:DIVIDE_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:literal:1
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:PLUS_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:OTU_exp
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating fitness expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:-1
+    ) 
+    ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+      ArithmeticASTFactor( 
+        ArithmeticASTValue:variable:SH3_sig
+      ) 
+      ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+        ArithmeticASTFactor( 
+          ArithmeticASTValue:variable:UBQ_sig
+        ) 
+        ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+          ArithmeticASTFactor( 
+            ArithmeticASTValue:variable:CUE_sig
+          ) 
+          ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:UQ_CON_sig
+            ) 
+            ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTValue:variable:RPN13_sig
+              ) 
+              ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+                ArithmeticASTFactor( 
+                  ArithmeticASTValue:variable:OTU_sig
+                ) 
+                ArithmeticASTRestTerm()
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+  ArithmeticASTRestExpression()
+)
+core.chemical.ResidueTypeSet: (2) Finished initializing fa_standard residue type set.  Created 722 residue types
+Setting dlig nmeg limit1024
+core.chemical.ResidueTypeSet: (3) Finished initializing fa_standard residue type set.  Created 722 residue types
+Setting dlig nmeg limit1024
+core.chemical.ResidueTypeSet: (1) Finished initializing fa_standard residue type set.  Created 722 residue types
+Setting dlig nmeg limit1024
+core.pack.task: (3) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (3) Adding daemon: 5 /netapp/home/thompson/UBQ/PDBs/1UBQ_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_UBQ_patch4.txt
+core.pack.task: (3) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (3) Setting dlig nmeg limit
+core.pack.task: (0) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (0) Adding daemon: 1 /netapp/home/thompson/UBQ/PDBs/CUE_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_CUE_patch4.txt
+core.pack.task: (0) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (0) Setting dlig nmeg limit
+core.pack.task: (2) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (2) Adding daemon: 3 /netapp/home/thompson/UBQ/PDBs/RPN13_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_RPN13_patch4.txt
+core.pack.task: (2) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (2) Setting dlig nmeg limit
+core.pack.task: (1) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (1) Adding daemon: 2 /netapp/home/thompson/UBQ/PDBs/OTU_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_OTU_patch4.txt
+core.pack.task: (1) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (1) Setting dlig nmeg limit
+core.pack.task: (2) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (2) Adding daemon: 4 /netapp/home/thompson/UBQ/PDBs/SH3_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_SH3_patch4.txt
+core.pack.task: (2) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (2) Setting dlig nmeg limit
+core.pack.task: (3) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (3) Adding daemon: 6 /netapp/home/thompson/UBQ/PDBs/UQ_con_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_UQ_CON_patch4.txt
+core.pack.task: (3) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (3) Setting dlig nmeg limit
+protocols.pack_daemon.PackDaemon: (0) PackDaemon::setup()
+protocols.pack_daemon.PackDaemon: (3) PackDaemon::setup()
+protocols.pack_daemon.PackDaemon: (2) PackDaemon::setup()
+protocols.pack_daemon.PackDaemon: (1) PackDaemon::setup()
+core.pack.dunbrack: (0) Dunbrack 2010 library took 0.2 seconds to load from binary
+core.pack.dunbrack: (3) Dunbrack 2010 library took 0.22 seconds to load from binary
+core.pack.dunbrack: (2) Dunbrack 2010 library took 0.23 seconds to load from binary
+core.pack.dunbrack: (1) Dunbrack 2010 library took 0.4 seconds to load from binary
+core.pack.interaction_graph.interaction_graph_factory: (0) Instantiating DoubleLazyInteractionGraph
+core.pack.pack_rotamers: (0) built 25250 rotamers at 76 positions.
+core.pack.interaction_graph.interaction_graph_factory: (3) Instantiating DoubleLazyInteractionGraph
+core.pack.pack_rotamers: (3) built 24538 rotamers at 58 positions.
+core.pack.interaction_graph.interaction_graph_factory: (2) Instantiating DoubleLazyInteractionGraph
+core.pack.pack_rotamers: (2) built 26634 rotamers at 87 positions.
+core.pack.interaction_graph.interaction_graph_factory: (1) Instantiating DoubleLazyInteractionGraph
+core.pack.pack_rotamers: (1) built 26328 rotamers at 72 positions.
+core.pack.pack_rotamers: (3) IG: 11160606 bytes
+protocols.pack_daemon.PackDaemon: (3) PackDaemon::setup()
+core.pack.pack_rotamers: (0) IG: 13955826 bytes
+core.pack.interaction_graph.interaction_graph_factory: (3) Instantiating DoubleLazyInteractionGraph
+core.pack.pack_rotamers: (3) built 31084 rotamers at 123 positions.
+core.pack.pack_rotamers: (2) IG: 16771494 bytes
+core.pack.pack_rotamers: (1) IG: 13533935 bytes
+protocols.pack_daemon.PackDaemon: (2) PackDaemon::setup()
+core.pack.interaction_graph.interaction_graph_factory: (2) Instantiating DoubleLazyInteractionGraph
+core.pack.pack_rotamers: (2) built 25577 rotamers at 80 positions.
+core.pack.pack_rotamers: (2) IG: 14668769 bytes
+core.pack.pack_rotamers: (3) IG: 24996979 bytes
+apps.public.design.mpi_msd: (0) Generation 1 took 1746.69 seconds; best fitness = -0.000261779
+apps.public.design.mpi_msd: (0) Generation 2 took 431.13 seconds; best fitness = -0.000286826
+apps.public.design.mpi_msd: (0) Generation 3 took 442.32 seconds; best fitness = -0.00138675
+apps.public.design.mpi_msd: (0) Generation 4 took 432.68 seconds; best fitness = -0.00138675
+apps.public.design.mpi_msd: (0) Generation 5 took 437.42 seconds; best fitness = -0.00448885
+apps.public.design.mpi_msd: (0) Generation 6 took 425.91 seconds; best fitness = -0.0150453
+apps.public.design.mpi_msd: (0) Generation 7 took 405.39 seconds; best fitness = -0.0150453
+apps.public.design.mpi_msd: (0) Generation 8 took 397.5 seconds; best fitness = -0.0231546
+apps.public.design.mpi_msd: (0) Generation 9 took 392.47 seconds; best fitness = -0.0431769
+apps.public.design.mpi_msd: (0) Generation 10 took 398.17 seconds; best fitness = -0.0431769
+apps.public.design.mpi_msd: (0) Generation 11 took 354.42 seconds; best fitness = -0.0510881
+apps.public.design.mpi_msd: (0) Generation 12 took 417.78 seconds; best fitness = -0.0510881
+apps.public.design.mpi_msd: (0) Generation 13 took 408.94 seconds; best fitness = -0.0823209
+apps.public.design.mpi_msd: (0) Generation 14 took 401.64 seconds; best fitness = -0.13332
+apps.public.design.mpi_msd: (0) Generation 15 took 388.11 seconds; best fitness = -0.178499
+apps.public.design.mpi_msd: (0) Generation 16 took 386.59 seconds; best fitness = -0.45915
+apps.public.design.mpi_msd: (0) Generation 17 took 364.63 seconds; best fitness = -0.45915
+apps.public.design.mpi_msd: (0) Generation 18 took 377.28 seconds; best fitness = -0.537075
+apps.public.design.mpi_msd: (0) Generation 19 took 358.02 seconds; best fitness = -0.584462
+apps.public.design.mpi_msd: (0) Generation 20 took 432.78 seconds; best fitness = -0.584462
+apps.public.design.mpi_msd: (0) Generation 21 took 464.98 seconds; best fitness = -0.730882
+apps.public.design.mpi_msd: (0) Generation 22 took 480.85 seconds; best fitness = -0.730882
+apps.public.design.mpi_msd: (0) Generation 23 took 465.1 seconds; best fitness = -0.730882
+apps.public.design.mpi_msd: (0) Generation 24 took 468.85 seconds; best fitness = -0.730882
+apps.public.design.mpi_msd: (0) Generation 25 took 476.38 seconds; best fitness = -0.730882
+apps.public.design.mpi_msd: (0) Generation 26 took 455.54 seconds; best fitness = -0.730882
+apps.public.design.mpi_msd: (0) Generation 27 took 466.87 seconds; best fitness = -0.730882
+apps.public.design.mpi_msd: (0) Generation 28 took 481.42 seconds; best fitness = -0.800333
+apps.public.design.mpi_msd: (0) Generation 29 took 403.22 seconds; best fitness = -0.800333
+apps.public.design.mpi_msd: (0) Generation 30 took 436.8 seconds; best fitness = -0.800333
+apps.public.design.mpi_msd: (0) Generation 31 took 477.95 seconds; best fitness = -0.800333
+apps.public.design.mpi_msd: (0) Generation 32 took 460.96 seconds; best fitness = -0.800333
+apps.public.design.mpi_msd: (0) Generation 33 took 427.58 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 34 took 431.67 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 35 took 444.32 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 36 took 449.45 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 37 took 432.27 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 38 took 487.15 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 39 took 433.63 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 40 took 474.02 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 41 took 463.6 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 42 took 486.62 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 43 took 439.37 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 44 took 430.52 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 45 took 445.29 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 46 took 424.86 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 47 took 469.16 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 48 took 447.13 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 49 took 416.18 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 50 took 386.82 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 51 took 417.02 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 52 took 388.53 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 53 took 418.24 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 54 took 425.73 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 55 took 404.99 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 56 took 416.84 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 57 took 401.15 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 58 took 358.61 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 59 took 353.36 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 60 took 340.11 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 61 took 333.48 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 62 took 356.91 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 63 took 340.08 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 64 took 346.31 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 65 took 337.23 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 66 took 368.91 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 67 took 321.71 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 68 took 330.65 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 69 took 342.02 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 70 took 329.01 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 71 took 352.81 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 72 took 337.06 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 73 took 337.05 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 74 took 330.93 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 75 took 351.18 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 76 took 315.72 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 77 took 307.24 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 78 took 322.86 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 79 took 343.04 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 80 took 348.77 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 81 took 302.53 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 82 took 357.81 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 83 took 303.21 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 84 took 326.47 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 85 took 302.23 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 86 took 301 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 87 took 274.96 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 88 took 333.73 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 89 took 344.83 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 90 took 290.69 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 91 took 310.76 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 92 took 256.04 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 93 took 311.18 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 94 took 298.86 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 95 took 317.82 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 96 took 286.26 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 97 took 293.55 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 98 took 288.26 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 99 took 300.95 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 100 took 558.38 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 101 took 639.35 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 102 took 631.6 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 103 took 563.96 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 104 took 551.52 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 105 took 643.66 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 106 took 572.77 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 107 took 583.5 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 108 took 575.8 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 109 took 491.45 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 110 took 472.95 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 111 took 448.5 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 112 took 411.07 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 113 took 382.93 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 114 took 488.24 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 115 took 468.64 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 116 took 588.22 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 117 took 579.54 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 118 took 619.18 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 119 took 503.83 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 120 took 447.33 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 121 took 444.57 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 122 took 501.35 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 123 took 410.9 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 124 took 478.65 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 125 took 426.95 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 126 took 461.35 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 127 took 447.63 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 128 took 403.33 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 129 took 445.6 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 130 took 622.86 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 131 took 505.77 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 132 took 427.15 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 133 took 550.2 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 134 took 493.73 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 135 took 600.36 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 136 took 490.89 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 137 took 522.28 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 138 took 658.58 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 139 took 353.04 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 140 took 218.61 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 141 took 199.25 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 142 took 191.62 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 143 took 177.82 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 144 took 146.43 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 145 took 150.17 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 146 took 167.33 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 147 took 183.77 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 148 took 157.51 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 149 took 188.72 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 150 took 163.78 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 151 took 158.54 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 152 took 164.66 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 153 took 177.8 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 154 took 193.39 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 155 took 177.07 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 156 took 190.98 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 157 took 178.74 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 158 took 169.97 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 159 took 161.61 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 160 took 150.04 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 161 took 163.1 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 162 took 175.83 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 163 took 172.11 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 164 took 179.35 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 165 took 142.34 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 166 took 117.82 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 167 took 143.45 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 168 took 146.09 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 169 took 135.18 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 170 took 164.37 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 171 took 169.67 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 172 took 150.88 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 173 took 164.04 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 174 took 152.61 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 175 took 137.7 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 176 took 161.41 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 177 took 145.73 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 178 took 157.52 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 179 took 151.18 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 180 took 136.16 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 181 took 144.3 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 182 took 173.78 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 183 took 166.78 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 184 took 149.03 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 185 took 115.61 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 186 took 144.6 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 187 took 151.42 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 188 took 153.39 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 189 took 190.07 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 190 took 131.16 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 191 took 158.04 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 192 took 169.26 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 193 took 165.89 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 194 took 156.05 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 195 took 150.53 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 196 took 143.41 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 197 took 137.56 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 198 took 181.42 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 199 took 138.46 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Generation 200 took 144.08 seconds; best fitness = -0.855616
+apps.public.design.mpi_msd: (0) Final Generation 200:
+apps.public.design.mpi_msd: (0) Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.856
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.841
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.835
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.821
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.815
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.815
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.811
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.809
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:S and fitness -0.806
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:S and fitness -0.805
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.803
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:Q AA:8:S and fitness -0.803
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:Q AA:8:S and fitness -0.803
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.802
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.800
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:Q AA:8:S and fitness -0.798
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.797
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:A and fitness -0.795
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.795
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:S AA:8:S and fitness -0.795
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.793
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.793
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:N AA:8:S and fitness -0.792
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.791
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:A and fitness -0.789
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:A and fitness -0.787
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:G AA:7:T AA:8:S and fitness -0.787
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:C AA:8:S and fitness -0.786
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.785
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:L AA:8:S and fitness -0.784
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:G AA:8:S and fitness -0.777
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:A and fitness -0.776
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.776
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:I AA:8:S and fitness -0.775
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:S AA:8:S and fitness -0.774
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:A and fitness -0.773
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:S and fitness -0.773
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.769
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.768
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.768
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:S and fitness -0.767
+Entity with traits: AA:1:V AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.765
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:A and fitness -0.764
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.764
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:A and fitness -0.764
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:V AA:8:S and fitness -0.764
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:S and fitness -0.762
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:G AA:7:Q AA:8:S and fitness -0.761
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:F AA:8:S and fitness -0.761
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:Q AA:8:S and fitness -0.760
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.760
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:Q AA:8:A and fitness -0.759
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:Q AA:8:S and fitness -0.759
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:F AA:8:S and fitness -0.759
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:N AA:8:S and fitness -0.758
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:Q AA:8:S and fitness -0.758
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:Q AA:8:A and fitness -0.758
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.757
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:C AA:8:S and fitness -0.757
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:S and fitness -0.756
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:A and fitness -0.756
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:D AA:7:T AA:8:S and fitness -0.755
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:A and fitness -0.754
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:Q AA:8:S and fitness -0.754
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:G AA:7:Q AA:8:S and fitness -0.753
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:Y AA:8:S and fitness -0.753
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:D AA:7:Q AA:8:S and fitness -0.752
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:Q AA:8:S and fitness -0.752
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.750
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:G AA:7:T AA:8:A and fitness -0.750
+Entity with traits: AA:1:I AA:2:Y AA:3:G AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.749
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Y AA:8:S and fitness -0.749
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:H AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.749
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.749
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:H AA:8:S and fitness -0.749
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:L AA:8:S and fitness -0.749
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.749
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.749
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:Q AA:8:S and fitness -0.749
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:H AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.749
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:N AA:8:S and fitness -0.748
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:S AA:8:S and fitness -0.747
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:A and fitness -0.747
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:L AA:8:S and fitness -0.746
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:S and fitness -0.745
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.745
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:H AA:8:S and fitness -0.745
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:A and fitness -0.745
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:V AA:8:S and fitness -0.744
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.744
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.744
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:F AA:6:N AA:7:Q AA:8:S and fitness -0.744
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:L AA:8:S and fitness -0.743
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:Q AA:8:A and fitness -0.743
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:S AA:8:S and fitness -0.743
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:L AA:8:S and fitness -0.743
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:D AA:7:Q AA:8:S and fitness -0.743
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:H AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.743
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:N AA:8:S and fitness -0.742
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.741
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.741
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:G AA:7:T AA:8:A and fitness -0.740
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:G AA:8:S and fitness -0.740
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:A and fitness -0.739
+Entity with traits: AA:1:V AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.739
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.739
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:F AA:8:A and fitness -0.739
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:N AA:8:S and fitness -0.739
+Entity with traits: AA:1:V AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.739
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:N AA:8:S and fitness -0.738
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:H AA:8:S and fitness -0.738
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:A and fitness -0.738
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:C AA:8:S and fitness -0.737
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:G AA:7:T AA:8:S and fitness -0.736
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:S AA:8:S and fitness -0.736
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:F AA:8:A and fitness -0.736
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:N AA:8:S and fitness -0.736
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:A and fitness -0.736
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:G AA:8:S and fitness -0.735
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:A and fitness -0.735
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:A and fitness -0.733
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:M AA:8:S and fitness -0.733
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:C AA:8:S and fitness -0.733
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:V AA:8:A and fitness -0.733
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:F AA:6:G AA:7:T AA:8:S and fitness -0.732
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.856
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:L AA:8:S and fitness -0.743
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:F AA:8:S and fitness -0.719
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:H AA:8:S and fitness -0.718
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:G AA:7:Y AA:8:S and fitness -0.691
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:G AA:5:Y AA:6:N AA:7:S AA:8:S and fitness -0.352
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:F and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:S and fitness -0.806
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:A and fitness -0.773
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.800
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:L AA:8:S and fitness -0.784
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:G AA:7:T AA:8:S and fitness -0.736
+Entity with traits: AA:1:V AA:2:N AA:3:M AA:4:D AA:5:Y AA:6:G AA:7:Q AA:8:S and fitness -0.023
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:F AA:8:S and fitness -0.719
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:H AA:5:Y AA:6:K AA:7:Q AA:8:S and fitness -0.073
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:H AA:5:Y AA:6:N AA:7:T AA:8:N and fitness -0.020
+Entity with traits: AA:1:I AA:2:R AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.114
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:S AA:7:G AA:8:S and fitness -0.571
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:A AA:8:A and fitness -0.576
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:H and fitness -0.006
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:A AA:7:C AA:8:S and fitness -0.569
+Entity with traits: AA:1:I AA:2:Y AA:3:N AA:4:H AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.262
+Entity with traits: AA:1:I AA:2:Y AA:3:N AA:4:D AA:5:Y AA:6:G AA:7:Y AA:8:S and fitness -0.336
+Entity with traits: AA:1:V AA:2:Y AA:3:A AA:4:D AA:5:W AA:6:N AA:7:T AA:8:S and fitness -0.248
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:N AA:8:I and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:C AA:5:M AA:6:G AA:7:V AA:8:S and fitness -0.062
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:C AA:7:T AA:8:A and fitness -0.477
+Entity with traits: AA:1:V AA:2:V AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:A and fitness -0.002
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Y AA:8:W and fitness  0.000
+Entity with traits: AA:1:I AA:2:G AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:V and fitness  0.000
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:E AA:6:N AA:7:M AA:8:S and fitness -0.157
+Entity with traits: AA:1:I AA:2:Y AA:3:V AA:4:D AA:5:Y AA:6:G AA:7:H AA:8:S and fitness -0.096
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:I AA:8:S and fitness -0.731
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.815
+Entity with traits: AA:1:I AA:2:F AA:3:K AA:4:D AA:5:F AA:6:N AA:7:A AA:8:S and fitness -0.359
+Entity with traits: AA:1:I AA:2:I AA:3:A AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness  0.000
+Entity with traits: AA:1:V AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:G AA:7:Q AA:8:E and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:M AA:7:S AA:8:S and fitness -0.461
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:D AA:8:S and fitness -0.634
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:W AA:7:T AA:8:S and fitness -0.001
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.739
+Entity with traits: AA:1:I AA:2:E AA:3:S AA:4:W AA:5:Y AA:6:N AA:7:Y AA:8:S and fitness -0.002
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.739
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:T AA:6:N AA:7:S AA:8:S and fitness -0.051
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:H AA:7:L AA:8:S and fitness -0.584
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:F AA:6:N AA:7:G AA:8:S and fitness -0.685
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:N AA:5:Y AA:6:N AA:7:L AA:8:S and fitness -0.509
+Entity with traits: AA:1:I AA:2:E AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:Q AA:8:S and fitness -0.086
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:K AA:5:Y AA:6:N AA:7:S AA:8:S and fitness -0.368
+Entity with traits: AA:1:I AA:2:E AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.057
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:E AA:5:Y AA:6:D AA:7:S AA:8:S and fitness -0.434
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:W AA:6:D AA:7:T AA:8:S and fitness -0.242
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:E AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.552
+Entity with traits: AA:1:I AA:2:G AA:3:S AA:4:H AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.049
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:S AA:7:Q AA:8:A and fitness -0.525
+Entity with traits: AA:1:R AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.223
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:I AA:8:A and fitness -0.690
+Entity with traits: AA:1:N AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:G AA:7:F AA:8:S and fitness -0.290
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:S AA:5:Y AA:6:G AA:7:F AA:8:S and fitness -0.495
+Entity with traits: AA:1:V AA:2:A AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.203
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:R AA:8:S and fitness -0.611
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:T AA:6:N AA:7:V AA:8:S and fitness -0.060
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:F AA:8:F and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:H AA:8:K and fitness -0.134
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:M AA:5:F AA:6:D AA:7:T AA:8:S and fitness -0.398
+Entity with traits: AA:1:I AA:2:E AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.057
+Entity with traits: AA:1:I AA:2:Y AA:3:K AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:G and fitness -0.355
+Entity with traits: AA:1:V AA:2:V AA:3:S AA:4:D AA:5:Y AA:6:K AA:7:T AA:8:S and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:K AA:6:D AA:7:T AA:8:A and fitness -0.050
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:K AA:7:V AA:8:S and fitness -0.071
+Entity with traits: AA:1:I AA:2:Y AA:3:L AA:4:D AA:5:F AA:6:N AA:7:Q AA:8:S and fitness -0.156
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:E AA:7:T AA:8:S and fitness -0.096
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:M AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.355
+Entity with traits: AA:1:V AA:2:Y AA:3:I AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:S and fitness -0.130
+Entity with traits: AA:1:N AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:C AA:8:S and fitness -0.346
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:W AA:7:Q AA:8:S and fitness -0.001
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:R AA:8:S and fitness -0.568
+Entity with traits: AA:1:I AA:2:Y AA:3:G AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.628
+Entity with traits: AA:1:I AA:2:Y AA:3:G AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:G and fitness -0.476
+Entity with traits: AA:1:V AA:2:Y AA:3:A AA:4:D AA:5:D AA:6:N AA:7:Q AA:8:S and fitness -0.227
+Entity with traits: AA:1:I AA:2:R AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:A and fitness -0.076
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:N AA:8:S and fitness -0.688
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:G and fitness -0.594
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:V AA:7:T AA:8:A and fitness -0.086
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:H AA:7:T AA:8:S and fitness -0.591
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:T AA:5:Y AA:6:G AA:7:Q AA:8:A and fitness -0.408
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:K AA:7:N AA:8:S and fitness -0.057
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:Q AA:7:Q AA:8:S and fitness -0.173
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:Q AA:8:S and fitness -0.803
+Entity with traits: AA:1:N AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:L AA:8:S and fitness -0.366
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:L AA:8:S and fitness -0.709
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:K AA:8:S and fitness -0.553
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:C AA:8:S and fitness -0.786
+Entity with traits: AA:1:V AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:G AA:7:Q AA:8:S and fitness -0.717
+Entity with traits: AA:1:I AA:2:Y AA:3:Q AA:4:D AA:5:Y AA:6:N AA:7:F AA:8:S and fitness -0.616
+Entity with traits: AA:1:I AA:2:W AA:3:S AA:4:D AA:5:F AA:6:F AA:7:T AA:8:A and fitness -0.170
+Entity with traits: AA:1:I AA:2:Y AA:3:K AA:4:D AA:5:W AA:6:N AA:7:G AA:8:S and fitness -0.131
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:H AA:5:K AA:6:N AA:7:Q AA:8:S and fitness -0.069
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:G AA:5:Y AA:6:N AA:7:L AA:8:S and fitness -0.367
+Entity with traits: AA:1:I AA:2:Y AA:3:E AA:4:D AA:5:P AA:6:G AA:7:S AA:8:S and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:M AA:5:Y AA:6:N AA:7:H AA:8:S and fitness -0.516
+Entity with traits: AA:1:W AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness  0.000
+Entity with traits: AA:1:D AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:N AA:8:S and fitness -0.161
+Entity with traits: AA:1:I AA:2:D AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:H AA:8:S and fitness -0.078
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:N AA:5:F AA:6:G AA:7:Q AA:8:S and fitness -0.557
+Entity with traits: AA:1:N AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.344
+Entity with traits: AA:1:C AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.420
+Entity with traits: AA:1:I AA:2:Y AA:3:F AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.011
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:L AA:7:L AA:8:S and fitness -0.444
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:S AA:8:F and fitness  0.000
+Entity with traits: AA:1:V AA:2:Y AA:3:P AA:4:W AA:5:Y AA:6:D AA:7:T AA:8:S and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:V AA:7:Q AA:8:E and fitness  0.000
+Entity with traits: AA:1:I AA:2:G AA:3:S AA:4:E AA:5:Y AA:6:D AA:7:T AA:8:S and fitness -0.027
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:L AA:6:G AA:7:T AA:8:S and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:A AA:5:F AA:6:N AA:7:T AA:8:A and fitness -0.459
+Entity with traits: AA:1:Q AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:A and fitness -0.341
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:T AA:6:G AA:7:T AA:8:S and fitness -0.081
+Entity with traits: AA:1:I AA:2:Y AA:3:M AA:4:D AA:5:Y AA:6:N AA:7:M AA:8:S and fitness -0.362
+Entity with traits: AA:1:I AA:2:S AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:A and fitness -0.242
+Entity with traits: AA:1:G AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:S AA:8:S and fitness -0.218
+Entity with traits: AA:1:I AA:2:Y AA:3:I AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.166
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:Q AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.462
+Entity with traits: AA:1:V AA:2:Y AA:3:F AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.003
+Entity with traits: AA:1:N AA:2:K AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.013
+Entity with traits: AA:1:V AA:2:C AA:3:S AA:4:D AA:5:D AA:6:N AA:7:Q AA:8:S and fitness -0.042
+apps.public.design.mpi_msd: (0) Evaluated 15441 sequences out of 25600000000 possible.
+apps.public.design.mpi_msd: (0) Top set #1. Writing pdbs for entity: Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.856
+protocols.pack_daemon.DynamicAggregateFunction: (0) Recovering relevant states
+protocols.pack_daemon.DynamicAggregateFunction: (0) Assigning value -187.53 to VariableExpression 1
+protocols.pack_daemon.DynamicAggregateFunction: (0) Assigning value -427.627 to VariableExpression 2
+protocols.pack_daemon.DynamicAggregateFunction: (0) Assigning value -285.726 to VariableExpression 3
+protocols.pack_daemon.DynamicAggregateFunction: (0) Assigning value -196.749 to VariableExpression 4
+protocols.pack_daemon.DynamicAggregateFunction: (0) Assigning value -125.658 to VariableExpression 5
+protocols.pack_daemon.DynamicAggregateFunction: (0) Assigning value -577.066 to VariableExpression 6
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression SH3_startenergy evaluated to -196.728
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression SH3_o evaluated to -191.818
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression SH3_s evaluated to 0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression SH3_exp evaluated to 0.0518933
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression SH3_k evaluated to 0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression SH3_sig evaluated to 0.987667
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UBQ_startenergy evaluated to -125.813
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UBQ_o evaluated to -120.903
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UBQ_s evaluated to 0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UBQ_exp evaluated to 0.0576718
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UBQ_k evaluated to 0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UBQ_sig evaluated to 0.986368
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression CUE_startenergy evaluated to -187.539
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression CUE_o evaluated to -182.629
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression CUE_s evaluated to 0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression CUE_exp evaluated to 0.0528256
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression CUE_k evaluated to 0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression CUE_sig evaluated to 0.987456
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UQ_CON_startenergy evaluated to -577.719
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UQ_CON_o evaluated to -572.809
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UQ_CON_s evaluated to 0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UQ_CON_exp evaluated to 0.0777431
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UQ_CON_k evaluated to 1
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression UQ_CON_sig evaluated to 0.927865
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_startenergy evaluated to -286.033
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_o evaluated to -281.123
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_s evaluated to 0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_exp evaluated to 0.0631725
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_k evaluated to 0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_sig evaluated to 0.985145
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression OTU_startenergy evaluated to -429.016
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression OTU_o evaluated to -424.106
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression OTU_s evaluated to 0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression OTU_exp evaluated to 0.120925
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression OTU_k evaluated to 0.25
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression OTU_sig evaluated to 0.97303
+protocols.pack_daemon.DynamicAggregateFunction: (0)   fitness_exp_ identifies active variable: SH3_currentenergy 4
+protocols.pack_daemon.DynamicAggregateFunction: (0)   fitness_exp_ identifies active variable: UBQ_currentenergy 5
+protocols.pack_daemon.DynamicAggregateFunction: (0)   fitness_exp_ identifies active variable: CUE_currentenergy 1
+protocols.pack_daemon.DynamicAggregateFunction: (0)   fitness_exp_ identifies active variable: UQ_CON_currentenergy 6
+protocols.pack_daemon.DynamicAggregateFunction: (0)   fitness_exp_ identifies active variable: RPN13_currentenergy 3
+protocols.pack_daemon.DynamicAggregateFunction: (0)   fitness_exp_ identifies active variable: OTU_currentenergy 2
+protocols.pack_daemon.DynamicAggregateFunction: (0)   FitnessFunction relevant state indices 1
+protocols.pack_daemon.DynamicAggregateFunction: (0)   FitnessFunction relevant state indices 2
+protocols.pack_daemon.DynamicAggregateFunction: (0)   FitnessFunction relevant state indices 3
+protocols.pack_daemon.DynamicAggregateFunction: (0)   FitnessFunction relevant state indices 4
+protocols.pack_daemon.DynamicAggregateFunction: (0)   FitnessFunction relevant state indices 5
+protocols.pack_daemon.DynamicAggregateFunction: (0)   FitnessFunction relevant state indices 6
+core.pack.task: (0) Packer task: initialize from command line() 
+core.pack.task: (0) Packer task: initialize from command line() 
+core.pack.task: (0) Packer task: initialize from command line() 
+core.pack.task: (0) Packer task: initialize from command line() 
+core.pack.task: (0) Packer task: initialize from command line() 
+apps.public.design.mpi_msd: (0) Writing structure msd_output_1_CUE_currentenergy.pdb with score: -187.475
+apps.public.design.mpi_msd: (0) Writing structure msd_output_1_OTU_currentenergy.pdb with score: -427.585
+apps.public.design.mpi_msd: (0) Writing structure msd_output_1_RPN13_currentenergy.pdb with score: -285.718
+apps.public.design.mpi_msd: (0) Writing structure msd_output_1_SH3_currentenergy.pdb with score: -196.728
+apps.public.design.mpi_msd: (0) Writing structure msd_output_1_UBQ_currentenergy.pdb with score: -125.666
+apps.public.design.mpi_msd: (0) Writing structure msd_output_1_UQ_CON_currentenergy.pdb with score: -577.119

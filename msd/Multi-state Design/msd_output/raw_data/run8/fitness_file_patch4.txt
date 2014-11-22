@@ -1,0 +1,49 @@
+STATE SH3_currentenergy /netapp/home/thompson/UBQ/PDBs/SH3_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_SH3_patch4.txt 
+SCALAR_EXPRESSION SH3_startenergy = -196.728
+SCALAR_EXPRESSION SH3_o = SH3_startenergy + 4.91
+SCALAR_EXPRESSION SH3_s = 0.6
+SCALAR_EXPRESSION SH3_exp = exp(SH3_s*(SH3_currentenergy-SH3_o))
+SCALAR_EXPRESSION SH3_k = 0.75
+SCALAR_EXPRESSION SH3_sig = (1-SH3_k)+(SH3_k/(1+SH3_exp))
+
+STATE UBQ_currentenergy /netapp/home/thompson/UBQ/PDBs/1UBQ_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_UBQ_patch4.txt 
+SCALAR_EXPRESSION UBQ_startenergy = -125.813
+SCALAR_EXPRESSION UBQ_o = UBQ_startenergy + 4.91
+SCALAR_EXPRESSION UBQ_s = 0.6
+SCALAR_EXPRESSION UBQ_exp = exp(UBQ_s*(UBQ_currentenergy-UBQ_o))
+SCALAR_EXPRESSION UBQ_k = 0.75
+SCALAR_EXPRESSION UBQ_sig = (1-UBQ_k)+(UBQ_k/(1+UBQ_exp))
+
+STATE CUE_currentenergy /netapp/home/thompson/UBQ/PDBs/CUE_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_CUE_patch4.txt 
+SCALAR_EXPRESSION CUE_startenergy = -187.539
+SCALAR_EXPRESSION CUE_o = CUE_startenergy + 4.91
+SCALAR_EXPRESSION CUE_s = 0.6
+SCALAR_EXPRESSION CUE_exp = exp(CUE_s*(CUE_currentenergy-CUE_o))
+SCALAR_EXPRESSION CUE_k = 0.75
+SCALAR_EXPRESSION CUE_sig = (1-CUE_k)+(CUE_k/(1+CUE_exp))
+
+STATE UQ_CON_currentenergy /netapp/home/thompson/UBQ/PDBs/UQ_con_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_UQ_CON_patch4.txt 
+SCALAR_EXPRESSION UQ_CON_startenergy = -577.719
+SCALAR_EXPRESSION UQ_CON_o = UQ_CON_startenergy + 4.91
+SCALAR_EXPRESSION UQ_CON_s = 0.6
+SCALAR_EXPRESSION UQ_CON_exp = exp(UQ_CON_s*(UQ_CON_currentenergy-UQ_CON_o))
+SCALAR_EXPRESSION UQ_CON_k = 1.0
+SCALAR_EXPRESSION UQ_CON_sig = (1-UQ_CON_k)+(UQ_CON_k/(1+UQ_CON_exp))
+
+STATE RPN13_currentenergy /netapp/home/thompson/UBQ/PDBs/RPN13_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_RPN13_patch4.txt 
+SCALAR_EXPRESSION RPN13_startenergy = -286.033
+SCALAR_EXPRESSION RPN13_o = RPN13_startenergy + 4.91
+SCALAR_EXPRESSION RPN13_s = 0.6
+SCALAR_EXPRESSION RPN13_exp = exp(RPN13_s*(RPN13_currentenergy-RPN13_o))
+SCALAR_EXPRESSION RPN13_k = 0.75
+SCALAR_EXPRESSION RPN13_sig = (1-RPN13_k)+(RPN13_k/(1+RPN13_exp))
+
+STATE OTU_currentenergy /netapp/home/thompson/UBQ/PDBs/OTU_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_OTU_patch4.txt 
+SCALAR_EXPRESSION OTU_startenergy = -429.016
+SCALAR_EXPRESSION OTU_o = OTU_startenergy + 4.91
+SCALAR_EXPRESSION OTU_s = 0.6
+SCALAR_EXPRESSION OTU_exp = exp(OTU_s*(OTU_currentenergy-OTU_o))
+SCALAR_EXPRESSION OTU_k = 0.75
+SCALAR_EXPRESSION OTU_sig = (1-OTU_k)+(OTU_k/(1+OTU_exp))
+
+FITNESS -1*SH3_sig*UBQ_sig*CUE_sig*UQ_CON_sig*RPN13_sig*OTU_sig
