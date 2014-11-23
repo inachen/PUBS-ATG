@@ -132,11 +132,6 @@ ubq_lst = list(UBIQ_SEQ)
 
 HU_seq_lst = []
 
-# for storing prop dic
-HU_fitness_prop_dic = {}
-
-HU_sub_DMSO_prop_dic = {}
-
 for key, val in hu_fit.iteritems():
 
     if val > 0 and key[1] != 'WT' and key[1] != 'STOP':
@@ -158,15 +153,13 @@ for s in HU_seq_lst:
 # HU minus DMSO
 HU_sub_dmso_seq_lst = []
 
+HU_sub_dmso_allel_lst = []
+
 hu_sub_dmso_mat = np.subtract(hu_fit_mat, dmso_fit_mat)
 
 hu_sub_dmso_unfit_seq_lst = []
 
 for (i,j), value in np.ndenumerate(hu_sub_dmso_mat):
-
-    if j == 62:
-        print AA_LST[i]
-        print value
 
     if value > 0:
 
@@ -207,6 +200,35 @@ cw = csv.writer(open("seq_logo/hu_sub_DMSO_unfit_consensus.csv", "wb"))
 
 for s in hu_sub_dmso_unfit_seq_lst:
     cw.writerow([s])            
+
+# write to prop dic
+
+HU_zipped_seq_lst = zip(*HU_seq_lst)
+HU_sub_dmso_zipped_seq_lst = zip(*HU_sub_dmso_seq_lst)
+
+zipped_lsts = [HU_zipped_seq_lst, HU_sub_dmso_zipped_seq_lst]
+
+# for storing prop dic
+HU_fit_prop_dic = {}
+
+HU_sub_DMSO_fit_prop_dic = {}
+
+prop_dic_lst = [HU_fit_prop_dic, HU_sub_DMSO_fit_prop_dic]
+
+names = ["HU_fit_prop_dic", "HU_sub_DMSO_fit_prop_dic"]
+
+for i, seq_lst in enumerate(zipped_lsts):
+
+    for pos, aa_lst in enumerate(seq_lst):
+
+        total = len(aa_lst)
+        for aa in AA_LST[1:]:
+            num = aa_lst.count(aa)
+
+            k = str(pos+1)
+            prop_dic_lst[i][k] = prop_dic_lst[i].get(k, []) + ([(aa, num/float(total))])
+
+    pickle.dump(prop_dic_lst[i], open('outpickles/'+names[i]+'_propdic.pkl', 'wb'))
 
 
 
