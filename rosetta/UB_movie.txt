@@ -22,7 +22,6 @@ as cartoon, UB
  
 mset 1 x900
  
-orient
 
 translate [0,0,100], object=UB
 
