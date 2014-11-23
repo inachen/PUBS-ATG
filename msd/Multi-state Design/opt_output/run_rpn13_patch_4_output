@@ -1,0 +1,767 @@
+core.init: (2) Rosetta version exported  from http://www.rosettacommons.org
+core.init: (2) command: /netapp/home/thompson/Rosetta/rosetta_2014.22/source/bin/mpi_msd.mpi.linuxgccrelease -database /netapp/home/thompson/Rosetta/rosetta_2014.22/database -msd:fitness_file fitness_file_patch4.txt -entity_resfile entity_file_patch4.txt -ms:generations 200 -ms:pop_size 250 -ms:fraction_by_recombination 0.1 -msd::double_lazy_ig_mem_limit 1024 -ignore_unrecognized_res -ignore_zero_occupancy false -mute core.pack.annealer.MultiCoolAnnealer
+core.init: (1) Rosetta version exported  from http://www.rosettacommons.org
+core.init: (1) command: /netapp/home/thompson/Rosetta/rosetta_2014.22/source/bin/mpi_msd.mpi.linuxgccrelease -database /netapp/home/thompson/Rosetta/rosetta_2014.22/database -msd:fitness_file fitness_file_patch4.txt -entity_resfile entity_file_patch4.txt -ms:generations 200 -ms:pop_size 250 -ms:fraction_by_recombination 0.1 -msd::double_lazy_ig_mem_limit 1024 -ignore_unrecognized_res -ignore_zero_occupancy false -mute core.pack.annealer.MultiCoolAnnealer
+core.init: (0) Rosetta version exported  from http://www.rosettacommons.org
+core.init: (0) command: /netapp/home/thompson/Rosetta/rosetta_2014.22/source/bin/mpi_msd.mpi.linuxgccrelease -database /netapp/home/thompson/Rosetta/rosetta_2014.22/database -msd:fitness_file fitness_file_patch4.txt -entity_resfile entity_file_patch4.txt -ms:generations 200 -ms:pop_size 250 -ms:fraction_by_recombination 0.1 -msd::double_lazy_ig_mem_limit 1024 -ignore_unrecognized_res -ignore_zero_occupancy false -mute core.pack.annealer.MultiCoolAnnealer
+core.init: (0) 'RNG device' seed mode, using '/dev/urandom', seed=2046700536 seed_offset=0 real_seed=2046700536
+core.init.random: (0) RandomGenerator:init: Normal mode, seed=2046700536 RG_type=mt19937
+core.init: (2) 'RNG device' seed mode, using '/dev/urandom', seed=-484793937 seed_offset=0 real_seed=2046700538
+core.init.random: (2) RandomGenerator:init: Normal mode, seed=2046700538 RG_type=mt19937
+core.scoring.ScoreFunctionFactory: (2) SCOREFUNCTION: talaris2013
+core.scoring.ScoreFunctionFactory: (0) SCOREFUNCTION: talaris2013
+core.init: (1) 'RNG device' seed mode, using '/dev/urandom', seed=-523793198 seed_offset=0 real_seed=2046700537
+core.init.random: (1) RandomGenerator:init: Normal mode, seed=2046700537 RG_type=mt19937
+core.scoring.ScoreFunctionFactory: (1) SCOREFUNCTION: talaris2013
+core.init: (3) Rosetta version exported  from http://www.rosettacommons.org
+core.init: (3) command: /netapp/home/thompson/Rosetta/rosetta_2014.22/source/bin/mpi_msd.mpi.linuxgccrelease -database /netapp/home/thompson/Rosetta/rosetta_2014.22/database -msd:fitness_file fitness_file_patch4.txt -entity_resfile entity_file_patch4.txt -ms:generations 200 -ms:pop_size 250 -ms:fraction_by_recombination 0.1 -msd::double_lazy_ig_mem_limit 1024 -ignore_unrecognized_res -ignore_zero_occupancy false -mute core.pack.annealer.MultiCoolAnnealer
+core.init: (3) 'RNG device' seed mode, using '/dev/urandom', seed=-1006219180 seed_offset=0 real_seed=2046700539
+core.init.random: (3) RandomGenerator:init: Normal mode, seed=2046700539 RG_type=mt19937
+core.scoring.ScoreFunctionFactory: (3) SCOREFUNCTION: talaris2013
+core.scoring.etable: (2) Starting energy table calculation
+core.scoring.etable: (2) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (2) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (2) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (1) Starting energy table calculation
+core.scoring.etable: (1) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (1) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (1) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (0) Starting energy table calculation
+core.scoring.etable: (0) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (0) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (0) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (1) Finished calculating energy tables.
+core.scoring.etable: (2) Finished calculating energy tables.
+basic.io.database: (2) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBPoly1D.csv
+basic.io.database: (1) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBPoly1D.csv
+basic.io.database: (1) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBFadeIntervals.csv
+basic.io.database: (2) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBFadeIntervals.csv
+basic.io.database: (2) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBEval.csv
+basic.io.database: (1) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBEval.csv
+core.scoring.etable: (3) Starting energy table calculation
+core.scoring.etable: (3) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (3) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (3) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+basic.io.database: (1) Database file opened: scoring/score_functions/rama/Rama_smooth_dyn.dat_ss_6.4
+basic.io.database: (2) Database file opened: scoring/score_functions/rama/Rama_smooth_dyn.dat_ss_6.4
+core.scoring.etable: (0) Finished calculating energy tables.
+basic.io.database: (0) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBPoly1D.csv
+basic.io.database: (0) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBFadeIntervals.csv
+basic.io.database: (0) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBEval.csv
+basic.io.database: (0) Database file opened: scoring/score_functions/rama/Rama_smooth_dyn.dat_ss_6.4
+core.scoring.etable: (3) Finished calculating energy tables.
+basic.io.database: (3) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBPoly1D.csv
+basic.io.database: (3) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBFadeIntervals.csv
+basic.io.database: (3) Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBEval.csv
+basic.io.database: (1) Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: (1) Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+basic.io.database: (1) Database file opened: scoring/score_functions/P_AA_pp/P_AA_pp
+basic.io.database: (3) Database file opened: scoring/score_functions/rama/Rama_smooth_dyn.dat_ss_6.4
+basic.io.database: (2) Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: (2) Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+basic.io.database: (2) Database file opened: scoring/score_functions/P_AA_pp/P_AA_pp
+basic.io.database: (0) Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: (0) Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+basic.io.database: (0) Database file opened: scoring/score_functions/P_AA_pp/P_AA_pp
+core.scoring.etable: (1) Starting energy table calculation
+core.scoring.etable: (1) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (1) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (1) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (2) Starting energy table calculation
+core.scoring.etable: (2) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (2) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (2) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+basic.io.database: (3) Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: (3) Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+basic.io.database: (3) Database file opened: scoring/score_functions/P_AA_pp/P_AA_pp
+core.scoring.etable: (1) Finished calculating energy tables.
+core.scoring.etable: (2) Finished calculating energy tables.
+apps.public.design.mpi_msd: (0) Activating decompose_bb_hb_into_pair_energies in the score function
+core.scoring.etable: (0) Starting energy table calculation
+core.scoring.etable: (0) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (0) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (0) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: (0) Finished calculating energy tables.
+core.chemical.ResidueTypeSet: (1) Finished initializing fa_standard residue type set.  Created 722 residue types
+Setting dlig nmeg limit1024
+core.chemical.ResidueTypeSet: (2) Finished initializing fa_standard residue type set.  Created 722 residue types
+Setting dlig nmeg limit1024
+core.scoring.etable: (3) Starting energy table calculation
+core.scoring.etable: (3) smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: (3) smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: (3) smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.chemical.ResidueTypeSet: (0) Finished initializing fa_standard residue type set.  Created 722 residue types
+Setting dlig nmeg limit1024
+protocols.pack_daemon.DynamicAggregateFunction: (0) Read STATE line.  Name= RPN13_currentenergy PDB= /netapp/home/thompson/UBQ/PDBs/RPN13_yeast_relax.pdb Corr= correspondence_file_patch4.txt 2RF= sec_resfile_RPN13_patch4.txt
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 2, attempting to tokenize scalar expression:  -289.394
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 2, attempting to parse scalar expression:  -289.394
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 2 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 3, attempting to tokenize scalar expression:  RPN13_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 3, attempting to parse scalar expression:  RPN13_startenergy + 4.91
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 3 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 4, attempting to tokenize scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 4, attempting to parse scalar expression:  0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 4 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 5, attempting to tokenize scalar expression:  exp(RPN13_s*(RPN13_currentenergy-RPN13_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 5, attempting to parse scalar expression:  exp(RPN13_s*(RPN13_currentenergy-RPN13_o))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 5 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 6, attempting to tokenize scalar expression:  1.0
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 6, attempting to parse scalar expression:  1.0
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 6 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 7, attempting to tokenize scalar expression:  (1-RPN13_k)+(RPN13_k/(1+RPN13_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 7, attempting to parse scalar expression:  (1-RPN13_k)+(RPN13_k/(1+RPN13_exp))
+protocols.pack_daemon.DynamicAggregateFunction: (0) SCALAR_EXPRESSION on line 7 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 9, attempting to tokenize FITNESS expression:  -1*RPN13_sig
+protocols.pack_daemon.DynamicAggregateFunction: (0) On line 9, attempting to parse expression:  -1*RPN13_sig
+protocols.pack_daemon.DynamicAggregateFunction: (0) FITNESS on line 9 successfully parsed
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_startenergy
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:-289.394
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_o
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:variable:RPN13_startenergy
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTValue:literal:4.91
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_s
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:0.6
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_exp
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTFunction:exp:1(
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:RPN13_s
+            ) 
+            ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:variable:RPN13_currentenergy
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:RPN13_o
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_k
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:1
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression()
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating scalar expression for RPN13_sig
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTExpression(
+        ArithmeticASTTerm(
+          ArithmeticASTFactor( 
+            ArithmeticASTValue:literal:1
+          ) 
+          ArithmeticASTRestTerm()
+        )
+        ArithmeticASTRestExpression:SUBTRACT_SYMBOL(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:RPN13_k
+            ) 
+            ArithmeticASTRestTerm()
+          )
+          ArithmeticASTRestExpression()
+        )
+      )
+    ) 
+    ArithmeticASTRestTerm()
+  )
+  ArithmeticASTRestExpression:PLUS_SYMBOL(
+    ArithmeticASTTerm(
+      ArithmeticASTFactor( 
+        ArithmeticASTExpression(
+          ArithmeticASTTerm(
+            ArithmeticASTFactor( 
+              ArithmeticASTValue:variable:RPN13_k
+            ) 
+            ArithmeticASTRestTerm:DIVIDE_SYMBOL(
+              ArithmeticASTFactor( 
+                ArithmeticASTExpression(
+                  ArithmeticASTTerm(
+                    ArithmeticASTFactor( 
+                      ArithmeticASTValue:literal:1
+                    ) 
+                    ArithmeticASTRestTerm()
+                  )
+                  ArithmeticASTRestExpression:PLUS_SYMBOL(
+                    ArithmeticASTTerm(
+                      ArithmeticASTFactor( 
+                        ArithmeticASTValue:variable:RPN13_exp
+                      ) 
+                      ArithmeticASTRestTerm()
+                    )
+                    ArithmeticASTRestExpression()
+                  )
+                )
+              ) 
+              ArithmeticASTRestTerm()
+            )
+          )
+          ArithmeticASTRestExpression()
+        )
+      ) 
+      ArithmeticASTRestTerm()
+    )
+    ArithmeticASTRestExpression()
+  )
+)
+protocols.pack_daemon.DynamicAggregateFunction: (0) Creating fitness expression from AST:
+ArithmeticASTExpression(
+  ArithmeticASTTerm(
+    ArithmeticASTFactor( 
+      ArithmeticASTValue:literal:-1
+    ) 
+    ArithmeticASTRestTerm:MULTIPLY_SYMBOL(
+      ArithmeticASTFactor( 
+        ArithmeticASTValue:variable:RPN13_sig
+      ) 
+      ArithmeticASTRestTerm()
+    )
+  )
+  ArithmeticASTRestExpression()
+)
+core.scoring.etable: (3) Finished calculating energy tables.
+core.chemical.ResidueTypeSet: (3) Finished initializing fa_standard residue type set.  Created 722 residue types
+Setting dlig nmeg limit1024
+core.pack.task: (3) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (3) Adding daemon: 1 /netapp/home/thompson/UBQ/PDBs/RPN13_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_RPN13_patch4.txt
+core.pack.task: (3) Packer task: initialize from command line() 
+protocols.pack_daemon.PackDaemon: (3) Setting dlig nmeg limit
+protocols.pack_daemon.PackDaemon: (3) PackDaemon::setup()
+core.pack.dunbrack: (3) Dunbrack 2010 library took 0.18 seconds to load from binary
+core.pack.interaction_graph.interaction_graph_factory: (3) Instantiating DoubleLazyInteractionGraph
+core.pack.pack_rotamers: (3) built 26634 rotamers at 87 positions.
+core.pack.pack_rotamers: (3) IG: 16771494 bytes
+apps.public.design.mpi_msd: (0) Generation 1 took 1030.53 seconds; best fitness = -0.124967
+apps.public.design.mpi_msd: (0) Generation 2 took 218.77 seconds; best fitness = -0.124967
+apps.public.design.mpi_msd: (0) Generation 3 took 210.71 seconds; best fitness = -0.124967
+apps.public.design.mpi_msd: (0) Generation 4 took 226.68 seconds; best fitness = -0.124967
+apps.public.design.mpi_msd: (0) Generation 5 took 179.66 seconds; best fitness = -0.161803
+apps.public.design.mpi_msd: (0) Generation 6 took 144.89 seconds; best fitness = -0.161803
+apps.public.design.mpi_msd: (0) Generation 7 took 148.8 seconds; best fitness = -0.161803
+apps.public.design.mpi_msd: (0) Generation 8 took 288.86 seconds; best fitness = -0.161803
+apps.public.design.mpi_msd: (0) Generation 9 took 336.86 seconds; best fitness = -0.161803
+apps.public.design.mpi_msd: (0) Generation 10 took 282.43 seconds; best fitness = -0.161803
+apps.public.design.mpi_msd: (0) Generation 11 took 319.27 seconds; best fitness = -0.17928
+apps.public.design.mpi_msd: (0) Generation 12 took 315.08 seconds; best fitness = -0.17928
+apps.public.design.mpi_msd: (0) Generation 13 took 330.49 seconds; best fitness = -0.17928
+apps.public.design.mpi_msd: (0) Generation 14 took 313.79 seconds; best fitness = -0.185836
+apps.public.design.mpi_msd: (0) Generation 15 took 309.76 seconds; best fitness = -0.229851
+apps.public.design.mpi_msd: (0) Generation 16 took 271.53 seconds; best fitness = -0.229851
+apps.public.design.mpi_msd: (0) Generation 17 took 285.68 seconds; best fitness = -0.312493
+apps.public.design.mpi_msd: (0) Generation 18 took 255.5 seconds; best fitness = -0.449564
+apps.public.design.mpi_msd: (0) Generation 19 took 170.58 seconds; best fitness = -0.449564
+apps.public.design.mpi_msd: (0) Generation 20 took 188.15 seconds; best fitness = -0.449564
+apps.public.design.mpi_msd: (0) Generation 21 took 173.43 seconds; best fitness = -0.449564
+apps.public.design.mpi_msd: (0) Generation 22 took 268.66 seconds; best fitness = -0.449564
+apps.public.design.mpi_msd: (0) Generation 23 took 261.31 seconds; best fitness = -0.449564
+apps.public.design.mpi_msd: (0) Generation 24 took 272.21 seconds; best fitness = -0.517793
+apps.public.design.mpi_msd: (0) Generation 25 took 239.99 seconds; best fitness = -0.517793
+apps.public.design.mpi_msd: (0) Generation 26 took 251.26 seconds; best fitness = -0.517793
+apps.public.design.mpi_msd: (0) Generation 27 took 226.93 seconds; best fitness = -0.517793
+apps.public.design.mpi_msd: (0) Generation 28 took 245.26 seconds; best fitness = -0.517793
+apps.public.design.mpi_msd: (0) Generation 29 took 242.17 seconds; best fitness = -0.517793
+apps.public.design.mpi_msd: (0) Generation 30 took 239.42 seconds; best fitness = -0.517793
+apps.public.design.mpi_msd: (0) Generation 31 took 237.45 seconds; best fitness = -0.517793
+apps.public.design.mpi_msd: (0) Generation 32 took 232.02 seconds; best fitness = -0.545971
+apps.public.design.mpi_msd: (0) Generation 33 took 234.86 seconds; best fitness = -0.545971
+apps.public.design.mpi_msd: (0) Generation 34 took 250.03 seconds; best fitness = -0.545971
+apps.public.design.mpi_msd: (0) Generation 35 took 221.29 seconds; best fitness = -0.545971
+apps.public.design.mpi_msd: (0) Generation 36 took 219.35 seconds; best fitness = -0.666339
+apps.public.design.mpi_msd: (0) Generation 37 took 164.05 seconds; best fitness = -0.666339
+apps.public.design.mpi_msd: (0) Generation 38 took 201.06 seconds; best fitness = -0.666339
+apps.public.design.mpi_msd: (0) Generation 39 took 176.38 seconds; best fitness = -0.666339
+apps.public.design.mpi_msd: (0) Generation 40 took 217.39 seconds; best fitness = -0.666339
+apps.public.design.mpi_msd: (0) Generation 41 took 193.03 seconds; best fitness = -0.690103
+apps.public.design.mpi_msd: (0) Generation 42 took 176.5 seconds; best fitness = -0.690103
+apps.public.design.mpi_msd: (0) Generation 43 took 154.29 seconds; best fitness = -0.690103
+apps.public.design.mpi_msd: (0) Generation 44 took 169.39 seconds; best fitness = -0.690103
+apps.public.design.mpi_msd: (0) Generation 45 took 201.39 seconds; best fitness = -0.690103
+apps.public.design.mpi_msd: (0) Generation 46 took 201.95 seconds; best fitness = -0.690103
+apps.public.design.mpi_msd: (0) Generation 47 took 203.31 seconds; best fitness = -0.690103
+apps.public.design.mpi_msd: (0) Generation 48 took 218.58 seconds; best fitness = -0.690103
+apps.public.design.mpi_msd: (0) Generation 49 took 142.78 seconds; best fitness = -0.690103
+apps.public.design.mpi_msd: (0) Generation 50 took 183.71 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 51 took 160.79 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 52 took 155.34 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 53 took 159.6 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 54 took 148.03 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 55 took 85.32 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 56 took 136.38 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 57 took 145.78 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 58 took 211.51 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 59 took 189.62 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 60 took 158.21 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 61 took 168.72 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 62 took 150.67 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 63 took 148.82 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 64 took 169.93 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 65 took 162.91 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 66 took 141.71 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 67 took 82.12 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 68 took 143.09 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 69 took 181.7 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 70 took 134.18 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 71 took 123.38 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 72 took 95 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 73 took 143.91 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 74 took 115.36 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 75 took 111.11 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 76 took 108.49 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 77 took 115 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 78 took 146.79 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 79 took 158.72 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 80 took 152.72 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 81 took 120.13 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 82 took 78.43 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 83 took 119.26 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 84 took 98.32 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 85 took 154.37 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 86 took 176.19 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 87 took 150.24 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 88 took 193.17 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 89 took 154.01 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 90 took 123.17 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 91 took 144.35 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 92 took 160.34 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 93 took 162.77 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 94 took 152.29 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 95 took 138.19 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 96 took 143.57 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 97 took 164.35 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 98 took 123.92 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 99 took 136.34 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 100 took 157.42 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 101 took 148.4 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 102 took 147.87 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 103 took 129.34 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 104 took 153.4 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 105 took 160.45 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 106 took 149.48 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 107 took 140.45 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 108 took 140.86 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 109 took 157.94 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 110 took 144.38 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 111 took 146.38 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 112 took 140.48 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 113 took 142.81 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 114 took 116.52 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 115 took 132.99 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 116 took 129.3 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 117 took 116.96 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 118 took 98.64 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 119 took 98.77 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 120 took 121.3 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 121 took 134.8 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 122 took 137.36 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 123 took 135.15 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 124 took 103.39 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 125 took 100.85 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 126 took 84.05 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 127 took 134.39 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 128 took 118.14 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 129 took 112.11 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 130 took 137.59 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 131 took 132.49 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 132 took 131.55 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 133 took 129.51 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 134 took 103.98 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 135 took 76.65 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 136 took 75.47 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 137 took 86.43 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 138 took 80.38 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 139 took 72.58 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 140 took 99.08 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 141 took 130.98 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 142 took 104.01 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 143 took 112.37 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 144 took 120.02 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 145 took 121.85 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 146 took 129.57 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 147 took 108.03 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 148 took 117.07 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 149 took 133.85 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 150 took 131.4 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 151 took 117.43 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 152 took 101.11 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 153 took 121.72 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 154 took 119.72 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 155 took 113.89 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 156 took 123 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 157 took 106.74 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 158 took 66.53 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 159 took 75.62 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 160 took 77.34 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 161 took 74.02 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 162 took 75.14 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 163 took 71.74 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 164 took 66.78 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 165 took 100 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 166 took 61.26 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 167 took 79.31 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 168 took 73 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 169 took 64.72 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 170 took 76.05 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 171 took 79.34 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 172 took 72.35 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 173 took 73.08 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 174 took 69.61 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 175 took 67.8 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 176 took 67.92 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 177 took 58.1 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 178 took 62.66 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 179 took 58.99 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 180 took 69.44 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 181 took 64.65 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 182 took 69.3 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 183 took 72.74 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 184 took 50.94 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 185 took 62.01 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 186 took 60.28 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 187 took 62.14 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 188 took 61.28 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 189 took 76.16 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 190 took 59.77 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 191 took 67.12 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 192 took 64.59 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 193 took 55.36 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 194 took 65.91 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 195 took 67.47 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 196 took 71.63 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 197 took 57.96 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 198 took 80.89 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 199 took 68.71 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Generation 200 took 84.97 seconds; best fitness = -0.716574
+apps.public.design.mpi_msd: (0) Final Generation 200:
+apps.public.design.mpi_msd: (0) Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.717
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.690
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.680
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.677
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.669
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.666
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.662
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.661
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.652
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:A and fitness -0.651
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.649
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.647
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:A and fitness -0.634
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:F AA:8:S and fitness -0.634
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.634
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.632
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.631
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:V AA:8:S and fitness -0.628
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.627
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Y AA:8:S and fitness -0.627
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:S and fitness -0.625
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.621
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:D AA:5:F AA:6:N AA:7:K AA:8:S and fitness -0.620
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.619
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.618
+Entity with traits: AA:1:I AA:2:Y AA:3:E AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.618
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:S AA:8:S and fitness -0.618
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.616
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:L AA:8:S and fitness -0.615
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:K AA:7:T AA:8:S and fitness -0.615
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:Q AA:8:S and fitness -0.610
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:S and fitness -0.610
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:A and fitness -0.609
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:R AA:8:S and fitness -0.609
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.608
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.608
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.608
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:K AA:8:S and fitness -0.606
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.606
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:E AA:8:S and fitness -0.605
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:N AA:8:S and fitness -0.605
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.604
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:R AA:8:S and fitness -0.604
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:A and fitness -0.602
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:C AA:8:S and fitness -0.602
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:I AA:8:S and fitness -0.600
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.598
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:G AA:8:S and fitness -0.597
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:A and fitness -0.596
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.595
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.595
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:A and fitness -0.594
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:A and fitness -0.594
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:V AA:8:A and fitness -0.592
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:F AA:8:S and fitness -0.592
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:G AA:7:T AA:8:S and fitness -0.591
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.591
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.591
+Entity with traits: AA:1:V AA:2:F AA:3:E AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.589
+Entity with traits: AA:1:V AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.589
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:F AA:8:S and fitness -0.588
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:H AA:8:S and fitness -0.588
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:F AA:6:N AA:7:T AA:8:A and fitness -0.588
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:Q AA:8:S and fitness -0.588
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.584
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:Y AA:8:S and fitness -0.584
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:A and fitness -0.584
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:H AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.583
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:D AA:7:T AA:8:S and fitness -0.583
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:S and fitness -0.583
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:K AA:7:T AA:8:A and fitness -0.582
+Entity with traits: AA:1:I AA:2:F AA:3:G AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.582
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:S AA:8:A and fitness -0.580
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Y AA:8:S and fitness -0.580
+Entity with traits: AA:1:I AA:2:F AA:3:Q AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.579
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:V AA:8:S and fitness -0.579
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.579
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:A and fitness -0.578
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.577
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:A and fitness -0.576
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:S AA:8:S and fitness -0.575
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.575
+Entity with traits: AA:1:I AA:2:F AA:3:K AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.573
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:A and fitness -0.572
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:S AA:8:S and fitness -0.572
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:K AA:7:T AA:8:S and fitness -0.572
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:R AA:8:S and fitness -0.571
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:F AA:8:S and fitness -0.571
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.571
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:L AA:8:S and fitness -0.571
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:K AA:7:T AA:8:S and fitness -0.570
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:V AA:8:S and fitness -0.569
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:A and fitness -0.569
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:A and fitness -0.569
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:L AA:8:S and fitness -0.568
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:A AA:8:S and fitness -0.568
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:D AA:7:R AA:8:S and fitness -0.567
+Entity with traits: AA:1:I AA:2:Y AA:3:E AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:A and fitness -0.566
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.566
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:F AA:6:N AA:7:V AA:8:S and fitness -0.565
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:D AA:5:Y AA:6:K AA:7:K AA:8:S and fitness -0.565
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:A and fitness -0.565
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:S and fitness -0.564
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:Q AA:7:T AA:8:S and fitness -0.564
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:Y AA:8:S and fitness -0.563
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:S and fitness -0.562
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:C AA:8:S and fitness -0.562
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:F AA:8:A and fitness -0.562
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:E AA:8:S and fitness -0.562
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:V AA:8:S and fitness -0.562
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:N AA:8:S and fitness -0.562
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:R AA:8:S and fitness -0.561
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:F AA:8:S and fitness -0.560
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:T AA:8:S and fitness -0.560
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:E AA:8:S and fitness -0.560
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:N AA:8:S and fitness -0.560
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:C AA:8:S and fitness -0.559
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:Q AA:8:S and fitness -0.559
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:G AA:7:T AA:8:A and fitness -0.559
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:K AA:7:V AA:8:S and fitness -0.559
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:A and fitness -0.559
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:A and fitness -0.558
+Entity with traits: AA:1:V AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.558
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:I AA:8:A and fitness -0.557
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:I AA:8:S and fitness -0.557
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:H AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.552
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:I AA:8:A and fitness -0.515
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.546
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:N AA:8:S and fitness -0.562
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:D AA:5:Y AA:6:K AA:7:K AA:8:S and fitness -0.565
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.647
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.717
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.632
+Entity with traits: AA:1:I AA:2:F AA:3:Q AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.579
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:K AA:7:V AA:8:S and fitness -0.559
+Entity with traits: AA:1:I AA:2:Y AA:3:L AA:4:D AA:5:M AA:6:D AA:7:T AA:8:S and fitness -0.044
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.661
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:C and fitness -0.001
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:S AA:8:S and fitness -0.575
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:V and fitness  0.000
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:Y and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:D AA:5:Y AA:6:Y AA:7:K AA:8:S and fitness -0.436
+Entity with traits: AA:1:G AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.267
+Entity with traits: AA:1:I AA:2:F AA:3:N AA:4:D AA:5:F AA:6:N AA:7:L AA:8:K and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:K AA:4:D AA:5:Y AA:6:N AA:7:D AA:8:S and fitness -0.352
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:Y and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:A AA:7:T AA:8:A and fitness -0.403
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:F AA:8:S and fitness -0.439
+Entity with traits: AA:1:S AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.266
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:K AA:5:Y AA:6:N AA:7:K AA:8:A and fitness -0.222
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:D AA:5:Y AA:6:K AA:7:R AA:8:S and fitness -0.243
+Entity with traits: AA:1:I AA:2:Y AA:3:T AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:A and fitness -0.012
+Entity with traits: AA:1:I AA:2:F AA:3:N AA:4:D AA:5:Y AA:6:N AA:7:N AA:8:S and fitness -0.355
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:D AA:8:S and fitness -0.461
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:R AA:8:E and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:Y AA:5:Y AA:6:Q AA:7:T AA:8:S and fitness -0.166
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:D AA:7:T AA:8:S and fitness -0.583
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:T AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.216
+Entity with traits: AA:1:F AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:S AA:8:A and fitness -0.580
+Entity with traits: AA:1:I AA:2:F AA:3:Y AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.294
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:T AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.216
+Entity with traits: AA:1:I AA:2:F AA:3:W AA:4:D AA:5:Y AA:6:K AA:7:V AA:8:S and fitness -0.189
+Entity with traits: AA:1:V AA:2:K AA:3:E AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.073
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:A AA:6:N AA:7:T AA:8:S and fitness -0.249
+Entity with traits: AA:1:I AA:2:F AA:3:P AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:E AA:7:C AA:8:S and fitness -0.420
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:R AA:8:S and fitness -0.441
+Entity with traits: AA:1:I AA:2:D AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.079
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:E AA:7:R AA:8:S and fitness -0.397
+Entity with traits: AA:1:I AA:2:F AA:3:I AA:4:D AA:5:Y AA:6:K AA:7:K AA:8:S and fitness -0.113
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:T AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.243
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:F AA:6:N AA:7:V AA:8:L and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:T and fitness -0.011
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:D AA:5:S AA:6:N AA:7:K AA:8:S and fitness -0.154
+Entity with traits: AA:1:I AA:2:Y AA:3:D AA:4:D AA:5:Y AA:6:N AA:7:S AA:8:S and fitness -0.333
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:L AA:6:N AA:7:Q AA:8:A and fitness -0.002
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:V AA:5:F AA:6:N AA:7:T AA:8:A and fitness -0.128
+Entity with traits: AA:1:D AA:2:F AA:3:E AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:A and fitness -0.104
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:T AA:6:N AA:7:N AA:8:S and fitness -0.028
+Entity with traits: AA:1:I AA:2:F AA:3:L AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.392
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:L AA:6:F AA:7:I AA:8:S and fitness -0.001
+Entity with traits: AA:1:I AA:2:N AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.118
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:K AA:8:P and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:S AA:5:Y AA:6:N AA:7:F AA:8:S and fitness -0.282
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:W AA:6:N AA:7:L AA:8:S and fitness -0.133
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:V and fitness  0.000
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:F AA:8:I and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness -0.649
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:K AA:7:T AA:8:L and fitness  0.000
+Entity with traits: AA:1:V AA:2:F AA:3:A AA:4:D AA:5:T AA:6:N AA:7:V AA:8:S and fitness -0.026
+Entity with traits: AA:1:I AA:2:F AA:3:W AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness -0.259
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:N AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.409
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:H AA:6:K AA:7:K AA:8:S and fitness -0.188
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:G AA:7:Y AA:8:S and fitness -0.453
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:G AA:7:M AA:8:S and fitness -0.402
+Entity with traits: AA:1:G AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.219
+Entity with traits: AA:1:I AA:2:Y AA:3:C AA:4:D AA:5:Y AA:6:D AA:7:T AA:8:A and fitness -0.249
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:T AA:7:V AA:8:S and fitness -0.200
+Entity with traits: AA:1:F AA:2:F AA:3:S AA:4:D AA:5:F AA:6:N AA:7:T AA:8:A and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:R AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:A and fitness -0.334
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:M AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.331
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:D AA:7:N AA:8:S and fitness -0.515
+Entity with traits: AA:1:I AA:2:W AA:3:S AA:4:D AA:5:Y AA:6:F AA:7:I AA:8:S and fitness -0.088
+Entity with traits: AA:1:I AA:2:C AA:3:S AA:4:D AA:5:F AA:6:E AA:7:T AA:8:S and fitness -0.089
+Entity with traits: AA:1:V AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:T AA:7:T AA:8:A and fitness -0.157
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:H AA:5:Y AA:6:N AA:7:L AA:8:S and fitness -0.469
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:P AA:5:Y AA:6:D AA:7:R AA:8:S and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:C AA:8:S and fitness -0.541
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:P AA:8:A and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:F and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:G AA:4:A AA:5:Y AA:6:K AA:7:T AA:8:S and fitness -0.165
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:C AA:7:T AA:8:S and fitness -0.471
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness -0.632
+Entity with traits: AA:1:W AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:Q AA:8:S and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:H AA:6:G AA:7:T AA:8:S and fitness -0.224
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:E AA:7:T AA:8:S and fitness -0.501
+Entity with traits: AA:1:A AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.372
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:F AA:6:N AA:7:V AA:8:S and fitness -0.562
+Entity with traits: AA:1:I AA:2:Y AA:3:V AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.147
+Entity with traits: AA:1:I AA:2:F AA:3:R AA:4:D AA:5:Y AA:6:K AA:7:K AA:8:S and fitness -0.318
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:D AA:5:Y AA:6:N AA:7:W AA:8:S and fitness -0.324
+Entity with traits: AA:1:I AA:2:F AA:3:C AA:4:D AA:5:Y AA:6:N AA:7:F AA:8:S and fitness -0.303
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:W AA:7:Q AA:8:S and fitness -0.186
+Entity with traits: AA:1:I AA:2:F AA:3:P AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:A and fitness  0.000
+Entity with traits: AA:1:T AA:2:F AA:3:S AA:4:N AA:5:Y AA:6:G AA:7:Q AA:8:S and fitness -0.194
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.717
+Entity with traits: AA:1:I AA:2:V AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:A and fitness -0.078
+Entity with traits: AA:1:V AA:2:F AA:3:C AA:4:D AA:5:R AA:6:Y AA:7:T AA:8:A and fitness -0.004
+Entity with traits: AA:1:I AA:2:F AA:3:E AA:4:D AA:5:T AA:6:N AA:7:K AA:8:S and fitness -0.044
+Entity with traits: AA:1:R AA:2:F AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:V AA:8:A and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:Y AA:5:F AA:6:N AA:7:F AA:8:S and fitness -0.184
+Entity with traits: AA:1:D AA:2:F AA:3:S AA:4:D AA:5:R AA:6:N AA:7:K AA:8:S and fitness -0.003
+Entity with traits: AA:1:K AA:2:Q AA:3:E AA:4:D AA:5:Y AA:6:N AA:7:K AA:8:S and fitness  0.000
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:P AA:5:Y AA:6:N AA:7:T AA:8:S and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:K AA:6:N AA:7:Q AA:8:S and fitness -0.057
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:L AA:8:A and fitness -0.472
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:M AA:5:E AA:6:N AA:7:Q AA:8:S and fitness -0.052
+Entity with traits: AA:1:V AA:2:Y AA:3:S AA:4:G AA:5:Y AA:6:N AA:7:T AA:8:A and fitness -0.179
+Entity with traits: AA:1:D AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:Q AA:7:T AA:8:S and fitness -0.093
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:A AA:6:N AA:7:N AA:8:S and fitness -0.167
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:Q and fitness  0.000
+Entity with traits: AA:1:M AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness  0.000
+Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:F AA:6:V AA:7:T AA:8:S and fitness -0.213
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:E AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.286
+Entity with traits: AA:1:Y AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:S and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:A AA:4:D AA:5:Y AA:6:N AA:7:C AA:8:A and fitness -0.440
+Entity with traits: AA:1:V AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:H and fitness  0.000
+Entity with traits: AA:1:I AA:2:Y AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:G AA:8:G and fitness -0.374
+Entity with traits: AA:1:W AA:2:F AA:3:Q AA:4:D AA:5:Y AA:6:N AA:7:E AA:8:S and fitness  0.000
+apps.public.design.mpi_msd: (0) Evaluated 15988 sequences out of 25600000000 possible.
+apps.public.design.mpi_msd: (0) Top set #1. Writing pdbs for entity: Entity with traits: AA:1:I AA:2:F AA:3:S AA:4:D AA:5:Y AA:6:N AA:7:T AA:8:S and fitness -0.717
+protocols.pack_daemon.DynamicAggregateFunction: (0) Recovering relevant states
+protocols.pack_daemon.DynamicAggregateFunction: (0) Assigning value -286.03 to VariableExpression 1
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_startenergy evaluated to -289.394
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_o evaluated to -284.484
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_s evaluated to 0.6
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_exp evaluated to 0.395529
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_k evaluated to 1
+protocols.pack_daemon.DynamicAggregateFunction: (0) sub expression RPN13_sig evaluated to 0.716574
+protocols.pack_daemon.DynamicAggregateFunction: (0)   fitness_exp_ identifies active variable: RPN13_currentenergy 1
+protocols.pack_daemon.DynamicAggregateFunction: (0)   FitnessFunction relevant state indices 1
+core.pack.task: (0) Packer task: initialize from command line() 
+core.pack.dunbrack: (0) Dunbrack 2010 library took 0.12 seconds to load from binary
+apps.public.design.mpi_msd: (0) Writing structure msd_output_1_RPN13_currentenergy.pdb with score: -286.033

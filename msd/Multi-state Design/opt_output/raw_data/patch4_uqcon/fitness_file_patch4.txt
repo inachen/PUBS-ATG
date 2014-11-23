@@ -1,0 +1,9 @@
+STATE UQ_CON_currentenergy /netapp/home/thompson/UBQ/PDBs/UQ_con_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_UQ_CON_patch4.txt 
+SCALAR_EXPRESSION UQ_CON_startenergy = -588.108
+SCALAR_EXPRESSION UQ_CON_o = UQ_CON_startenergy + 4.91
+SCALAR_EXPRESSION UQ_CON_s = 0.6
+SCALAR_EXPRESSION UQ_CON_exp = exp(UQ_CON_s*(UQ_CON_currentenergy-UQ_CON_o))
+SCALAR_EXPRESSION UQ_CON_k = 1.0
+SCALAR_EXPRESSION UQ_CON_sig = (1-UQ_CON_k)+(UQ_CON_k/(1+UQ_CON_exp))
+
+FITNESS -1*UQ_CON_sig

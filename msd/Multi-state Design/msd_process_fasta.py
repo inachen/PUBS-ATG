@@ -68,6 +68,7 @@ def get_prop_dic(fasta_fp, patch_num, run_num):
 
     # convert list of patch seq to ubiquitin seq list
     for record in SeqIO.parse(open(fasta_fp, "rU"), "fasta"):
+
         patch_seq = list(str(record.seq))
         ubi_seq = list(UBIQ_SEQ)
         allel_seq = ['-' for i in range(len(UBIQ_SEQ))]
@@ -85,6 +86,7 @@ def get_prop_dic(fasta_fp, patch_num, run_num):
         
         for i, aa in enumerate(ubi_seq):
             seq_lst[i].append(aa)
+
 
     # write WT sequences to list
     cw = csv.writer(open('out_txt/consensus_run_wt_'+str(run_num)+'_patch_'+str(patch_num)+'.csv', "wb"))
@@ -117,20 +119,21 @@ def get_prop_dic(fasta_fp, patch_num, run_num):
 def run():
 
     # file name format: run_#_patch_#_output
-    filelst = glob("opt_output/run*_output")
+    filelst = glob("opt_output/run*_output.fasta")
 
     # goes through all output files
     for fp in filelst:
+
         info_lst = fp.split('_')
         run_num = info_lst[2]
         patch_num = int(info_lst[4])
 
-        # extract .fasta files from output
-        get_fasta(fp)
+        # # extract .fasta files from output
+        # get_fasta(fp)
 
         # produce prop dictionary pickles (for bruk)
         # also saves sequence txt files for consensus logo
-        get_prop_dic(fp+'.fasta', patch_num, run_num)
+        get_prop_dic(fp, patch_num, run_num)
 
     # fasta_fp = "UQ_CON_interface_Patch1.fasta"
 

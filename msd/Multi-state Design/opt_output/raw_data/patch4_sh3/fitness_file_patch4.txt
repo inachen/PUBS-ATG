@@ -1,0 +1,9 @@
+STATE SH3_currentenergy /netapp/home/thompson/UBQ/PDBs/SH3_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_SH3_patch4.txt 
+SCALAR_EXPRESSION SH3_startenergy = -216.911
+SCALAR_EXPRESSION SH3_o = SH3_startenergy + 4.91
+SCALAR_EXPRESSION SH3_s = 0.6
+SCALAR_EXPRESSION SH3_exp = exp(SH3_s*(SH3_currentenergy-SH3_o))
+SCALAR_EXPRESSION SH3_k = 1.0
+SCALAR_EXPRESSION SH3_sig = (1-SH3_k)+(SH3_k/(1+SH3_exp))
+
+FITNESS -1*SH3_sig

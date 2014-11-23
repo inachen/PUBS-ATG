@@ -27,7 +27,7 @@ dmso_in = open('data_pkls/Codon_FitScore_DMSO_day1.pkl', 'rb')
 dmso_codon = pickle.load(dmso_in)
 dmso_in.close()
 
-caffeine_in = open('data_pkls/Codon_FitScore_Caffeine_day1.pkl', 'rb')
+caffeine_in = open('data_pkls/Codon_FitScore_Caffeine_day2.pkl', 'rb')
 caffeine_codon = pickle.load(caffeine_in)
 caffeine_in.close()
 

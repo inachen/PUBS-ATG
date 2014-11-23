@@ -1,0 +1,9 @@
+STATE RPN13_currentenergy /netapp/home/thompson/UBQ/PDBs/RPN13_yeast_relax.pdb correspondence_file_patch4.txt sec_resfile_RPN13_patch4.txt 
+SCALAR_EXPRESSION RPN13_startenergy = -289.394
+SCALAR_EXPRESSION RPN13_o = RPN13_startenergy + 4.91
+SCALAR_EXPRESSION RPN13_s = 0.6
+SCALAR_EXPRESSION RPN13_exp = exp(RPN13_s*(RPN13_currentenergy-RPN13_o))
+SCALAR_EXPRESSION RPN13_k = 1.0
+SCALAR_EXPRESSION RPN13_sig = (1-RPN13_k)+(RPN13_k/(1+RPN13_exp))
+
+FITNESS -1*RPN13_sig

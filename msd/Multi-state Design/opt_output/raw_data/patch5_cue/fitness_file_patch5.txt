@@ -1,0 +1,9 @@
+STATE CUE_currentenergy /netapp/home/thompson/UBQ/PDBs/CUE_yeast_relax.pdb correspondence_file_patch5.txt sec_resfile_CUE_patch5.txt 
+SCALAR_EXPRESSION CUE_startenergy = -187.539
+SCALAR_EXPRESSION CUE_o = CUE_startenergy + 4.91
+SCALAR_EXPRESSION CUE_s = 0.6
+SCALAR_EXPRESSION CUE_exp = exp(CUE_s*(CUE_currentenergy-CUE_o))
+SCALAR_EXPRESSION CUE_k = 1.0
+SCALAR_EXPRESSION CUE_sig = (1-CUE_k)+(CUE_k/(1+CUE_exp))
+
+FITNESS -1*CUE_sig
