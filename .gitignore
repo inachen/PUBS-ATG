@@ -8,3 +8,7 @@ rosetta/.Rapp.history
 rosetta/.Rapp.history
 
 .pymol.swo
+
+new_fitness/plots/Caffeine_vs_DMSO_corr.png
+
+new_fitness/plots/Hydroxyurea_vs_Caffeine_corr.png
