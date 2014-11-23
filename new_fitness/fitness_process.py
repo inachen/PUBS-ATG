@@ -132,6 +132,11 @@ ubq_lst = list(UBIQ_SEQ)
 
 HU_seq_lst = []
 
+# for storing prop dic
+HU_fitness_prop_dic = {}
+
+HU_sub_DMSO_prop_dic = {}
+
 for key, val in hu_fit.iteritems():
 
     if val > 0 and key[1] != 'WT' and key[1] != 'STOP':
