@@ -54,7 +54,7 @@ def plotmaker(ddg_dict, rosetta_dict, name_string):
 	plt.xlabel('DDG Values')
 	plt.ylabel('Shannon Entropy')
 	plt.title('Correlation of DDG and Shannon Entropy')
-	plt.savefig('ddg_vs_entropy/' + name_string[16:] + '.pdf')
+	plt.savefig('ddg_vs_entropy/' + name_string[16:37] + '.pdf')
 # print rosetta_test
 # x_val = ddg_calc(ddg_monomer, rosetta_test)
 # print len(rosetta_test)
@@ -64,8 +64,11 @@ def plotmaker(ddg_dict, rosetta_dict, name_string):
 # plt.show()
 # print len(entropy_ls(rosetta_test))
 
-#importing rosetta files
+importing rosetta files
 filelist = glob('msd/msd_pickles/run*')
 for name in filelist:
 	rosetta_file = pic.load(open(name, "rb"))
 	plotmaker(ddg_uqcon, rosetta_file, name)
+
+file1 = pic.load(open('msd/msd_pickles/run_1_patch_1_propdic.pkl', "rb"))
+print file1.keys()
