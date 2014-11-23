@@ -20,9 +20,6 @@ ddg_otu = pic.load(open("rosetta/out_pickles/ddg_dic_OTU.pkl", "rb"))
 ddg_rpn13 = pic.load(open("rosetta/out_pickles/ddg_dic_RPN13.pkl", "rb"))
 ddg_sh3 = pic.load(open("rosetta/out_pickles/ddg_dic_SH3.pkl", "rb"))
 
-#importing rosetta files
-rosetta_test = pic.load(open("msd/msd_pickles/run_16_patch_5_propdic.pkl", "rb"))
-
 #ddg of patch = sum of(ddg * fraction the mutation at that location shows up in rosetta)
 #input (ddg dictionary, rosetta dictionary)
 def ddg_calc(ddg_dict, rosetta_dict):
@@ -51,10 +48,13 @@ def entropy_ls(rosetta_dict):
 	return entropy_list
 
 def plotmaker(ddg_dict, rosetta_dict, name_string):
-	x_val = ddg_calc(ddg_monomer, rosetta_test)
-	y_val = entropy_ls(rosetta_test)
+	x_val = ddg_calc(ddg_dict, rosetta_dict)
+	y_val = entropy_ls(rosetta_dict)
 	plt.plot(x_val, y_val, "ro")
-	plt.savefig('ddg_vs_entropy/' + name_string + '.pdf')
+	plt.xlabel('DDG Values')
+	plt.ylabel('Shannon Entropy')
+	plt.title('Correlation of DDG and Shannon Entropy')
+	plt.savefig('ddg_vs_entropy/' + name_string[16:] + '.pdf')
 # print rosetta_test
 # x_val = ddg_calc(ddg_monomer, rosetta_test)
 # print len(rosetta_test)
@@ -64,9 +64,8 @@ def plotmaker(ddg_dict, rosetta_dict, name_string):
 # plt.show()
 # print len(entropy_ls(rosetta_test))
 
+#importing rosetta files
 filelist = glob('msd/msd_pickles/run*')
-print filelist
 for name in filelist:
 	rosetta_file = pic.load(open(name, "rb"))
 	plotmaker(ddg_uqcon, rosetta_file, name)
-
