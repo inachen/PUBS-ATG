@@ -99,37 +99,161 @@ bootp<-mean(tboot>stat)
 bootp
 source("http://bioconductor.org/biocLite.R")
 biocLite("DESeq")
+install.packages("ColorBrewer")
+install.packages("plyr")
+install.packages("ggplot2")
+install.packages("RColorBrewer")
+dat_mat = read.csv("fitness_csv/Hydroxyurea_sub_DMSO_fitness.csv", header=FALSE, check.names=TRUE) # row.names = 1
+dat_mat = read.csv("fitness_csv/Hydroxyurea_sub_DMSO_fitness.csv", header=FALSE, check.names=TRUE) # row.names = 1
+dat_avg = colMeans(dat_mat, na.rm=TRUE)
+data_avg
+dat_avg
+colnames(dat_avg) <- c(1:77)
+colnames(dat_mat) <- c(1:77)
+dat_avg = colMeans(dat_mat, na.rm=TRUE)
+dat_avg
+name = "Hydroxyurea_sub_DMSO_fitness"
+dat_mat = read.csv(paste("fitness_csv/", name, ".csv"), header=FALSE, check.names=TRUE) # row.names = 1
+dat_mat = read.csv(paste("fitness_csv/",name,".csv"), header=FALSE, check.names=TRUE) # row.names = 1
+dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1
+write.csv(dat_avg, file = paste(name, "_avg.csv", sep=""))
+write.csv(dat_avg, file = paste("fitness_csv/", name, "_avg.csv", sep=""))
+pvals <- read.table("MS.pvals.out", header=T)#
+#
+observed <- sort(pvals$Pvalue)#
+lobs <- -(log10(observed))#
+#
+expected <- c(1:length(observed)) #
+lexp <- -(log10(expected / (length(expected)+1)))
+pvals <- read.table("MS.pvals.out", header=T)#
+#
+observed <- sort(pvals$Pvalue)#
+lobs <- -(log10(observed))#
+#
+expected <- c(1:length(observed)) #
+lexp <- -(log10(expected / (length(expected)+1)))#
+pdf("qqplot.pdf", width=6, height=6)#
+plot(c(0,7), c(0,7), col="red", lwd=3, type="l", xlab="Expected (-logP)", ylab="Observed (-logP)", xlim=c(0,7), ylim=c(0,7), las=1, xaxs="i", yaxs="i", bty="l")#
+points(lexp, lobs, pch=23, cex=.4, bg="black") #
+dev.off()
+rm(list=ls())#
+#
+library("ggplot2")#
+library("RColorBrewer")#
+#
+wtcc <- read.table("MS.pvals.out", header=T, as.is=T)#
+#
+wtcc$Start <- wtcc$Start/1000#
+for(j in 2:22){#
+  wtcc[wtcc$Chr==j,"Start"] <- max(wtcc[wtcc$Chr==(j-1),"Start"])+wtcc[wtcc$Chr==j,"Start"]#
+  wtcc[wtcc$Chr==j, "Tick"] <- (min(wtcc[wtcc$Chr==j,"Start"]) + max(wtcc[wtcc$Chr==j,"Start"]))/2#
+}#
+wtcc[wtcc$Chr==1,"Tick"] <- (min(wtcc[wtcc$Chr==1,"Start"]) + max(wtcc[wtcc$Chr==1,"Start"]))/2#
+wtcc$Discovery_log <- -log10(wtcc$Pvalue)#
+wtcc$Color_Dis <- wtcc$Chr %% 2#
+wtcc$Color_Dis <-ifelse(wtcc$Pvalue< 0.05, (wtcc$Chr %% 2)+2, wtcc$Color_Dis)#
+#
+colours <- c("#D3D3D3","#808080",brewer.pal(n = 3, name = "Set1"))#
+#
+pdf("Manhattan_plot.pdf",width=12,height=6)#
+p <- ggplot(wtcc, aes(Start, Discovery_log))+geom_point(size=1.5,alpha=0.6,aes(colour=as.factor(Color_Dis)))+#
+  scale_colour_manual(values = colours) +#
+  #scale_color_brewer(palette="Set1")+#
+  geom_hline(yintercept=-log10(0.05),size=0.5, colour="gray")+#
+  ylab(expression(paste(-log[10]~'P value')))+#
+  theme_bw()+#
+  theme(legend.position = "none",#
+        panel.grid.major.x = element_blank(),#
+        panel.grid.minor.x = element_blank()) +#
+  scale_x_continuous(name = "Chromosome", breaks = unique(wtcc$Tick), labels = unique(wtcc$Chr),expand=c(0.01,0))#
+print(p)#
+dev.off()
+rm(list=ls())#
+library(ggplot2)#
+#
+VEGAS1 <- read.table("HT.pvals.out", header=T, as.is=T)#
+VEGAS2 <- read.table("MS.pvals.out", header=T, as.is=T)#
+#
+## print out the number of records in each profile#
+print(nrow(VEGAS1))#
+print(nrow(VEGAS2))#
+#
+##### Sort VEGAS output by chromosome and position#
+VEGAS1 <- VEGAS1[order(VEGAS1$Chr,VEGAS1$Start,VEGAS1$Stop),]#
+VEGAS2 <- VEGAS2[order(VEGAS2$Chr,VEGAS2$Start,VEGAS2$Stop),]#
+#
+##Make block column#
+p.BlockDefine.threshold <- 0.05#
+VEGAS1$block <- NA#
+current.block <- 0#
+for(current.row in 1:nrow(VEGAS1)){#
+    ## move on if pval is not good#
+    if(VEGAS1[current.row,"Pvalue"] >= p.BlockDefine.threshold) next#
+    ## if first row, or new block, then bump to next block#
+    if(current.row == 1 ||#
+         VEGAS1[current.row - 1,"Pvalue"] >= p.BlockDefine.threshold)#
+      current.block <- current.block + 1#
+    ## put the block in the matrix#
+    VEGAS1[current.row,"block"] <- current.block#
+} ## #
+rm(current.row,current.block)#
+VEGAS2$block <- NA#
+current.block <- 0#
+for(current.row in 1:nrow(VEGAS2)){#
+    ## move on if pval is no good#
+    if(VEGAS2[current.row,"Pvalue"] >= p.BlockDefine.threshold) next#
+    ## if first row, or new block, then bump to next block#
+    if(current.row == 1 ||#
+         VEGAS2[current.row - 1,"Pvalue"] >= p.BlockDefine.threshold)#
+      current.block <- current.block + 1#
+    ## put the block in the matrix#
+    VEGAS2[current.row,"block"] <- current.block#
+} ###
+rm(current.row,current.block)#
+#
+## plot heatmap#
+VEGAS1$flag <-ifelse(is.na(VEGAS1$block), 0, 1)#
+VEGAS2$flag <-ifelse(is.na(VEGAS2$block), 0, 1)#
+#
+block <- merge(VEGAS1, VEGAS2, by="Gene")#
+print(nrow(block))#
+#
+rowLabels <- block$Gene#
+block <- cbind(block$flag.x, block$flag.y)#
+colnames(block) <-c("HT", "MS")#
+#
+block_matrix <- data.matrix(block)#
+pdf("block_test.pdf",width=6,height=10)#
+p <- heatmap(block_matrix, Rowv=NA, Colv=NA, col=cm.colors(256), labRow=rowLabels, scale="row", margins = c(5,10))#
+print(p)#
+dev.off()
+dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1
+colnames(dat_mat) <- c(1:77)
 # plotting matrices#
 #
-dat = read.csv("fitness_csv/Hydroxyurea_sub_DMSO_fitness.csv", header=FALSE, check.names=FALSE) # row.names = 1#
+name = "Hydroxyurea_sub_DMSO_fitness"#
+#
+dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1#
+#
+colnames(dat_mat) <- c(1:77)#
+#
+title = "HU - DMSO"#
 #
 library("pheatmap")#
 #
-pheatmap(dat, cluster_rows=FALSE, cluster_cols=FALSE, main="HU - DMSO", show_colnames=TRUE )
-# plotting matrices#
-#
-dat = read.csv("fitness_csv/Hydroxyurea_sub_DMSO_fitness.csv", header=FALSE, check.names=FALSE) # row.names = 1#
-#
-library("pheatmap")#
-#
-pheatmap(dat, cluster_rows=FALSE, cluster_cols=FALSE, main="HU - DMSO", show_colnames=TRUE )
-# plotting matrices#
-#
-dat = read.csv("fitness_csv/Hydroxyurea_sub_DMSO_fitness.csv", header=FALSE, check.names=TRUE) # row.names = 1#
-#
-library("pheatmap")#
-#
-pheatmap(dat, cluster_rows=FALSE, cluster_cols=FALSE, main="HU - DMSO", show_colnames=TRUE )
-dat_avg = colMeans(dat, na.rm=TRUE)#
+pheatmap(dat_mat, cluster_rows=FALSE, cluster_cols=FALSE, main=title, show_colnames=TRUE )
+at_avg = colMeans(dat_mat, na.rm=TRUE)#
 #
 library("ggplot2")#
 #
-dat_df = data.frame(data = dat_avg, pos = 1:77)#
+dat_df = data.frame(dat = dat_avg, pos = 1:77)#
 #
-ggplot(dat_df, aes(x=pos,y = data)) + geom_bar(stat="identity") +#
+ggplot(dat_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
     ggtitle(title) + xlab("Position") + ylab("Average Fitness") + #
     scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
-    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))
+    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))#
+#
+write.csv(dat_avg, file = paste("fitness_csv/", name, "_avg.csv", sep=""))
 dat_avg = colMeans(dat_mat, na.rm=TRUE)#
 #
 library("ggplot2")#
@@ -139,26 +263,68 @@ dat_df = data.frame(dat = dat_avg, pos = 1:77)#
 ggplot(dat_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
     ggtitle(title) + xlab("Position") + ylab("Average Fitness") + #
     scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
-    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))
-dat_avg = colMeans(dat_mat, na.rm=TRUE)
-ting matrices#
+    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))#
 #
-dat_mat = read.csv("fitness_csv/Hydroxyurea_sub_DMSO_fitness.csv", header=FALSE, check.names=TRUE) # row.names = 1#
+write.csv(dat_avg, file = paste("fitness_csv/", name, "_avg.csv", sep=""))
+# plotting matrices#
 #
-title = "HU - DMSO"#
+name = "Hydroxyurea_sub_Caffeine_fitness"#
+#
+dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1#
+#
+colnames(dat_mat) <- c(1:77)#
+#
+title = "HU - Caffeine"#
 #
 library("pheatmap")#
 #
 pheatmap(dat_mat, cluster_rows=FALSE, cluster_cols=FALSE, main=title, show_colnames=TRUE )
-dat_avg = colMeans(dat_mat, na.rm=TRUE)
-library("ggplot2")
-dat_df = data.frame(dat = dat_avg, pos = 1:77)
-hist(dat_avg)
+# plotting averages#
+#
+dat_avg = colMeans(dat_mat, na.rm=TRUE)#
+#
+library("ggplot2")#
+#
+dat_df = data.frame(dat = dat_avg, pos = 1:77)#
+#
 ggplot(dat_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
     ggtitle(title) + xlab("Position") + ylab("Average Fitness") + #
     scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
-    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))
-dat_mat = read.csv("fitness_csv/Hydroxyurea_sub_Caffeine_fitness.csv", header=FALSE, check.names=TRUE) # row.names = 1#
+    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))#
+#
+write.csv(dat_avg, file = paste("fitness_csv/", name, "_avg.csv", sep=""))
+name = "Hydroxyurea_sub_Caffeine_fitness"#
+#
+dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1#
+#
+colnames(dat_mat) <- c(1:77)#
+#
+title = "HU - Caffeine"#
+#
+library("pheatmap")#
+#
+pheatmap(dat_mat, cluster_rows=FALSE, cluster_cols=FALSE, main=title, show_colnames=TRUE )
+# plotting averages#
+#
+dat_avg = colMeans(dat_mat, na.rm=TRUE)#
+#
+library("ggplot2")#
+#
+dat_df = data.frame(dat = dat_avg, pos = 1:77)#
+#
+ggplot(dat_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
+    ggtitle(title) + xlab("Position") + ylab("Average Fitness") + #
+    scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
+    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))#
+#
+write.csv(dat_avg, file = paste("fitness_csv/", name, "_avg.csv", sep=""))
+# plotting matrices#
+#
+name = "Hydroxyurea_sub_Caffeine_fitness"#
+#
+dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1#
+#
+colnames(dat_mat) <- c(1:77)#
 #
 title = "HU - Caffeine"#
 #
@@ -166,48 +332,63 @@ library("pheatmap")#
 #
 pheatmap(dat_mat, cluster_rows=FALSE, cluster_cols=FALSE, main=title, show_colnames=TRUE )#
 #
-dat_avg = colMeans(dat_mat, na.rm=TRUE)
-library("ggplot2")#
+# plotting averages
+dat_mat = read.csv(paste("fitness_csv/hu_fitness.csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1
+dat_mat = read.csv(paste("fitness_csv/hu_fitness.csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1
+c(1:77)#
 #
-dat_df = data.frame(dat = dat_avg, pos = 1:77)#
+title = "HU"#
 #
-ggplot(dat_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
-    ggtitle(title) + xlab("Position") + ylab("Average Fitness") + #
-    scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
-    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))
-dat_mat = read.csv("fitness_csv/Hydroxyurea_sub_Caffeine_fitness.csv", header=FALSE, check.names=TRUE) # row.names = 1#
+library("pheatmap")#
+#
+pheatmap(dat_mat, clus
+luster_rows=FALSE, cluster_cols=FALSE, main=title, show_colnames=TRUE )
+pheatmap(dat_mat, cluster_rows=FALSE, cluster_cols=FALSE, main=title, show_colnames=TRUE )
+dat_mat = read.csv(paste("fitness_csv/hu_fitness.csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1
+colnames(dat_mat) <- c(1:77)
+title = "HU"#
+#
+library("pheatmap")#
+#
+pheatmap(dat_mat, cluster_rows=FALSE, cluster_cols=FALSE, main=title, show_colnames=TRUE )
+name = "Hydroxyurea_sub_Caffeine_fitness"#
+#
+dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1#
+# dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1#
+#
+colnames(dat_mat) <- c(1:77)#
+rownames(dat_mat) <- c("STOP", "W", "F", "Y", "L", "I", "M", "V", "C", "A", "G", "P", "S", "T", "N", "Q", "H", "R", "K", "D", "E")#
 #
 title = "HU - Caffeine"#
 #
 library("pheatmap")#
 #
 pheatmap(dat_mat, cluster_rows=FALSE, cluster_cols=FALSE, main=title, show_colnames=TRUE )
-dat_avg = colMeans(dat_mat, na.rm=TRUE)#
+name = "Hydroxyurea_sub_DMSO_fitness"#
 #
-library("ggplot2")#
+dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1#
+# dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1#
 #
-dat_df = data.frame(dat = dat_avg, pos = 1:77)#
-#
-ggplot(dat_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
-    ggtitle(title) + xlab("Position") + ylab("Average Fitness") + #
-    scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
-    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))
-# plotting matrices#
-#
-dat_mat = read.csv("fitness_csv/Hydroxyurea_sub_DMSO_fitness.csv", header=FALSE, check.names=TRUE) # row.names = 1#
+colnames(dat_mat) <- c(1:77)#
+rownames(dat_mat) <- c("STOP", "W", "F", "Y", "L", "I", "M", "V", "C", "A", "G", "P", "S", "T", "N", "Q", "H", "R", "K", "D", "E")#
 #
 title = "HU - DMSO"#
 #
 library("pheatmap")#
 #
 pheatmap(dat_mat, cluster_rows=FALSE, cluster_cols=FALSE, main=title, show_colnames=TRUE )
-dat_avg = colMeans(dat_mat, na.rm=TRUE)#
+name = "Hydroxyurea_sub_DMSO_fitness"#
 #
-library("ggplot2")#
+# dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1#
+dat_mat = read.csv(paste("fitness_csv/hu_fitness.csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1#
 #
-dat_df = data.frame(dat = dat_avg, pos = 1:77)#
+colnames(dat_mat) <- c(1:77)#
+rownames(dat_mat) <- c("STOP", "W", "F", "Y", "L", "I", "M", "V", "C", "A", "G", "P", "S", "T", "N", "Q", "H", "R", "K", "D", "E")#
 #
-ggplot(dat_df, aes(x=pos,y = dat)) + geom_bar(stat="identity") +#
-    ggtitle(title) + xlab("Position") + ylab("Average Fitness") + #
-    scale_x_discrete(breaks = 1:77, label = c(1:77)) + #
-    theme(axis.text=element_text(size=7), axis.title=element_text(size=12))
+title = "HU Fitness"#
+#
+library("pheatmap")#
+#
+pheatmap(dat_mat, cluster_rows=FALSE, cluster_cols=FALSE, main=title, show_colnames=TRUE )#
+#
+# plotting averages
