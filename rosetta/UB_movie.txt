@@ -10,6 +10,8 @@ load 2GMI.pse
 #select MMS2, chain B
 select UB1, sym02-10000
 select UB, 2GMI
+select bind, resi 576 and 2GMI
+select binds, resi 563 and sym02-10000
 select binding, UB resi 571
 #extract UB, chain C
 extract MMS2, chain B
@@ -19,8 +21,10 @@ color grey, MMS2
 as surface, E2
 as surface, MMS2
 as cartoon, UB
+as spheres, bind
+as sphere, binds
  
-mset 1 x900
+mset 1 x500
  
 
 translate [0,0,100], object=UB
@@ -38,37 +42,37 @@ set_view (\
      5.602733612,   21.602519989,    0.000003815,\
    277.899505615,  381.247283936,  -20.000000000 ) 
 
-frame 200
+frame 100
 mview store
  
 # define the inhib as the binding loop
-select binding_site, resi 571
+select binding_site, resi 563
 select (none)
  
 # slowly zoom in
-frame 300
+frame 150
 zoom binding_site
 mview store
  
 # look around the binding pocket
-frame 400
+frame 200
 turn x, 360
 mview store
  
 # wrap back more quickly...
-frame 500
-turn y, 180
+frame 250
+turn y, 100
 mview store
 
 translate [0,0,100], object=MMS2
 
-frame 600
+frame 300
 #translate [0,0,+100], object=MMS2
 mview store, object=MMS2
 mview interpolate, object=MMS2
 #mview store
 
-frame 650
+frame 350
 mview store, object=MMS2
 mview store, object=E2
 mview reinterpolate, object=MMS2
@@ -76,7 +80,7 @@ mview reinterpolate, object=E2
 
 
 # one more gratuitous view
-frame 700
+frame 400
 ### cut below here and paste into script ###
 ### cut below here and paste into script ###
 set_view (\
@@ -88,7 +92,7 @@ set_view (\
     65.606353760,  131.803726196,  -20.000001907 )
 mview store
  
-frame 750
+frame 450
 set_view (\
     -0.883944750,    0.430790305,    0.181814834,\
      0.463548630,    0.858354092,    0.219891459,\
@@ -100,11 +104,11 @@ mview store
 
 translate [0,0,+100], object=E2
 
-frame 800
+frame 350
 mview store, object=E2
 mview interpolate, object+E2
 
-frame 850
+frame 400
 mview store, object=E2
 mview store, object=MMS2
 mview reinterpolate, object=MMS2
@@ -115,7 +119,7 @@ orient
 
 #translate [0,0,100], object=UB
 
-frame 855
+frame 450
 set_view (\
     -0.599383652,    0.743741095,    0.295939058,\
      0.799002111,    0.578190267,    0.165181056,\
@@ -126,7 +130,7 @@ set_view (\
 mview store
 
 #wait 3 seconds
-frame 900
+frame 500
 mview store
 
 # define the inhib as the binding loop
