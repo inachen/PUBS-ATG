@@ -2,13 +2,13 @@
 
 name = "Hydroxyurea_sub_DMSO_fitness"
 
-dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1
 # dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1
+dat_mat = read.csv(paste("fitness_csv/hu_fitness.csv", sep=""), header=FALSE, check.names=TRUE) # row.names = 1
 
 colnames(dat_mat) <- c(1:77)
 rownames(dat_mat) <- c("STOP", "W", "F", "Y", "L", "I", "M", "V", "C", "A", "G", "P", "S", "T", "N", "Q", "H", "R", "K", "D", "E")
 
-title = "HU - DMSO"
+title = "HU Fitness"
 
 library("pheatmap")
 
