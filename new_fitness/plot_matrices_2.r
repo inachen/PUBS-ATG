@@ -8,7 +8,7 @@ dat_mat = read.csv(paste("fitness_csv/", name, ".csv", sep=""), header=FALSE, ch
 colnames(dat_mat) <- c(1:77)
 rownames(dat_mat) <- c("STOP", "W", "F", "Y", "L", "I", "M", "V", "C", "A", "G", "P", "S", "T", "N", "Q", "H", "R", "K", "D", "E")
 
-title = "HU - DMSO"
+title = "HU - Caffeine"
 
 library("pheatmap")
 

@@ -118,7 +118,7 @@ for n1, mat1 in enumerate(fit_mat_lst):
             fig = plt.figure()
             plt.plot(mat1_lst, mat2_lst, '.', color=plt.rcParams['axes.color_cycle'][1])
             plt.plot(mat1_lst, mat1_lst_fit, color='black')
-            plt.annotate("r2 = %.3f" % r_sq, xy=(0.05, 0.95), xycoords='axes fraction', fontsize=16,
+            plt.annotate("r^2 = %.3f \n m = %.3f" % (r_sq, m), xy=(0.05, 0.95), xycoords='axes fraction', fontsize=16,
                 xytext=(0.5, -1), textcoords='offset points',
                 ha='left', va='top')
             plt.xlabel(NAMES[n1])
