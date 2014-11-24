@@ -86,6 +86,8 @@ for num, fit_mat in enumerate(fit_mat_lst):
 
     np.savetxt("fitness_csv/" + NAMES[num] + "_fitness.csv", fit_mat, delimiter=",")
 
+# save just our data
+np.savetxt("fitness_csv/hu_fitness.csv", hu_fit_mat, delimiter=",")
 
 style.use("ggplot")
 
